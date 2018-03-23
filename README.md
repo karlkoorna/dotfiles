@@ -1,2 +1,2 @@
-# dotfiles
+# Dotfiles
 My application settings
