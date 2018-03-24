@@ -1,5 +1,4 @@
 code --install-extension alefragnani.Bookmarks
-code --install-extension christian-kohler.npm-intellisense
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension EditorConfig.EditorConfig
 code --install-extension eg2.vscode-npm-script
