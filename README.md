@@ -1,2 +1,2 @@
 # Dotfiles
-My application settings
+My app configurations.
