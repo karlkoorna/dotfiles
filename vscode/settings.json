@@ -195,7 +195,6 @@
       "react/jsx-first-prop-new-line": "warn",
       "react/jsx-no-undef": "error",
       "react/jsx-no-bind": "error",
-      "react/jsx-one-expression-per-line": "error",
       "react/jsx-pascal-case": "error",
       "react/jsx-tag-spacing": [ "warn", { "beforeClosing": "never" } ],
       "react/jsx-uses-vars": "error",
