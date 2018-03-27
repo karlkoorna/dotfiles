@@ -188,7 +188,6 @@
       "react/no-redundant-should-component-update": "error",
       "react/no-will-update-set-state": "error",
       "react/prefer-es6-class": "error",
-      "react/jsx-closing-tag-location": "warn",
       "react/jsx-curly-spacing": [ "warn", { "children": true } ],
       "react/jsx-equals-spacing": "warn",
       "react/jsx-first-prop-new-line": "warn",
