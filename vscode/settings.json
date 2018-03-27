@@ -178,7 +178,6 @@
       "prefer-const": "warn",
       "prefer-rest-params": "error",
       "prefer-spread": "warn",
-      "prefer-template": "warn",
       "require-yield": "error",
       "rest-spread-spacing": "warn",
       "template-curly-spacing": "warn",
