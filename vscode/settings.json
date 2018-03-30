@@ -13,25 +13,6 @@
   },
   "files.eol": "\n",
   "explorer.confirmDelete": false,
-  "launch": {
-  	"version": "0.2.0",
-  	"configurations": [
-  	  {
-  	    "name": "Launch Node.js",
-  	    "request": "launch",
-  	    "type": "node",
-  	    "program": "node",
-  	    "cwd": "${workspaceRoot}"
-      },
-      {
-        "name": "Launch Go",
-        "request": "launch",
-        "type": "go",
-        "mode": "debug",
-        "program": "${workspaceRoot}"
-      }
-  	]
-  },
   "html.format.enable": false,
   "json.format.enable": false,
   "javascript.format.enable": false,
