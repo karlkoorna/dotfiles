@@ -11,6 +11,9 @@
     "editor.insertSpaces": true,
     "editor.tabSize": 2
   },
+  "[go]": {
+    "editor.formatOnSave": false
+  },
   "files.eol": "\n",
   "explorer.confirmDelete": false,
   "html.format.enable": false,
