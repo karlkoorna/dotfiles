@@ -22,7 +22,7 @@
       {
         "type": "node",
         "request": "launch",
-        "name": "Nodemon",
+        "name": "Nodemon (F)",
         "runtimeExecutable": "nodemon",
         "program": "${file}",
         "args": [  "-e", "js" ],
@@ -31,19 +31,19 @@
       {
         "type": "node",
         "request": "launch",
-        "name": "Node.js",
+        "name": "Node.js (F)",
         "program": "${file}"
       },
       {
         "type": "python",
         "request": "launch",
-        "name": "Python",
+        "name": "Python (F)",
         "program": "${file}"
       },
       {
-        "name": "Go",
         "type": "go",
         "request": "launch",
+        "name": "Go (D)",
         "mode": "debug",
         "program": "${workspaceRoot}"
       }
