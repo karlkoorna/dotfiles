@@ -63,6 +63,7 @@
   "scss.validate": false,
   "eslint.options": {
     "useEslintrc": false,
+    "parser": "babel-eslint",
     "parserOptions": {
       "sourceType": "module",
       "ecmaVersion": 2018,
@@ -145,7 +146,6 @@
       "key-spacing": "warn",
       "keyword-spacing": "warn",
       "linebreak-style": "warn",
-      "lines-between-class-members": "warn",
       "max-statements-per-line": [ "error", { "max": 2 } ],
       "multiline-ternary": [ "error", "never" ],
       "new-parens": "warn",
@@ -209,7 +209,6 @@
       "react/jsx-equals-spacing": "warn",
       "react/jsx-first-prop-new-line": "warn",
       "react/jsx-no-undef": "error",
-      "react/jsx-no-bind": "error",
       "react/jsx-pascal-case": "error",
       "react/jsx-tag-spacing": [ "warn", { "beforeClosing": "never" } ],
       "react/jsx-uses-vars": "error",
@@ -217,5 +216,6 @@
     }
   },
   "eslint.autoFixOnSave": true,
-  "bookmarks.navigateThroughAllFiles": true
+  "bookmarks.navigateThroughAllFiles": true,
+  "git.confirmSync": false
 }
