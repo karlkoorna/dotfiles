@@ -16,39 +16,6 @@
   },
   "files.eol": "\n",
   "explorer.confirmDelete": false,
-  "launch": {
-    "version": "0.2.0",
-    "configurations": [
-      {
-        "type": "node",
-        "request": "launch",
-        "name": "Nodemon (F)",
-        "runtimeExecutable": "nodemon",
-        "program": "${file}",
-        "args": [  "-e", "js" ],
-        "restart": true
-      },
-      {
-        "type": "node",
-        "request": "launch",
-        "name": "Node.js (F)",
-        "program": "${file}"
-      },
-      {
-        "type": "python",
-        "request": "launch",
-        "name": "Python (F)",
-        "program": "${file}"
-      },
-      {
-        "type": "go",
-        "request": "launch",
-        "name": "Go (D)",
-        "mode": "debug",
-        "program": "${workspaceRoot}"
-      }
-    ]
-  },
   "html.format.enable": false,
   "json.format.enable": false,
   "javascript.format.enable": false,
