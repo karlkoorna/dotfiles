@@ -28,7 +28,6 @@
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "eslint.autoFixOnSave": true,
   "bookmarks.navigateThroughAllFiles": true,
   "git.confirmSync": false
 }
