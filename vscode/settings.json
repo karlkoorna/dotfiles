@@ -29,5 +29,6 @@
   "less.validate": false,
   "scss.validate": false,
   "bookmarks.navigateThroughAllFiles": true,
-  "git.confirmSync": false
+  "git.confirmSync": false,
+  "editor.insertSpaces": false
 }
