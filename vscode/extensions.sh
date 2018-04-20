@@ -12,3 +12,4 @@ code --install-extension slevesque.vscode-autohotkey
 code --install-extension Tyriar.sort-lines
 code --install-extension wayou.vscode-todo-highlight
 code --install-extension wix.vscode-import-cost
+code --install-extension mikestead.dotenv
