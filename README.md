@@ -1,5 +1,5 @@
 # Dotfiles
-The way I like it.
+My dotfiles.
 
 ### Fonts
 
