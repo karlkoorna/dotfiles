@@ -1,5 +1,5 @@
 # Dotfiles
-My app configurations.
+The way I like it.
 
 ### Fonts
 
