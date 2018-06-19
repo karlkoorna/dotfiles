@@ -4,8 +4,6 @@ code --install-extension eg2.vscode-npm-script
 code --install-extension formulahendry.auto-close-tag
 code --install-extension formulahendry.auto-rename-tag
 code --install-extension jvitor83.typings-autoinstaller
-code --install-extension lukehoban.Go
-code --install-extension ms-python.python
 code --install-extension robertohuertasm.vscode-icons
 code --install-extension shardulm94.trailing-spaces
 code --install-extension slevesque.vscode-autohotkey
