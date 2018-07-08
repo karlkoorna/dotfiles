@@ -1,7 +1,7 @@
 # Dotfiles
 My dotfiles.
 
-### Fonts
+## Fonts
 
 [FiraCode](https://github.com/tonsky/FiraCode)\
 [FontAwesome](https://fontawesome.com/)\
