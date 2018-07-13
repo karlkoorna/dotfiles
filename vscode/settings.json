@@ -1,34 +1,38 @@
 {
-  "editor.fontFamily": "Fira Code, Consolas, monospace",
-  "editor.fontLigatures": true,
-  "editor.mouseWheelZoom": true,
-  "editor.trimAutoWhitespace": false,
-  "workbench.iconTheme": "vscode-icons",
-  "trailing-spaces.includeEmptyLines": false,
-  "trailing-spaces.trimOnSave": true,
-  "explorer.confirmDragAndDrop": false,
   "[json]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 2
   },
-  "[go]": {
-    "editor.formatOnSave": false
+  "[jsonc]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
   },
-  "files.eol": "\n",
+  "bookmarks.navigateThroughAllFiles": true,
+  "css.validate": false,
+  "editor.detectIndentation": false,
+  "editor.fontFamily": "Fira Code, Consolas, monospace",
+  "editor.fontLigatures": true,
+  "editor.insertSpaces": false,
+  "editor.mouseWheelZoom": true,
+  "editor.trimAutoWhitespace": false,
   "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "extensions.ignoreRecommendations": true,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "git.confirmSync": false,
   "html.format.enable": false,
-  "json.format.enable": false,
-  "javascript.format.enable": false,
-  "typescript.format.enable": false,
   "html.validate.scripts": false,
   "html.validate.styles": false,
-  "php.validate.enable": false,
+  "javascript.format.enable": false,
   "javascript.validate.enable": false,
-  "typescript.validate.enable": false,
-  "css.validate": false,
+  "json.format.enable": false,
   "less.validate": false,
+  "php.validate.enable": false,
   "scss.validate": false,
-  "bookmarks.navigateThroughAllFiles": true,
-  "git.confirmSync": false,
-  "editor.insertSpaces": false
+  "trailing-spaces.includeEmptyLines": false,
+  "trailing-spaces.trimOnSave": true,
+  "typescript.format.enable": false,
+  "typescript.validate.enable": false,
+  "workbench.iconTheme": "vscode-icons"
 }
