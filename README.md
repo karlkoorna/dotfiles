@@ -28,6 +28,8 @@ My dotfiles.
 * **Start**
 	* Show recently added and most used apps.
 	* Keep only the settings folder visible.
+	* Unpin everything from start except weather.
+	* Make groups: "Start", "Office", "Adobe", "Browsers" and "Tools".
 * **Taskbar**
 	* Hide location, contacts and Windows Ink icons.
 	* Do not show taskbars on all displays.
