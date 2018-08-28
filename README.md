@@ -77,7 +77,7 @@ My dotfiles.
 
 ## Software
 
-## [Android Studio](https://developer.android.com/studio)
+### [Android Studio](https://developer.android.com/studio)
 
 * Use the Darcula theme.
 * Install the Android Virtual Device component.
