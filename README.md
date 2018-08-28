@@ -189,6 +189,7 @@ also delete it in the user folder.
 ### [MySQL](https://dev.mysql.com/downloads/mysql)
 
 * Install Server with documentation and Workbench.
+* Use Legacy Authentication Method.
 
 ### [Node.js](https://nodejs.org)
 
