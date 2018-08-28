@@ -124,10 +124,23 @@ also delete it in the user folder.
 * Download to "X:\Torrents".
 * Disable system tray icon.
 
+### [Voicemeeter Banana](https://vb-audio.com/Voicemeeter/banana.htm)
+
+* Set first input to WDM microphone.
+* Set first output to WDM headphones.
+* Set "Voicemeeter Input" as the default playback.
+* Set "Voicemeeter Aux Output" as the default recording device.
+* Keep H1>B1, V1>A1 and V2>A1 routings.
+* Run app at startup.
+* Hook volume keys for A1.
+* Pin to system tray.
+
 ### [Discord](https://discordapp.com/download)
 
 * Disable in-game overlay.
 * Start minimized.
+* Set "Voicemeeter Output" as the input device.
+* Set "Voicemeeter Aux Input" as the output device.
 * Pin to system tray.
 
 ### Edge
@@ -249,16 +262,6 @@ also delete it in the user folder.
 
 * Choose .NET, UWP, C++ and Unity workloads.
 * Use the Dark theme.
-
-### [Voicemeeter Banana](https://vb-audio.com/Voicemeeter/banana.htm)
-
-* Set first input to WDM microphone.
-* Set first output to WDM headphones.
-* Set "VB-Audio Voicemeeter VAIO" as the default playback and recording device.
-* Keep H1>B1 and V1>A1 routings.
-* Run app at startup.
-* Hook volume keys for A1.
-* Pin to system tray.
 
 #### [Wallpaper Engine](https://store.steampowered.com/app/431960/Wallpaper_Engine)
 
