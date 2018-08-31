@@ -249,6 +249,7 @@ also delete it in the user folder.
 ### [TranslucentTB](https://github.com/TranslucentTB/TranslucentTB/releases)
 
 * Clear taskbar at all times.
+* Open at boot.
 
 ### [VirtualBox](https://virtualbox.org/wiki/Downloads)
 
