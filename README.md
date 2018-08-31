@@ -8,7 +8,7 @@ My dotfiles.
 [Material Design Icons](https://github.com/google/material-design-icons/tree/master/iconfont)
 
 ## Operating System
-*(Windows 10 64-bit Home Edition)*
+*(Windows 10 64-bit Professional Edition)*
 
 ### System
 
