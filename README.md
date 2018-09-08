@@ -248,6 +248,11 @@ also delete it in the user folder.
 * Remove all music library folders and do not scan Steam folders.
 * Pin to system tray.
 
+#### [Wallpaper Engine](https://store.steampowered.com/app/431960/Wallpaper_Engine)
+
+* Highest quality settings.
+* Do not output audio.
+
 ### [TranslucentTB](https://github.com/TranslucentTB/TranslucentTB/releases)
 
 * Clear taskbar at all times.
@@ -265,10 +270,5 @@ also delete it in the user folder.
 
 * Choose .NET, UWP, C++ and Unity workloads.
 * Use the Dark theme.
-
-#### [Wallpaper Engine](https://store.steampowered.com/app/431960/Wallpaper_Engine)
-
-* Highest quality settings.
-* Do not output audio.
 
 ### [Wireshark](https://wireshark.org/#download)
