@@ -180,6 +180,8 @@ also delete it in the user folder.
 
 * Clone repositories to “X:\GitHub”.
 
+### [Insomnia](https://insomnia.rest)
+
 ### [IntelliJ](https://jetbrains.com/idea/download)
 
 * Use the Darcula theme.
