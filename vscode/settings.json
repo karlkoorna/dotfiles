@@ -34,5 +34,6 @@
   "trailing-spaces.trimOnSave": true,
   "typescript.format.enable": false,
   "typescript.validate.enable": false,
-  "workbench.iconTheme": "vscode-icons"
+  "workbench.iconTheme": "vscode-icons",
+  "window.titleBarStyle": "custom"
 }
