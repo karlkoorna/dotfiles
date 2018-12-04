@@ -111,7 +111,7 @@ My dotfiles.
 * Use DuckDuckGo as the default search engine.
 * Send do not track requests.
 
-#### [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [OneTab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall), [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg), [JSON Formatter](https://chrome.google.com/webstore/detail/sourcegraph/dgjhfomjieaadpoljlnidmbgkdffpack), [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi), [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd), [MobX DevTools](https://chrome.google.com/webstore/detail/mobx-developer-tools/pfgnfdagidkfgccljigdamigbcnndkod), [Vue DevTools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
+#### [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [OneTab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall), [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg), [JSON Formatter]
 
 ### [Creative Cloud](https://creative.adobe.com/products/download/creative-cloud) (Photoshop, Illustrator, Premiere, After Effects)
 
@@ -169,7 +169,7 @@ also delete it in the user folder.
 * Only show the URL and bookmarks bar, downloads and bookmarks icons.
 * Do not warn when closing multiple tabs.
 
-#### [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin), [OneTab](https://addons.mozilla.org/en-US/firefox/addon/onetab), [Wappalyzer](https://addons.mozilla.org/en-US/firefox/addon/wappalyzer), [Sourcegraph](https://addons.mozilla.org/en-US/firefox/addon/sourcegraph), [React DevTools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools), [Redux DevTools](https://addons.mozilla.org/en-US/firefox/addon/remotedev), [MobX DevTools](https://addons.mozilla.org/en-US/firefox/addon/mobx-devtools), [Vue DevTools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools)
+#### [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin)
 
 ### [Git](https://git-scm.com/download/win)
 
@@ -181,11 +181,6 @@ also delete it in the user folder.
 * Clone repositories to “X:\GitHub”.
 
 ### [Insomnia](https://insomnia.rest)
-
-### Internet Explorer
-
-* Do not use recommended settings.
-* Delete all browsing data on exit.
 
 ### [Java JDK](http://oracle.com/technetwork/java/javase/downloads)
 
