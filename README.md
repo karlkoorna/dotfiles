@@ -77,23 +77,6 @@ My dotfiles.
 
 ## Software
 
-### [Android Studio](https://developer.android.com/studio)
-
-* Use the Darcula theme.
-* Install the Android Virtual Device component.
-* Change font size with mouse wheel.
-* Set editor font to "Fira Code" and enable font ligatures.
-
-### [Notepad++](https://notepad-plus-plus.org/download)
-
-* Use Unix line endings.
-* Indent with 2 spaces in JSON files.
-* Auto insert all closing characters.
-* Use DuckDuckGo as the default search engine.
-* Update files silently.
-
-### [VLC](https://videolan.org/vlc)
-
 ### [7-Zip](https://7-zip.org)
 
 * Show icons in context menu.
@@ -102,13 +85,19 @@ My dotfiles.
 * Use Notepad++ as the editor.
 * Enable full row select.
 
+### [Android Studio](https://developer.android.com/studio)
+
+* Use the Darcula theme.
+* Install the Android Virtual Device component.
+* Change font size with mouse wheel.
+* Set editor font to "Fira Code" and enable font ligatures.
+
 ### [Bulk Rename Utility](https://bulkrenameutility.co.uk/Download.php)
 
 ### [Chrome](https://google.com/chrome)
 
 * Hide home button.
 * Show bookmarks bar.
-* Use DuckDuckGo as the default search engine.
 * Send do not track requests.
 
 #### [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [OneTab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall), [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg), [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa)
@@ -124,17 +113,6 @@ also delete it in the user folder.
 * Download to "X:\Torrents".
 * Disable system tray icon.
 
-### [Voicemeeter Banana](https://vb-audio.com/Voicemeeter/banana.htm)
-
-* Set first input to WDM microphone.
-* Set first output to WDM headphones.
-* Set "Voicemeeter Input" as the default playback.
-* Set "Voicemeeter Aux Output" as the default recording device.
-* Keep H1>B1, V1>A1 and V2>A1 routings.
-* Run app at startup.
-* Hook volume keys for A1.
-* Pin to system tray.
-
 ### [Discord](https://discordapp.com/download)
 
 * Disable in-game overlay.
@@ -148,7 +126,6 @@ also delete it in the user folder.
 * Show bookmarks bar.
 * Do not ask what to do with each download.
 * Send do not track requests.
-* Use DuckDuckGo as the default search engine.
 
 #### [uBlock Origin](https://microsoft.com/p/ublock-origin/9nblggh444l4)
 
@@ -164,7 +141,6 @@ also delete it in the user folder.
 ### [Firefox](https://mozilla.org/firefox/download)
 
 * Do not check if Firefox is your default browser.
-* Use DuckDuckGo as the default search engine.
 * Always use tracking protection.
 * Only show the URL and bookmarks bar, downloads and bookmarks icons.
 * Do not warn when closing multiple tabs.
@@ -205,7 +181,6 @@ also delete it in the user folder.
 * Use Unix line endings.
 * Use 2 spaces in JSON.
 * Auto insert all character pairs.
-* Use DuckDuckGo as the default search engine.
 * Update files silently.
 
 ### [Open-EID](https://installer.id.ee)
@@ -238,11 +213,6 @@ also delete it in the user folder.
 * Remove all music library folders and do not scan Steam folders.
 * Pin to system tray.
 
-#### [Wallpaper Engine](https://store.steampowered.com/app/431960/Wallpaper_Engine)
-
-* Highest quality settings.
-* Do not output audio.
-
 ### [TranslucentTB](https://github.com/TranslucentTB/TranslucentTB/releases)
 
 * Clear taskbar at all times.
@@ -256,5 +226,23 @@ also delete it in the user folder.
 
 * Choose .NET, UWP, C++ and Unity workloads.
 * Use the Dark theme.
+
+### [VLC](https://videolan.org/vlc)
+
+### [Voicemeeter Banana](https://vb-audio.com/Voicemeeter/banana.htm)
+
+* Set first input to WDM microphone.
+* Set first output to WDM headphones.
+* Set "Voicemeeter Input" as the default playback.
+* Set "Voicemeeter Aux Output" as the default recording device.
+* Keep H1>B1, V1>A1 and V2>A1 routings.
+* Run app at startup.
+* Hook volume keys for A1.
+* Pin to system tray.
+
+#### [Wallpaper Engine](https://store.steampowered.com/app/431960/Wallpaper_Engine)
+
+* Highest quality settings.
+* Do not output audio.
 
 ### [Wireshark](https://wireshark.org/#download)
