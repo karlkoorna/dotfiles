@@ -61,5 +61,6 @@
         "jsx": true
       }
     }
-  }
+  },
+  "gitlens.codeLens.enabled": false
 }
