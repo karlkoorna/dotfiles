@@ -1,0 +1,76 @@
+{
+	"console.log": {
+		"prefix": "cl",
+		"body": [
+			"console.log(${1:'$2'});"
+		]
+	},
+	"console.info": {
+		"prefix": "ci",
+		"body": [
+			"console.info(${1:'$2'});"
+		]
+	},
+	"console.warn": {
+		"prefix": "cw",
+		"body": [
+			"console.warn(${1:'$2'});"
+		]
+	},
+	"console.error": {
+		"prefix": "ce",
+		"body": [
+			"console.error(${1:'$2'});"
+		]
+	},
+	"for..i": {
+		"prefix": "fi",
+		"body": [
+			"for (let i = ${1:0}; i < $2; i++) {",
+			"\t$3",
+			"}"
+		]
+	},
+	"for..of": {
+		"prefix": "fof",
+		"body": [
+			"for (const $1 of $2) {",
+			"\t$3",
+			"}"
+		]
+	},
+	"for..in": {
+		"prefix": "fin",
+		"body": [
+			"for (const $1 in $2) {",
+			"\t$3",
+			"}"
+		]
+	},
+	"require": {
+		"prefix": "req",
+		"body": [
+			"const $1 = require('$2');"
+		]
+	},
+	"import": {
+		"prefix": "imp",
+		"body": [
+			"import ${1:{ $2 \\}} from '$3';"
+		]
+	},
+	"arrow-function": {
+		"prefix": "afn",
+		"body": [
+			"($1) => ${2:{\n\t$3\n\\}}"
+		]
+	},
+	"listener": {
+		"prefix": ".ael",
+		"body": [
+			".addEventListener('$2', (${3:e}) => {",
+			"\t$4",
+			"}"
+		]
+	}
+}
