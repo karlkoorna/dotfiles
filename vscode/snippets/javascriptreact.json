@@ -26,25 +26,19 @@
 	"for..i": {
 		"prefix": "fi",
 		"body": [
-			"for (let i = ${1:0}; i < $2; i++) {",
-			"\t$3",
-			"}"
+			"for (let i = ${1:0}; i < $2; i++) ${3:{\n\t$4\n\\}}"
 		]
 	},
 	"for..of": {
 		"prefix": "fof",
 		"body": [
-			"for (const $1 of $2) {",
-			"\t$3",
-			"}"
+			"for (const $1 of $2) ${3:{\n\t$4\n\\}}"
 		]
 	},
 	"for..in": {
 		"prefix": "fin",
 		"body": [
-			"for (const $1 in $2) {",
-			"\t$3",
-			"}"
+			"for (const $1 in $2) ${3:{\n\t$4\n\\}}"
 		]
 	},
 	"require": {
