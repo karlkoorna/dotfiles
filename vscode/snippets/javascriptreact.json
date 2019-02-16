@@ -65,7 +65,7 @@
 			"($1) => ${2:{\n\t$3\n\\}}"
 		]
 	},
-	"listener": {
+	"event-listener": {
 		"prefix": ".ael",
 		"body": [
 			".addEventListener('$2', (${3:e}) => {",
