@@ -44,12 +44,15 @@
   "markdown.extension.toc.githubCompatibility": true,
   "trailing-spaces.highlightCurrentLine": false,
   "javascript.suggest.completeFunctionCalls": true,
+  "javascript.format.enable": false,
+  "javascript.suggestionActions.enabled": false,
   "trailing-spaces.includeEmptyLines": false,
   "workbench.iconTheme": "vscode-icons",
-  "javascript.format.enable": false,
   "typescript.suggest.completeFunctionCalls": true,
+  "typescript.suggestionActions.enabled": false,
   "bracketPairColorizer.showBracketsInRuler": true,
   "bracketPairColorizer.showHorizontalScopeLine": false,
+  "gitlens.codeLens.enabled": false,
   "eslint.autoFixOnSave": true,
   "eslint.options": {
     "fix": true,
@@ -62,5 +65,4 @@
       }
     }
   },
-  "gitlens.codeLens.enabled": false
 }
