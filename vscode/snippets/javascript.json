@@ -2,69 +2,191 @@
 	"console.log": {
 		"prefix": "cl",
 		"body": [
-			"console.log(${1:'$2'});"
+			"console.log(${0:'$1'});"
 		]
 	},
 	"console.info": {
 		"prefix": "ci",
 		"body": [
-			"console.info(${1:'$2'});"
+			"console.info(${0:'$0'});"
 		]
 	},
 	"console.warn": {
 		"prefix": "cw",
 		"body": [
-			"console.warn(${1:'$2'});"
+			"console.warn(${0:'$1'});"
 		]
 	},
 	"console.error": {
 		"prefix": "ce",
 		"body": [
-			"console.error(${1:'$2'});"
+			"console.error(${0:'$1'});"
+		]
+	},
+	"console.dir": {
+		"prefix": "cd",
+		"body": [
+			"console.dir($0);"
+		]
+	},
+	"console.table": {
+		"prefix": "ct",
+		"body": [
+			"console.table($0);"
+		]
+	},
+	"console.ct": {
+		"prefix": "ct",
+		"body": [
+			"console.time(${0:'$1'});"
+		]
+	},
+	"console.cte": {
+		"prefix": "cte",
+		"body": [
+			"console.timeEnd(${0:'$1'});"
+		]
+	},
+	"console.cg": {
+		"prefix": "cg",
+		"body": [
+			"console.group(${0:'$1'});"
+		]
+	},
+	"console.cge": {
+		"prefix": "cge",
+		"body": [
+			"console.groupEnd(${0:'$1'});"
 		]
 	},
 	"for..i": {
 		"prefix": "fi",
 		"body": [
-			"for (let i = ${1:0}; i < $2; i++) ${3:{\n\t$4\n\\}}"
-		]
-	},
-	"for..of": {
-		"prefix": "fof",
-		"body": [
-			"for (const $1 of $2) ${3:{\n\t$4\n\\}}"
+			"for (let ${1:i} = ${2:0}; ${1:i} < $3; ${1:i}++) "
 		]
 	},
 	"for..in": {
 		"prefix": "fin",
 		"body": [
-			"for (const $1 in $2) ${3:{\n\t$4\n\\}}"
+			"for (const $1 in $2) "
+		]
+	},
+	"for..of": {
+		"prefix": "fof",
+		"body": [
+			"for (const $1 of $2) "
 		]
 	},
 	"require": {
 		"prefix": "req",
 		"body": [
-			"const $1 = require('$2');"
+			"const $1 = require('$0');"
 		]
 	},
 	"import": {
 		"prefix": "imp",
 		"body": [
-			"import ${1:{ $2 \\}} from '$3';"
+			"import ${1:{ $2 \\}} from '$0';"
+		]
+	},
+	".addEventListener": {
+		"prefix": ".ael",
+		"body": [
+			".addEventListener('$1', (${2:e}) => {",
+			"\t$0",
+			"});"
+		]
+	},
+	".map": {
+		"prefix": ".map",
+		"body": [
+			".map((${1:value}) => $0)"
+		]
+	},
+	".reduce": {
+		"prefix": ".reduce",
+		"body": [
+			".reduce((sum, value) => $0, $1)"
+		]
+	},
+	".reduceRight": {
+		"prefix": ".reduceRight",
+		"body": [
+			".reduceRight((sum, value) => $0, $1)"
+		]
+	},
+	".find": {
+		"prefix": ".find",
+		"body": [
+			".find((${1:value}) => $0)"
+		]
+	},
+	".findIndex": {
+		"prefix": ".findIndex",
+		"body": [
+			".findIndex((${1:value}) => $0)"
+		]
+	},
+	".filter": {
+		"prefix": ".filter",
+		"body": [
+			".filter((${1:value}) => $0)"
+		]
+	},
+	".sort": {
+		"prefix": ".sort",
+		"body": [
+			".sort(prev, next) => $0)"
+		]
+	},
+	".some": {
+		"prefix": ".some",
+		"body": [
+			".some((${1:value}) => $0)"
+		]
+	},
+	".every": {
+		"prefix": ".every",
+		"body": [
+			".every((${1:value}) => $0)"
+		]
+	},
+	"function": {
+		"prefix": "fn",
+		"body": [
+			"function $1() {",
+			"\t$0",
+			"}"
 		]
 	},
 	"arrow-function": {
 		"prefix": "afn",
 		"body": [
-			"($1) => ${2:{\n\t$3\n\\}}"
+			"($1) => "
 		]
 	},
-	"event-listener": {
-		"prefix": ".ael",
+	"setTimeout": {
+		"prefix": "st",
 		"body": [
-			".addEventListener('$2', (${3:e}) => {",
-			"\t$4",
-			"}"
+			"setTimeout(() => {",
+			"\t$0",
+			"})"
+		]
+	},
+	"setInterval": {
+		"prefix": "si",
+		"body": [
+			"setInterval(() => {",
+			"\t$0",
+			"}, $1)"
+		]
+	},
+	"promise": {
+		"prefix": "promise",
+		"body": [
+			"return new Promise((resolve${1:, reject}) => {",
+			"\t$0",
+			"});"
 		]
 	}
 }

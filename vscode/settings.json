@@ -11,6 +11,7 @@
   "editor.fontLigatures": true,
   "editor.mouseWheelZoom": true,
   "editor.trimAutoWhitespace": false,
+  "editor.snippetSuggestions": "top",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.eol": "\n",
