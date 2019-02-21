@@ -100,7 +100,7 @@ My dotfiles.
 * Show bookmarks bar.
 * Send do not track requests.
 
-#### [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [OneTab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall), [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg), [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa)
+#### [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [OneTab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall), [Stylish](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe), [Violentmonkey](https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag), [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg), [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa)
 
 ### [Creative Cloud](https://creative.adobe.com/products/download/creative-cloud) (Photoshop, Illustrator, Premiere, After Effects)
 
@@ -157,8 +157,6 @@ also delete it in the user folder.
 * Clone repositories to “X:\GitHub”.
 
 ### [Insomnia](https://insomnia.rest)
-
-### [Java JDK](http://oracle.com/technetwork/java/javase/downloads)
 
 ### [Microsoft Office](https://setup.office.com/downloadoffice) (Word, Excel, PowerPoint)
 
