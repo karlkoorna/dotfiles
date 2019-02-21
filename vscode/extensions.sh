@@ -10,9 +10,12 @@ code --install-extension GrapeCity.gc-excelviewer
 code --install-extension jvitor83.typings-autoinstaller
 code --install-extension mechatroner.rainbow-csv
 code --install-extension mikestead.dotenv
+code --install-extension richie5um2.vscode-sort-json
 code --install-extension robertohuertasm.vscode-icons
 code --install-extension shardulm94.trailing-spaces
+code --install-extension shinnn.stylelint
 code --install-extension slevesque.vscode-autohotkey
 code --install-extension Tyriar.sort-lines
 code --install-extension wix.vscode-import-cost
 code --install-extension yzhang.markdown-all-in-one
+code --install-extension Zignd.html-css-class-completion
