@@ -11,6 +11,7 @@ code --install-extension jvitor83.typings-autoinstaller
 code --install-extension mechatroner.rainbow-csv
 code --install-extension mikestead.dotenv
 code --install-extension richie5um2.vscode-sort-json
+code --install-extension ritwickdey.LiveServer
 code --install-extension robertohuertasm.vscode-icons
 code --install-extension shardulm94.trailing-spaces
 code --install-extension shinnn.stylelint
