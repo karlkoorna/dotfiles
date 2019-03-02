@@ -1,4 +1,4 @@
-# Dotfiles
+s# Dotfiles
 My dotfiles.
 
 ## Fonts
@@ -192,14 +192,7 @@ also delete it in the user folder.
 
 ### [Snipaste](http://snapfiles.com/downloads/snipaste/dlsnipaste.html)
 
-* Install in “X:\Programs”.
-* Do not show usage tips on the magnifier.
-* Run on system startup.
-* Use hex value for color picker and copy without ‘#’.
-* Use mnemonics on the context menu.
-* Disable text to image conversion.
-* Snip with “Ctrl + PrtSc”.
-* Snip and copy with “PrtSc”.
+* Copy config from [here](https://github.com/karlkoorna/dotfiles/blob/master/snipaste/config.ini).
 
 ### [Steam](https://store.steampowered.com/about)
 
