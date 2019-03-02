@@ -1,4 +1,4 @@
-s# Dotfiles
+# Dotfiles
 My dotfiles.
 
 ## Fonts
