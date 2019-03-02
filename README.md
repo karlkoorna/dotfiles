@@ -28,7 +28,7 @@ My dotfiles.
 * **Start**
 	* Show recently added and most used apps.
 	* Keep only the settings folder visible.
-	* Unpin everything except weather.
+	* Unpin everything.
 * **Taskbar**
 	* Hide location, contacts and Windows Ink icons.
 	* Do not show taskbars on all displays.
@@ -128,15 +128,6 @@ also delete it in the user folder.
 * Send do not track requests.
 
 #### [uBlock Origin](https://microsoft.com/p/ublock-origin/9nblggh444l4)
-
-### [Everything](https://www.voidtools.com)
-
-* Do not start on system startup.
-* Do not run in the background.
-* Do not show the tray icon.
-* Show context menu item.
-* Alternate row color.
-* Index folder size and date created with fast sort.
 
 ### [Firefox](https://mozilla.org/firefox/download)
 
