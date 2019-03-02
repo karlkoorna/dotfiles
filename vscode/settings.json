@@ -31,7 +31,9 @@
       "ecmaVersion": 9,
       "sourceType": "module"
     },
-    "rules": {}
+    "rules": {
+      "semi": 2
+    }
   },
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
@@ -48,10 +50,10 @@
   "javascript.suggest.completeFunctionCalls": true,
   "javascript.suggestionActions.enabled": false,
   "less.validate": false,
+  "liveServer.settings.NoBrowser": true,
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.host": "0.0.0.0",
   "liveServer.settings.port": 80,
-  "liveServer.settings.useLocalIp": true,
   "markdown.extension.preview.autoShowPreviewToSide": true,
   "markdown.extension.toc.githubCompatibility": true,
   "npm.enableScriptExplorer": true,
