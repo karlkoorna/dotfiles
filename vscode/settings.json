@@ -26,7 +26,8 @@
       "browser",
       "node",
       "commonjs",
-      "es6"
+      "es6",
+      "jquery"
     ],
     "parser": "babel-eslint",
     "parserOptions": {
