@@ -65,7 +65,6 @@
           "allowSingleLine": true
         }
       ],
-      "capitalized-comments": "warn",
       "class-methods-use-this": "error",
       "comma-dangle": "warn",
       "comma-spacing": "warn",
@@ -170,7 +169,12 @@
       "no-mixed-spaces-and-tabs": "error",
       "no-multi-spaces": "warn",
       "no-multi-str": "error",
-      "no-multiple-empty-lines": "warn",
+      "no-multiple-empty-lines": [
+        "warn",
+        {
+          "max": 1
+        }
+      ],
       "no-negated-condition": "error",
       "no-new-object": "error",
       "no-new-require": "error",
