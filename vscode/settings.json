@@ -461,7 +461,14 @@
       "string-quotes": "double",
       "unit-case": "lower",
       "unit-no-unknown": true,
-      "value-keyword-case": "lower",
+      "value-keyword-case": [
+        "lower",
+        {
+          "ignoreProperties": [
+            "/--.*/"
+          ]
+        }
+      ],
       "value-list-comma-space-after": "always",
       "value-list-comma-space-before": "never"
     }
