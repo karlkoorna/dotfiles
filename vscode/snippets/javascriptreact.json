@@ -116,5 +116,11 @@
       "\t$0",
       "});"
     ]
+  },
+  "setState": {
+    "prefix": "ss",
+    "body": [
+      "this.setState({ $1 });"
+    ]
   }
 }
