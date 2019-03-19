@@ -73,8 +73,7 @@
       "constructor-super": "warn",
       "curly": [
         "warn",
-        "multi",
-        "consistent"
+        "multi"
       ],
       "dot-location": [
         "warn",
