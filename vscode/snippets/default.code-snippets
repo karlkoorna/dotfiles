@@ -1,0 +1,145 @@
+{
+	"console.log": {
+		"prefix": "cl",
+		"body": [
+			"console.log(${0:'$1'});"
+		],
+		"scope": "javascript,javascriptreact,typescript,typescriptreact"
+	},
+	"console.info": {
+		"prefix": "ci",
+		"body": [
+			"console.info(${0:'$1'});"
+		],
+		"scope": "javascript,javascriptreact,typescript,typescriptreact"
+	},
+	"console.warn": {
+		"prefix": "cw",
+		"body": [
+			"console.warn(${0:'$1'});"
+		],
+		"scope": "javascript,javascriptreact,typescript,typescriptreact"
+	},
+	"console.error": {
+		"prefix": "ce",
+		"body": [
+			"console.error(${0:'$1'});"
+		],
+		"scope": "javascript,javascriptreact,typescript,typescriptreact"
+	},
+	"console.time": {
+		"prefix": "ct",
+		"body": [
+			"console.time(${0:'$1'});"
+		],
+		"scope": "javascript,javascriptreact,typescript,typescriptreact"
+	},
+	"console.timeEnd": {
+		"prefix": "cte",
+		"body": [
+			"console.timeEnd(${0:'$1'});"
+		],
+		"scope": "javascript,javascriptreact,typescript,typescriptreact"
+	},
+	"JSON.stringify": {
+		"prefix": "js",
+		"body": [
+			"JSON.stringify($0);"
+		],
+		"scope": "javascript,javascriptreact,typescript,typescriptreact"
+	},
+	"JSON.parse": {
+		"prefix": "jp",
+		"body": [
+			"JSON.parse($0);"
+		],
+		"scope": "javascript,javascriptreact,typescript,typescriptreact"
+	},
+	"for..i": {
+		"prefix": "fi",
+		"body": [
+			"for (let ${1:i} = ${2:0}; ${1:i} < $3; ${1:i}++) "
+		],
+		"scope": "javascript,javascriptreact,typescript,typescriptreact"
+	},
+	"for..in": {
+		"prefix": "fin",
+		"body": [
+			"for (const $1 in $2) "
+		],
+		"scope": "javascript,javascriptreact,typescript,typescriptreact"
+	},
+	"for..of": {
+		"prefix": "fof",
+		"body": [
+			"for (const $1 of $2) "
+		],
+		"scope": "javascript,javascriptreact,typescript,typescriptreact"
+	},
+	"require": {
+		"prefix": "req",
+		"body": [
+			"const $1 = require('$0');"
+		],
+		"scope": "javascript,javascriptreact,typescript,typescriptreact"
+	},
+	"import": {
+		"prefix": "imp",
+		"body": [
+			"import ${1:{ $2 \\}} from '$0';"
+		],
+		"scope": "javascript,javascriptreact,typescript,typescriptreact"
+	},
+	"function": {
+		"prefix": "fn",
+		"body": [
+			"function $1() {",
+			"\t$0",
+			"}"
+		],
+		"scope": "javascript,javascriptreact,typescript,typescriptreact"
+	},
+	"async-function": {
+		"prefix": "afn",
+		"body": [
+			"async function $1() {",
+			"\t$0",
+			"}"
+		],
+		"scope": "javascript,javascriptreact,typescript,typescriptreact"
+	},
+	"setTimeout": {
+		"prefix": "timeout",
+		"body": [
+			"setTimeout(() => {",
+			"\t$0",
+			"}, $1);"
+		],
+		"scope": "javascript,javascriptreact,typescript,typescriptreact"
+	},
+	"setInterval": {
+		"prefix": "interval",
+		"body": [
+			"setInterval(() => {",
+			"\t$0",
+			"}, $1);"
+		],
+		"scope": "javascript,javascriptreact,typescript,typescriptreact"
+	},
+	"promise": {
+		"prefix": "promise",
+		"body": [
+			"new Promise((resolve${1:, reject}) => {",
+			"\t$0",
+			"});"
+		],
+		"scope": "javascript,javascriptreact,typescript,typescriptreact"
+	},
+	"setState": {
+		"prefix": "ss",
+		"body": [
+			"this.setState({ $1 });"
+		],
+		"scope": "javascript,javascriptreact,typescript,typescriptreact"
+	}
+}
