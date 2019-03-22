@@ -1,2 +1,4 @@
 [core]
 	excludesfile = ~/.gitignore
+	autocrlf = true
+	eol = lf
