@@ -12,11 +12,12 @@ code --install-extension mechatroner.rainbow-csv
 code --install-extension mikestead.dotenv
 code --install-extension richie5um2.vscode-sort-json
 code --install-extension ritwickdey.LiveServer
-code --install-extension robertohuertasm.vscode-icons
 code --install-extension shardulm94.trailing-spaces
 code --install-extension shinnn.stylelint
 code --install-extension slevesque.vscode-autohotkey
 code --install-extension Tyriar.sort-lines
+code --install-extension uyiosa-enabulele.reopenclosedtab
+code --install-extension vscode-icons-team.vscode-icons
 code --install-extension wayou.vscode-todo-highlight
 code --install-extension wix.vscode-import-cost
 code --install-extension yzhang.markdown-all-in-one
