@@ -80,7 +80,7 @@ My dotfiles.
 ### [7-Zip](https://7-zip.org)
 
 * Show icons in context menu.
-* Keep only "Open archive", "Extract files...", "Extract here", "Add to archive" and "CRC SHA >" context menu items.
+* Keep only `Open archive`, `Extract files...`, `Extract here` and `Add to archive` context menu items.
 * Use VLC as the viewer.
 * Use Notepad++ as the editor.
 * Enable full row select.
@@ -90,7 +90,7 @@ My dotfiles.
 * Use the Darcula theme.
 * Install the Android Virtual Device component.
 * Change font size with mouse wheel.
-* Set editor font to "Fira Code" and enable font ligatures.
+* Set editor font to `Fira Code` and enable font ligatures.
 
 ### [Bulk Rename Utility](https://bulkrenameutility.co.uk/Download.php)
 
@@ -110,15 +110,15 @@ also delete it in the user folder.
 
 ### [Deluge](http://download.deluge-torrent.org/windows)
 
-* Download to "X:\Torrents".
+* Download to `X:\Torrents`.
 * Disable system tray icon.
 
 ### [Discord](https://discordapp.com/download)
 
 * Disable in-game overlay.
 * Start minimized.
-* Set "Voicemeeter Output" as the input device.
-* Set "Voicemeeter Aux Input" as the output device.
+* Set `Voicemeeter Output` as the input device.
+* Set `Voicemeeter Aux Input` as the output device.
 * Pin to system tray.
 
 ### Edge
@@ -142,10 +142,11 @@ also delete it in the user folder.
 
 * Use Visual Studio Code as Git’s default editor.
 * Checkout as-is, commit Unix-style line endings.
+* Copy global config and ignores from [here](https://github.com/karlkoorna/dotfiles/tree/master/git).
 
 ### [GitHub Desktop](https://desktop.github.com)
 
-* Clone repositories to “X:\GitHub”.
+* Clone repositories to `X:\GitHub`.
 
 ### [Insomnia](https://insomnia.rest)
 
@@ -163,7 +164,7 @@ also delete it in the user folder.
 
 ### [Node.js](https://nodejs.org)
 
-* Install packages from **[here](https://github.com/karlkoorna/dotfiles/blob/master/npm/packages.sh)**.
+* Install packages from [here](https://github.com/karlkoorna/dotfiles/blob/master/npm/packages.sh).
 
 ### [Notepad++](https://notepad-plus-plus.org/download)
 
@@ -178,7 +179,7 @@ also delete it in the user folder.
 
 ### [Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer)
 
-* Install in “X:\Programs”.
+* Install in `X:\Programs`.
 * Replace Task Manager.
 
 ### [Snipaste](http://snapfiles.com/downloads/snipaste/dlsnipaste.html)
@@ -188,9 +189,9 @@ also delete it in the user folder.
 ### [Steam](https://store.steampowered.com/about)
 
 * Disable Big Picture Overlay.
-* Open overlay with "Shift + '".
-* Switch to **[Metro](https://metroforsteam.com)** skin.
-* Add “X:\Games\Steam” games library folder.
+* Open overlay with `Shift + '`.
+* Install the **[Metro](https://metroforsteam.com)** skin.
+* Add `X:\Games\Steam` games library folder.
 * Allow downloads during gameplay.
 * Remove all music library folders and do not scan Steam folders.
 * Pin to system tray.
@@ -207,7 +208,7 @@ also delete it in the user folder.
 
 ### [Visual Studio Code](https://code.visualstudio.com)
 
-* Copy settings and install packages from **[here](https://github.com/karlkoorna/dotfiles/tree/master/vscode)**.
+* Copy settings and install packages from [here](https://github.com/karlkoorna/dotfiles/tree/master/vscode).
 
 ### [Visual Studio Community](https://visualstudio.microsoft.com/vs)
 
@@ -220,9 +221,9 @@ also delete it in the user folder.
 
 * Set first input to WDM microphone.
 * Set first output to WDM headphones.
-* Set "Voicemeeter Input" as the default playback.
-* Set "Voicemeeter Aux Output" as the default recording device.
-* Keep H1>B1, V1>A1 and V2>A1 routings.
+* Set `Voicemeeter Input` as the default playback.
+* Set `Voicemeeter Aux Output` as the default recording device.
+* Keep `H1>B1`, `V1>A1` and `V2>A1` routings.
 * Run app at startup.
 * Hook volume keys for A1.
 * Pin to system tray.
