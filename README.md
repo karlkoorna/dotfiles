@@ -102,7 +102,7 @@ My dotfiles.
 
 #### [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [OneTab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall), [Stylish](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe), [Violentmonkey](https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag), [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg), [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa)
 
-### [Creative Cloud](https://creative.adobe.com/products/download/creative-cloud) (Photoshop, Illustrator, Premiere, After Effects)
+### [Creative Cloud](https://creative.adobe.com/products/download/creative-cloud) (Photoshop, Illustrator, Premiere, After Effects, Acrobat Pro)
 
 * Do not launch Creative Cloud at login, sync files or fonts.
 * Unpin the Creative Cloud files folder from the File Explorer sidebar,
