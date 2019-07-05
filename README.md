@@ -188,8 +188,6 @@ also delete it in the user folder.
 
 ### [Python](https://python.org)
 
-* Install packages from [here](https://github.com/karlkoorna/dotfiles/blob/master/python/packages.sh).
-
 ### [Snipaste](http://snapfiles.com/downloads/snipaste/dlsnipaste.html)
 
 * Copy config from [here](https://github.com/karlkoorna/dotfiles/blob/master/snipaste/config.ini).
