@@ -14,4 +14,4 @@ code --install-extension wayou.vscode-todo-highlight
 code --install-extension wix.vscode-import-cost
 code --install-extension yzhang.markdown-all-in-one
 code --install-extension Zignd.html-css-class-completion
-code --install-extension  ms-python.python
+code --install-extension ms-python.python
