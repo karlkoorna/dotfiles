@@ -92,6 +92,10 @@ My dotfiles.
 * Change font size with mouse wheel.
 * Set editor font to `Fira Code` and enable font ligatures.
 
+### [AutoHotKey](https://www.autohotkey.com)
+
+Get the script from [here](https://gist.github.com/karlkoorna/56772f47c964461201c71e91d310c603).
+
 ### [Bulk Rename Utility](https://bulkrenameutility.co.uk/Download.php)
 
 ### [Chrome](https://google.com/chrome)
