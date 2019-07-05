@@ -92,7 +92,7 @@ My dotfiles.
 * Change font size with mouse wheel.
 * Set editor font to `Fira Code` and enable font ligatures.
 
-### [AutoHotKey](https://www.autohotkey.com)
+### [AutoHotKey](https://autohotkey.com)
 
 Copy the script to `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup` from [here](https://gist.github.com/karlkoorna/56772f47c964461201c71e91d310c603).
 
@@ -185,6 +185,10 @@ also delete it in the user folder.
 
 * Install in `X:\Programs`.
 * Replace Task Manager.
+
+### [Python](https://python.org)
+
+* Install packages from [here](https://github.com/karlkoorna/dotfiles/blob/master/python/packages.sh).
 
 ### [Snipaste](http://snapfiles.com/downloads/snipaste/dlsnipaste.html)
 
