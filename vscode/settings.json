@@ -5,6 +5,9 @@
 	"[jsonc]": {
 		"editor.tabSize": 2
 	},
+	"[python]": {
+		"files.trimTrailingWhitespace": true
+	},
 	"breadcrumbs.enabled": true,
 	"breadcrumbs.filePath": "last",
 	"css.validate": false,

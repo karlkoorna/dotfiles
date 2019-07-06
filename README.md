@@ -92,9 +92,7 @@ My dotfiles.
 * Change font size with mouse wheel.
 * Set editor font to `Fira Code` and enable font ligatures.
 
-### [AutoHotKey](https://autohotkey.com)
-
-Copy the script to `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup` from [here](https://gist.github.com/karlkoorna/56772f47c964461201c71e91d310c603).
+### [AutoHotKey](https://autohotkey.com) [📄](https://gist.github.com/karlkoorna/ef7043fa993320c0057b7c877d9aad1c)
 
 ### [Bulk Rename Utility](https://bulkrenameutility.co.uk/Download.php)
 
@@ -156,10 +154,9 @@ also delete it in the user folder.
 
 ### [Microsoft Office](https://setup.office.com/downloadoffice) (Word, Excel, PowerPoint)
 
-### [MP3-Tag](https://mp3tag.de/en/dodownload.html)
+### [MP3Tag](https://mp3tag.de/en/dodownload.html)
 
-* Write only ID3v2.3 UTF-16 tags.
-* Remove only ID3v1 tags.
+* Copy sources and actions from [here](https://github.com/karlkoorna/dotfiles/tree/master/mp3tag).
 
 ### [MySQL](https://dev.mysql.com/downloads/mysql)
 
@@ -172,14 +169,11 @@ also delete it in the user folder.
 
 ### [Notepad++](https://notepad-plus-plus.org/download)
 
-* Use Unix line endings.
-* Use 2 spaces in JSON.
-* Auto insert all character pairs.
-* Update files silently.
-
 ### [Open-EID](https://installer.id.ee)
 
 * Unselect DigiDoc3 Client, TeRa Client and Internet Explorer support.
+
+### [PotPlayer](https://potplayer.daum.net)
 
 ### [Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer)
 
@@ -188,14 +182,12 @@ also delete it in the user folder.
 
 ### [Python](https://python.org)
 
-### [Snipaste](http://snapfiles.com/downloads/snipaste/dlsnipaste.html)
-
-* Copy config from [here](https://github.com/karlkoorna/dotfiles/blob/master/snipaste/config.ini).
+### [Snipaste](http://snapfiles.com/downloads/snipaste/dlsnipaste.html) [📁](https://github.com/karlkoorna/dotfiles/blob/master/snipaste/config.ini)
 
 ### [Steam](https://store.steampowered.com/about)
 
 * Disable Big Picture Overlay.
-* Open overlay with `Shift + '`.
+* Open overlay with `Shift + ~`.
 * Install the **[Metro](https://metroforsteam.com)** skin.
 * Add `X:\Games\Steam` games library folder.
 * Allow downloads during gameplay.
@@ -207,31 +199,27 @@ also delete it in the user folder.
 * Highest quality settings.
 * Do not output audio.
 
-### [TranslucentTB](https://github.com/TranslucentTB/TranslucentTB/releases)
+### [TranslucentTB](https://github.com/TranslucentTB/TranslucentTB)
 
-* Clear taskbar at all times.
 * Open at boot.
 
 ### [Visual Studio Code](https://code.visualstudio.com)
 
 * Copy settings and install packages from [here](https://github.com/karlkoorna/dotfiles/tree/master/vscode).
 
-### [Visual Studio Community](https://visualstudio.microsoft.com/vs)
+### [Visual Studio Community](https://visualstudio.microsoft.com/vs) [📁](https://github.com/karlkoorna/dotfiles/tree/master/vs)
 
-* Choose .NET, UWP, C++ and Unity workloads.
+* Choose .NET, C++, UWP and ASP.NET workloads.
 * Use the Dark theme.
-
-### [VLC](https://videolan.org/vlc)
 
 ### [Voicemeeter Banana](https://vb-audio.com/Voicemeeter/banana.htm)
 
 * Set first input to WDM microphone.
-* Set first output to WDM headphones.
-* Set `Voicemeeter Input` as the default playback.
-* Set `Voicemeeter Aux Output` as the default recording device.
-* Keep `H1>B1`, `V1>A1` and `V2>A1` routings.
-* Run app at startup.
+* Set first output to WDM speakers.
+* Set `Voicemeeter Input` as the default playback device.
+* Set `Voicemeeter Output` as the default recording device.
+* Keep only `H1>B1`, `V1>A1` and `V2>A1` routings.
+* Pin to system tray and run at startup.
 * Hook volume keys for A1.
-* Pin to system tray.
 
-### [Wireshark](https://wireshark.org/#download)
+### [Wireshark](https://wireshark.org)
