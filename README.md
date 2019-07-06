@@ -81,26 +81,20 @@ My dotfiles.
 
 * Show icons in context menu.
 * Keep only `Open archive`, `Extract files...`, `Extract here` and `Add to archive` context menu items.
-* Use VLC as the viewer.
+* Use PotPlayer as the viewer.
 * Use Notepad++ as the editor.
 * Enable full row select.
 
-### [Android Studio](https://developer.android.com/studio)
-
-* Use the Darcula theme.
-* Install the Android Virtual Device component.
-* Change font size with mouse wheel.
-* Set editor font to `Fira Code` and enable font ligatures.
+### [Android Studio](https://developer.android.com/studio) [📁](https://github.com/karlkoorna/dotfiles/tree/master/androidstudio)
 
 ### [AutoHotKey](https://autohotkey.com) [📄](https://gist.github.com/karlkoorna/ef7043fa993320c0057b7c877d9aad1c)
 
-### [Bulk Rename Utility](https://bulkrenameutility.co.uk/Download.php)
+### [Bulk Rename Utility](https://bulkrenameutility.co.uk)
 
 ### [Chrome](https://google.com/chrome)
 
 * Hide home button.
 * Show bookmarks bar.
-* Send do not track requests.
 
 #### [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [OneTab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall), [Stylish](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe), [Violentmonkey](https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag), [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg), [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa)
 
@@ -110,64 +104,53 @@ My dotfiles.
 * Unpin the Creative Cloud files folder from the File Explorer sidebar,
 also delete it in the user folder.
 
-### [Deluge](http://download.deluge-torrent.org/windows)
+### [Deluge](https://deluge-torrent.org)
 
-* Download to `X:\Torrents`.
 * Disable system tray icon.
 
-### [Discord](https://discordapp.com/download)
+### [Discord](https://discordapp.com)
 
 * Disable in-game overlay.
 * Start minimized.
 * Set `Voicemeeter Output` as the input device.
-* Set `Voicemeeter Aux Input` as the output device.
+* Set `Voicemeeter Input` as the output device.
 * Pin to system tray.
 
 ### Edge
 
 * Show bookmarks bar.
 * Do not ask what to do with each download.
-* Send do not track requests.
 
 #### [uBlock Origin](https://microsoft.com/p/ublock-origin/9nblggh444l4)
 
-### [Firefox](https://mozilla.org/firefox/download)
+### [Firefox](https://mozilla.org/firefox)
 
-* Do not check if Firefox is your default browser.
-* Always use tracking protection.
-* Only show the URL and bookmarks bar, downloads and bookmarks icons.
+* Only show the URL and bookmarks bar.
 * Do not warn when closing multiple tabs.
 
 #### [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin)
 
-### [Git](https://git-scm.com/download/win)
+### [Git](https://git-scm.com) [📁](https://github.com/karlkoorna/dotfiles/tree/master/git)
 
 * Use Visual Studio Code as Git’s default editor.
 * Checkout as-is, commit Unix-style line endings.
-* Copy global config and ignores from [here](https://github.com/karlkoorna/dotfiles/tree/master/git).
 
 ### [GitHub Desktop](https://desktop.github.com)
 
-* Clone repositories to `X:\GitHub`.
-
 ### [Insomnia](https://insomnia.rest)
 
-### [Microsoft Office](https://setup.office.com/downloadoffice) (Word, Excel, PowerPoint)
+### [Microsoft Office](https://office.com) (Word, Excel, PowerPoint)
 
-### [MP3Tag](https://mp3tag.de/en/dodownload.html)
-
-* Copy sources and actions from [here](https://github.com/karlkoorna/dotfiles/tree/master/mp3tag).
+### [MP3Tag](https://mp3tag.de) [📁](https://github.com/karlkoorna/dotfiles/tree/master/mp3tag)
 
 ### [MySQL](https://dev.mysql.com/downloads/mysql)
 
 * Install Server with documentation and Workbench.
 * Use Legacy Authentication Method.
 
-### [Node.js](https://nodejs.org)
+### [Node.js](https://nodejs.org) [📁](https://github.com/karlkoorna/dotfiles/tree/master/nodejs)
 
-* Install packages from [here](https://github.com/karlkoorna/dotfiles/blob/master/npm/packages.sh).
-
-### [Notepad++](https://notepad-plus-plus.org/download)
+### [Notepad++](https://notepad-plus-plus.org) [📁](https://github.com/karlkoorna/dotfiles/tree/master/notepad++)
 
 ### [Open-EID](https://installer.id.ee)
 
@@ -177,19 +160,19 @@ also delete it in the user folder.
 
 ### [Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer)
 
-* Install in `X:\Programs`.
 * Replace Task Manager.
 
 ### [Python](https://python.org)
 
-### [Snipaste](http://snapfiles.com/downloads/snipaste/dlsnipaste.html) [📁](https://github.com/karlkoorna/dotfiles/blob/master/snipaste/config.ini)
+### [Snipaste](https://snipaste.com) [📁](https://github.com/karlkoorna/dotfiles/tree/master/snipaste)
 
-### [Steam](https://store.steampowered.com/about)
+### [SpeedCrunch](https://www.speedcrunch.org) [📁](https://github.com/karlkoorna/dotfiles/tree/master/speedcrunch)
+
+### [Steam](https://store.steampowered.com)
 
 * Disable Big Picture Overlay.
 * Open overlay with `Shift + ~`.
 * Install the **[Metro](https://metroforsteam.com)** skin.
-* Add `X:\Games\Steam` games library folder.
 * Allow downloads during gameplay.
 * Remove all music library folders and do not scan Steam folders.
 * Pin to system tray.
@@ -199,13 +182,11 @@ also delete it in the user folder.
 * Highest quality settings.
 * Do not output audio.
 
-### [TranslucentTB](https://github.com/TranslucentTB/TranslucentTB)
+### [TranslucentTB](https://github.com/TranslucentTB/TranslucentTB) [📁](https://github.com/karlkoorna/dotfiles/tree/master/translucenttb)
 
 * Open at boot.
 
-### [Visual Studio Code](https://code.visualstudio.com)
-
-* Copy settings and install packages from [here](https://github.com/karlkoorna/dotfiles/tree/master/vscode).
+### [Visual Studio Code](https://code.visualstudio.com) [📁](https://github.com/karlkoorna/dotfiles/tree/master/vscode)
 
 ### [Visual Studio Community](https://visualstudio.microsoft.com/vs) [📁](https://github.com/karlkoorna/dotfiles/tree/master/vs)
 
