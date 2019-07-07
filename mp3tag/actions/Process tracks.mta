@@ -18,49 +18,42 @@ F=TITLE
 [#3]
 T=4
 F=TITLE
-1=( *)version( *)(\\W)
-2=$3
+1=TV (Edit|Size)
+2=TV Size
 3=0
 
 [#4]
 T=4
 F=TITLE
-1=[^ ]TV Edit[^ ]
-2=TV Size
+1=([^ ])Instrumental([^ ])
+2=$1Off Vocal$2
 3=0
 
 [#5]
-T=4
-F=TITLE
-1=[^ ]Instrumental[^ ]
-2=Off Vocal
-3=0
-
-[#6]
 T=5
 F=TITLE
 1=$trim(%title%)
 
-[#7]
+[#6]
 T=1
 F=ALBUM
 1=1
 2="-~().:;!?\u300c\u300d
 
-[#8]
+[#7]
 T=4
 F=YEAR
 1=(\\d{4})
 2=$1
 3=0
 
-[#9]
+[#8]
 T=5
 F=TRACK
 1=%_counter%/%_total_files%
 
-[#10]
+[#9]
 T=5
 F=_FILENAME
-1=$validate($num($cutleft(%discnumber%, $strchr(%discnumber%,/)), 2)$num(%track%, 2) - %title%,)
+1=$validate($num($cutright(%discnumber%, 2), 2)$num(%track%, 2) - %title%,)
 
