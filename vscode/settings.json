@@ -1,9 +1,11 @@
 {
 	"[json]": {
-		"editor.tabSize": 2
+		"editor.tabSize": 2,
+		"editor.insertSpaces": false
 	},
 	"[jsonc]": {
-		"editor.tabSize": 2
+		"editor.tabSize": 2,
+		"editor.insertSpaces": false
 	},
 	"[python]": {
 		"files.trimTrailingWhitespace": true
@@ -36,9 +38,6 @@
 		],
 		"parser": "babel-eslint",
 		"parserOptions": {
-			"ecmaFeatures": {
-				"jsx": true
-			},
 			"ecmaVersion": 9,
 			"sourceType": "module"
 		},
@@ -205,7 +204,12 @@
 			"no-unreachable": "error",
 			"no-unsafe-finally": "error",
 			"no-unsafe-negation": "warn",
-			"no-unused-expressions": "error",
+			"no-unused-expressions": [
+				"error",
+				{
+					"allowTaggedTemplates": true
+				}
+			],
 			"no-unused-labels": "warn",
 			"no-unused-vars": "error",
 			"no-use-before-define": [
@@ -499,5 +503,6 @@
 	"workbench.tree.indent": 20,
 	"workbench.view.alwaysShowHeaderActions": true,
 	"zenMode.hideLineNumbers": false,
-	"zenMode.hideTabs": false
+	"zenMode.hideTabs": false,
+	"terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
 }
