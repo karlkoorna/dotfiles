@@ -195,5 +195,6 @@ also delete it in the user folder.
 * Keep only `H1>B1`, `V1>A1` and `V2>A1` routings.
 * Pin to system tray and run at startup.
 * Hook volume keys for A1.
+* Pin system tray icon.
 
 ### [Wireshark](https://wireshark.org)
