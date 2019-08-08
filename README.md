@@ -27,33 +27,35 @@ My dotfiles.
 * **Lock screen**
 	* Show detailed weather status on the lock screen. 
 * **Start**
-	* Hide app list in Start menu.
+	* Hide app list in start menu.
 	* Show recently added and most used apps.
 	* Keep only Settings and Personal folder visible.
 	* Unpin all tiles.
 * **Taskbar**
 	* Do not show taskbars on all displays.
-	* Show Search as an icon.
-	* Hide Task View and Windows Ink buttons.
+	* Show search as an icon.
+	* Hide task view and Windows Ink buttons.
 	* Unpin all shortcuts except File Explorer and Google Chrome.
 
 ### Accounts
 
-* **Email & app accounts**
+* **Email & accounts**
 	* Add a mail, calendar and people account.
 	* Download new emails as items arrive.
-* **Time & language**
-	* **Date & time**
-		* Change date and time formats.
-* **Region & language**
-	* Add keyboard layouts.
-* **Speech**
-	* Recognize non-native accents for this language.
+
+### Time & Language
+
+* **Date & time**
+	* Set time zone automatically.
+* **Region**
+	* Update data formats.
+* **Language**
+	* Add preferred languages.
 
 ### Gaming
 
-* **Game bar**
-	* Disable the game bar.
+* **Captures**
+* Record high quality 60fps video.
 
 ### Ease of Access
 
@@ -62,17 +64,17 @@ My dotfiles.
 * **Keyboard**
 	* Disable sticky, toggle and filter keys' shortcut keys.
 
-### Cortana
-
-* Talk to Cortana.
-* Let Cortana respond to “Hey Cortana”.
-
 ### Update & security
 
 * **Windows Update**
 	* Install all available updates. Repeat until none are left.
 * **For developers**
-	* Enable developer mode, show file extensions and hidden files.
+	* Enable developer mode, show file extensions, hidden files and full path.
+
+### Search
+
+* **Searching Windows**
+* Select enhanced indexing.
 
 ## Software
 
