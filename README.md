@@ -171,10 +171,8 @@ also delete it in the user folder.
 
 * Disable Big Picture Overlay.
 * Open overlay with `Shift + ~`.
-* Install the **[Metro](https://metroforsteam.com)** skin.
 * Allow downloads during gameplay.
-* Remove all music library folders and do not scan Steam folders.
-* Pin to system tray.
+* Pin system tray icon.
 
 #### [Wallpaper Engine](https://store.steampowered.com/app/431960/Wallpaper_Engine)
 
