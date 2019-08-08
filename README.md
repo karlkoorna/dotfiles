@@ -9,6 +9,11 @@ My dotfiles.
 ## Operating System
 *(Windows 10 64-bit Professional Edition)*
 
+Turn on the following Windows Features:
+* Hyper-V
+* Telnet
+* Subsystem for Linux
+
 ### System
 
 * **Notifications & actions**
