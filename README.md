@@ -191,8 +191,8 @@ also delete it in the user folder.
 
 * Set first input to WDM microphone.
 * Set first output to WDM speakers.
-* Set `Voicemeeter Input` as the default playback device.
-* Set `Voicemeeter Output` as the default recording device.
+* Set `Voicemeeter Input` as the default output device.
+* Set `Voicemeeter Output` as the default input device.
 * Keep only `H1>B1`, `V1>A1` and `V2>A1` routings.
 * Pin to system tray and run at startup.
 * Hook volume keys for A1.
