@@ -116,11 +116,6 @@ also delete it in the user folder.
 * Set `Voicemeeter Input` as the output device.
 * Pin to system tray.
 
-### Edge
-
-* Show bookmarks bar.
-* Do not ask what to do with each download.
-
 #### [uBlock Origin](https://microsoft.com/p/ublock-origin/9nblggh444l4)
 
 ### [Firefox](https://mozilla.org/firefox)
