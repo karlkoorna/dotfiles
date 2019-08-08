@@ -4,8 +4,7 @@ My dotfiles.
 ## Fonts
 
 [FiraCode](https://github.com/tonsky/FiraCode/releases)\
-[FontAwesome](https://fontawesome.com/how-to-use/on-the-desktop/setup/getting-started)\
-[Material Design Icons](https://github.com/google/material-design-icons/tree/master/iconfont)
+[FontAwesome](https://fontawesome.com/how-to-use/on-the-desktop/setup/getting-started)
 
 ## Operating System
 *(Windows 10 64-bit Professional Edition)*
