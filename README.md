@@ -25,19 +25,17 @@ My dotfiles.
 * **Colors**
 	* Show accent color on all surfaces.
 * **Lock screen**
-	* Don not show any apps on the lock screen.
+	* Show detailed weather status on the lock screen. 
 * **Start**
+	* Hide app list in Start menu.
 	* Show recently added and most used apps.
-	* Keep only the settings folder visible.
-	* Unpin everything.
+	* Keep only Settings and Personal folder visible.
+	* Unpin all tiles.
 * **Taskbar**
-	* Hide location, contacts and Windows Ink icons.
 	* Do not show taskbars on all displays.
-	* Hide Cortana and Task View buttons.
-	* Keep only File Explorer pinned.
-* **Apps**
-	* Uninstall Mobile Plans, Solitaire Collection, OneNote, Skype and My Office.
-	* Unpin the OneDrive folder from the File Explorer sidebar, also delete it from the user folder.
+	* Show Search as an icon.
+	* Hide Task View and Windows Ink buttons.
+	* Unpin all shortcuts except File Explorer and Google Chrome.
 
 ### Accounts
 
