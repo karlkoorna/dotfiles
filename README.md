@@ -109,11 +109,10 @@ also delete it in the user folder.
 
 ### [Discord](https://discordapp.com)
 
-* Disable in-game overlay.
-* Start minimized.
 * Set `Voicemeeter Output` as the input device.
 * Set `Voicemeeter Input` as the output device.
-* Pin to system tray.
+* Disable in-game overlay.
+* Start minimized.
 
 #### [uBlock Origin](https://microsoft.com/p/ublock-origin/9nblggh444l4)
 
