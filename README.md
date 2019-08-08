@@ -109,7 +109,7 @@ also delete it in the user folder.
 
 ### [Discord](https://discordapp.com)
 
-* Set `Voicemeeter Output` as the input device.
+* Set `Voicemeeter Aux Output` as the input device.
 * Set `Voicemeeter Input` as the output device.
 * Disable in-game overlay.
 * Start minimized.
