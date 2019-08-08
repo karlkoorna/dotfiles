@@ -114,7 +114,6 @@ also delete it in the user folder.
 * Set `Voicemeeter Aux Output` as the input device.
 * Set `Voicemeeter Input` as the output device.
 * Disable in-game overlay.
-* Start minimized.
 
 #### [uBlock Origin](https://microsoft.com/p/ublock-origin/9nblggh444l4)
 
