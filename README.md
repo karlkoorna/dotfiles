@@ -17,6 +17,8 @@ My dotfiles.
 	* Disable focus assist and automatic rules.
 * **Power & sleep**
 	* The computer should never turn off the screen or go to sleep.
+* **Clipboard**
+	* Enable clipboard history.
 
 ### Personalization
 
