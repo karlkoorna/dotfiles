@@ -175,6 +175,7 @@ also delete it in the user folder.
 #### [Wallpaper Engine](https://store.steampowered.com/app/431960/Wallpaper_Engine)
 
 * Highest quality settings.
+* Auto start with high priority.
 * Do not output audio.
 
 ### [TranslucentTB](https://github.com/TranslucentTB/TranslucentTB) [📁](https://github.com/karlkoorna/dotfiles/tree/master/translucenttb)
