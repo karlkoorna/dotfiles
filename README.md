@@ -124,7 +124,7 @@ Turn on the following Windows Features:
 
 #### [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin)
 
-### [Git](https://git-scm.com)
+### [Git](https://git-scm.com) [📄](https://gist.github.com/karlkoorna/c5e85b426e0bd36a9084485f126cc968)
 
 * Disable Git GUI context menu item.
 * Use Visual Studio Code Insiders as Git’s default editor.
