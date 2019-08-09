@@ -79,7 +79,7 @@ Turn on the following Windows Features:
 ### Search
 
 * **Searching Windows**
-* Select enhanced indexing.
+	* Select enhanced indexing.
 
 ## Software
 
