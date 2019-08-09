@@ -97,18 +97,14 @@ Turn on the following Windows Features:
 
 ### [Bulk Rename Utility](https://bulkrenameutility.co.uk)
 
-### [Chrome](https://google.com/chrome)
+### [Chrome Canary](https://google.com/chrome/canary)
 
 * Hide home button.
 * Show bookmarks bar.
 
 #### [Better TTV](https://chrome.google.com/webstore/detail/betterttv/ajopnjidmegmdimjlfnijceegpefgped), [Currently](https://chrome.google.com/webstore/detail/currently/ojhmphdkpgbibohbnpbfiefkgieacjmh), [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa), [OneTab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall), [Reddit Enhancement Suite](https://chrome.google.com/webstore/detail/reddit-enhancement-suite/kbmfpngjjgdllneeigpgjifpgocmfgmb), [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg)
 
-### [Creative Cloud](https://creative.adobe.com/products/download/creative-cloud) (Photoshop, Illustrator, Premiere, After Effects, Acrobat Pro)
-
-* Do not launch Creative Cloud at login, sync files or fonts.
-* Unpin the Creative Cloud files folder from the File Explorer sidebar,
-also delete it in the user folder.
+### [Creative Cloud](https://creative.adobe.com/products/download/creative-cloud) (Photoshop, Illustrator, Premiere, After Effects, Acrobat)
 
 ### [Deluge](https://deluge-torrent.org)
 
@@ -120,11 +116,10 @@ also delete it in the user folder.
 * Set `Voicemeeter Input` as the output device.
 * Disable in-game overlay.
 
-#### [uBlock Origin](https://microsoft.com/p/ublock-origin/9nblggh444l4)
+### [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer)
 
-### [Firefox](https://mozilla.org/firefox)
-
-* Only show the URL and bookmarks bar.
+* Switch to default theme.
+* Only show developer tools button, URL and bookmarks bars.
 * Do not warn when closing multiple tabs.
 
 #### [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin)
