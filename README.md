@@ -30,7 +30,7 @@ Turn on the following Windows Features:
 * **Colors**
 	* Show accent color on all surfaces.
 * **Lock screen**
-	* Show detailed weather status on the lock screen. 
+	* Show detailed weather status on the lock screen.
 * **Start**
 	* Hide app list in start menu.
 	* Show recently added and most used apps.
@@ -116,6 +116,8 @@ Turn on the following Windows Features:
 * Set `Voicemeeter Input` as the output device.
 * Disable in-game overlay.
 
+### [Docker](https://docker.com/products/docker-desktop)
+
 ### [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer)
 
 * Switch to default theme.
@@ -133,6 +135,8 @@ Turn on the following Windows Features:
 ### [GitHub Desktop](https://desktop.github.com)
 
 ### [Insomnia](https://insomnia.rest)
+
+* Do not validate certificates.
 
 ### [Microsoft Office](https://office.com) (Word, Excel, PowerPoint)
 

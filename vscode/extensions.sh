@@ -5,6 +5,7 @@ code-insiders --install-extension EditorConfig.EditorConfig
 code-insiders --install-extension formulahendry.auto-rename-tag
 code-insiders --install-extension GrapeCity.gc-excelviewer
 code-insiders --install-extension mechatroner.rainbow-csv
+code-insiders --install-extension ms-azuretools.vscode-docker
 code-insiders --install-extension richie5um2.vscode-sort-json
 code-insiders --install-extension shardulm94.trailing-spaces
 code-insiders --install-extension shinnn.stylelint

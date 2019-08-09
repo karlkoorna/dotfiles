@@ -1,11 +1,11 @@
 {
 	"[json]": {
-		"editor.tabSize": 2,
-		"editor.insertSpaces": false
+		"editor.insertSpaces": false,
+		"editor.tabSize": 2
 	},
 	"[jsonc]": {
-		"editor.tabSize": 2,
-		"editor.insertSpaces": false
+		"editor.insertSpaces": false,
+		"editor.tabSize": 2
 	},
 	"[python]": {
 		"files.trimTrailingWhitespace": true
@@ -384,7 +384,6 @@
 	"npm.enableScriptExplorer": true,
 	"php.validate.run": "onType",
 	"search.showLineNumbers": true,
-	"search.usePCRE2": true,
 	"sortLines.filterBlankLines": true,
 	"sortLines.sortEntireFile": true,
 	"stylelint.config": {
@@ -488,6 +487,7 @@
 	},
 	"telemetry.enableCrashReporter": false,
 	"telemetry.enableTelemetry": false,
+	"terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
 	"trailing-spaces.highlightCurrentLine": false,
 	"trailing-spaces.includeEmptyLines": false,
 	"trailing-spaces.trimOnSave": true,
@@ -503,6 +503,5 @@
 	"workbench.tree.indent": 20,
 	"workbench.view.alwaysShowHeaderActions": true,
 	"zenMode.hideLineNumbers": false,
-	"zenMode.hideTabs": false,
-	"terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
+	"zenMode.hideTabs": false
 }
