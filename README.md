@@ -126,6 +126,7 @@ Turn on the following Windows Features:
 
 ### [Git](https://git-scm.com) [📁](https://github.com/karlkoorna/dotfiles/tree/master/git)
 
+* Disable Git GUI context menu item.
 * Use Visual Studio Code Insiders as Git’s default editor.
 * Checkout as-is, commit Unix-style line endings.
 
@@ -180,6 +181,8 @@ Turn on the following Windows Features:
 * Open at boot.
 
 ### [Visual Studio Code Insiders](https://code.visualstudio.com/insiders) [📁](https://github.com/karlkoorna/dotfiles/tree/master/vscode)
+
+* Add actions to context menus.
 
 ### [Visual Studio Community](https://visualstudio.microsoft.com/vs) [📁](https://github.com/karlkoorna/dotfiles/tree/master/vs)
 
