@@ -30,7 +30,7 @@
 		<GUIConfig name="auto-insert" parentheses="yes" brackets="yes" curlyBrackets="yes" quotes="yes" doubleQuotes="yes" htmlXmlTag="yes" />
 		<GUIConfig name="MenuBar">show</GUIConfig>
 		<GUIConfig name="Caret" width="1" blinkRate="600" />
-		<GUIConfig name="ScintillaGlobalSettings" enableMultiSelection="no" />
+		<GUIConfig name="ScintillaGlobalSettings" enableMultiSelection="yes" />
 		<GUIConfig name="openSaveDir" value="0" defaultDirPath="" />
 		<GUIConfig name="titleBar" short="no" />
 		<GUIConfig name="wordCharList" useDefault="yes" charsAdded="" />
