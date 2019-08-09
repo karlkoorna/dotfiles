@@ -126,7 +126,7 @@ Turn on the following Windows Features:
 
 ### [Git](https://git-scm.com) [📁](https://github.com/karlkoorna/dotfiles/tree/master/git)
 
-* Use Visual Studio Code as Git’s default editor.
+* Use Visual Studio Code Insiders as Git’s default editor.
 * Checkout as-is, commit Unix-style line endings.
 
 ### [GitHub Desktop](https://desktop.github.com)
@@ -179,7 +179,7 @@ Turn on the following Windows Features:
 
 * Open at boot.
 
-### [Visual Studio Code](https://code.visualstudio.com) [📁](https://github.com/karlkoorna/dotfiles/tree/master/vscode)
+### [Visual Studio Code Insiders](https://code.visualstudio.com/insiders) [📁](https://github.com/karlkoorna/dotfiles/tree/master/vscode)
 
 ### [Visual Studio Community](https://visualstudio.microsoft.com/vs) [📁](https://github.com/karlkoorna/dotfiles/tree/master/vs)
 
