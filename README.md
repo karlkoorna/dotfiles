@@ -95,6 +95,8 @@ Turn on the following Windows Features:
 
 ### [AutoHotKey](https://autohotkey.com) [📄](https://gist.github.com/karlkoorna/ef7043fa993320c0057b7c877d9aad1c)
 
+### [Blender](https://blender.org)
+
 ### [Bulk Rename Utility](https://bulkrenameutility.co.uk)
 
 ### [Chrome Canary](https://google.com/chrome/canary)
@@ -118,7 +120,7 @@ Turn on the following Windows Features:
 
 ### [Docker](https://docker.com/products/docker-desktop)
 
-### [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer)
+### [Firefox Developer Edition](https://mozilla.org/en-US/firefox/developer)
 
 * Switch to default theme.
 * Only show developer tools button, URL and bookmarks bars.
@@ -144,28 +146,24 @@ Turn on the following Windows Features:
 
 ### [MySQL](https://dev.mysql.com/downloads/mysql)
 
-* Install Server with documentation and Workbench.
+* Install MySQL Server, MySQL Workbench and MySQL for Excel.
 * Use Legacy Authentication Method.
 
 ### [Node.js](https://nodejs.org) [📁](https://github.com/karlkoorna/dotfiles/tree/master/nodejs)
 
 ### [Notepad++](https://notepad-plus-plus.org) [📁](https://github.com/karlkoorna/dotfiles/tree/master/notepad++)
 
-### [Open-EID](https://installer.id.ee)
+### [eID](https://installer.id.ee)
 
-* Unselect DigiDoc3 Client, TeRa Client and Internet Explorer support.
+* Uncheck TeRa Client and Internet Explorer support.
 
 ### [PotPlayer](https://potplayer.daum.net)
 
-### [Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer)
-
-* Replace Task Manager.
-
-### [Python](https://python.org)
+### [Python](https://python.org/downloads)
 
 ### [Snipaste](https://snipaste.com) [📁](https://github.com/karlkoorna/dotfiles/tree/master/snipaste)
 
-### [SpeedCrunch](https://www.speedcrunch.org) [📁](https://github.com/karlkoorna/dotfiles/tree/master/speedcrunch)
+### [SpeedCrunch](https://speedcrunch.org) [📁](https://github.com/karlkoorna/dotfiles/tree/master/speedcrunch)
 
 ### [Steam](https://store.steampowered.com)
 
@@ -191,7 +189,7 @@ Turn on the following Windows Features:
 ### [Visual Studio Community](https://visualstudio.microsoft.com/vs) [📁](https://github.com/karlkoorna/dotfiles/tree/master/vs)
 
 * Choose .NET, C++, UWP and ASP.NET workloads.
-* Use the Dark theme.
+* Use the dark theme.
 
 ### [Voicemeeter Banana](https://vb-audio.com/Voicemeeter/banana.htm)
 
