@@ -136,6 +136,8 @@ Turn on the following Windows Features:
 
 ### [GitHub Desktop](https://desktop.github.com)
 
+### [Go](https://golang.org)
+
 ### [Insomnia](https://insomnia.rest)
 
 * Do not validate certificates.

@@ -10,6 +10,9 @@
 	"[python]": {
 		"files.trimTrailingWhitespace": true
 	},
+	"[go]": {
+		"editor.formatOnSave": false,
+	},
 	"breadcrumbs.enabled": true,
 	"breadcrumbs.filePath": "last",
 	"css.validate": false,
@@ -503,5 +506,7 @@
 	"workbench.tree.indent": 20,
 	"workbench.view.alwaysShowHeaderActions": true,
 	"zenMode.hideLineNumbers": false,
-	"zenMode.hideTabs": false
+	"zenMode.hideTabs": false,
+	"go.formatTool": "goformat",
+	"go.lintTool": "staticcheck"
 }

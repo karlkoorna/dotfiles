@@ -6,13 +6,14 @@ code-insiders --install-extension formulahendry.auto-rename-tag
 code-insiders --install-extension GrapeCity.gc-excelviewer
 code-insiders --install-extension mechatroner.rainbow-csv
 code-insiders --install-extension ms-azuretools.vscode-docker
+code-insiders --install-extension ms-python.python
+code-insiders --install-extension ms-vscode.Go
 code-insiders --install-extension richie5um2.vscode-sort-json
 code-insiders --install-extension shardulm94.trailing-spaces
 code-insiders --install-extension shinnn.stylelint
+code-insiders --install-extension Zignd.html-css-class-completion
 code-insiders --install-extension Tyriar.sort-lines
 code-insiders --install-extension vscode-icons-team.vscode-icons
 code-insiders --install-extension wayou.vscode-todo-highlight
 code-insiders --install-extension wix.vscode-import-cost
 code-insiders --install-extension yzhang.markdown-all-in-one
-code-insiders --install-extension Zignd.html-css-class-completion
-code-insiders --install-extension ms-python.python
