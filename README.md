@@ -91,9 +91,9 @@ Turn on the following Windows Features:
 * Use Notepad++ as the editor.
 * Enable full row select.
 
-### [Android Studio](https://developer.android.com/studio) [📁](https://github.com/karlkoorna/dotfiles/tree/master/androidstudio)
+### [Android Studio](https://developer.android.com/studio) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/androidstudio)
 
-### [AutoHotKey](https://autohotkey.com) [📄](https://gist.github.com/karlkoorna/ef7043fa993320c0057b7c877d9aad1c)
+### [AutoHotKey](https://autohotkey.com) [📁](https://github.com/karlkoorna/dotfiles/tree/master/scripts/ahk)
 
 ### [Blender](https://blender.org)
 
@@ -144,16 +144,16 @@ Turn on the following Windows Features:
 
 ### [Microsoft Office](https://office.com) (Word, Excel, PowerPoint)
 
-### [MP3Tag](https://mp3tag.de) [📁](https://github.com/karlkoorna/dotfiles/tree/master/mp3tag)
+### [MP3Tag](https://mp3tag.de) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/mp3tag)
 
 ### [MySQL](https://dev.mysql.com/downloads/mysql)
 
 * Install MySQL Server, MySQL Workbench and MySQL for Excel.
 * Use Legacy Authentication Method.
 
-### [Node.js](https://nodejs.org) [📁](https://github.com/karlkoorna/dotfiles/tree/master/nodejs)
+### [Node.js](https://nodejs.org) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/nodejs)
 
-### [Notepad++](https://notepad-plus-plus.org) [📁](https://github.com/karlkoorna/dotfiles/tree/master/notepad++)
+### [Notepad++](https://notepad-plus-plus.org) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/notepad++)
 
 ### [eID](https://installer.id.ee)
 
@@ -163,9 +163,9 @@ Turn on the following Windows Features:
 
 ### [Python](https://python.org/downloads)
 
-### [Snipaste](https://snipaste.com) [📁](https://github.com/karlkoorna/dotfiles/tree/master/snipaste)
+### [Snipaste](https://snipaste.com) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/snipaste)
 
-### [SpeedCrunch](https://speedcrunch.org) [📁](https://github.com/karlkoorna/dotfiles/tree/master/speedcrunch)
+### [SpeedCrunch](https://speedcrunch.org) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/speedcrunch)
 
 ### [Steam](https://store.steampowered.com)
 
@@ -180,17 +180,17 @@ Turn on the following Windows Features:
 * Auto start with high priority.
 * Do not output audio.
 
-### [TranslucentTB](https://github.com/TranslucentTB/TranslucentTB) [📁](https://github.com/karlkoorna/dotfiles/tree/master/translucenttb)
+### [TranslucentTB](https://github.com/TranslucentTB/TranslucentTB) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/translucenttb)
 
 * Open at boot.
 
 ### [Unity](https://unity.com)
 
-### [Visual Studio Code Insiders](https://code.visualstudio.com/insiders) [📁](https://github.com/karlkoorna/dotfiles/tree/master/vscode)
+### [Visual Studio Code Insiders](https://code.visualstudio.com/insiders) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/vscode)
 
 * Add actions to context menus.
 
-### [Visual Studio Community](https://visualstudio.microsoft.com/vs) [📁](https://github.com/karlkoorna/dotfiles/tree/master/vs)
+### [Visual Studio Community](https://visualstudio.microsoft.com/vs) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/vs)
 
 * Choose .NET, C++, UWP and ASP.NET workloads.
 * Use the dark theme.
