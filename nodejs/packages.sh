@@ -1,1 +1,2 @@
-npm i -g http-server nodemon create-react-app eslint babel-eslint eslint-plugin-react eslint-plugin-jsx-a11y
+npm i -g nodemon http-server
+npm i -g @vue/cli create-react-app
