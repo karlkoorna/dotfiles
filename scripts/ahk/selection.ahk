@@ -35,3 +35,15 @@ ClipWait, 1
 Run "https://google.com/search?q=%clipboard%"
 Clipboard := old
 return
+
+; CTRL+ALT+E -- Copy public IP to clipboard.
+^!e::
+ip=0.0.0.0
+tmp=%WinDir%/temp/ip.tmp
+UrlDownloadToFile, https://checkip.amazonaws.com, %tmp%
+FileReadLine, ip, %tmp%, 1
+FileDelete, %tmp%
+Clipboard := ip
+ToolTip, Copied
+SetTimer, RemoveToolTip, 500
+return
