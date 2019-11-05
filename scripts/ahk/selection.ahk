@@ -1,3 +1,7 @@
+RemoveToolTip:
+ToolTip
+return
+
 ; CTRL+ALT+X -- Delete selection without copying to clipboard.
 ^!x::
 Send {BS}
@@ -15,9 +19,10 @@ Send ^v
 Clipboard := new
 return
 
-; CTRL+ALT+D -- Copy length of selection into clipboard.
+; CTRL+ALT+D -- Display length of selection.
 ^!d::
 Send ^c
 ClipWait, 1
-Clipboard := StrLen(Clipboard)
+ToolTip, % StrLen(Clipboard)
+SetTimer, RemoveToolTip, 5000
 return
