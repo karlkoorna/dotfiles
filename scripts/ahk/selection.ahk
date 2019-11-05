@@ -26,3 +26,12 @@ ClipWait, 1
 ToolTip, % StrLen(Clipboard)
 SetTimer, RemoveToolTip, 5000
 return
+
+; CTRL+ALT+G -- Google search selection.
+^!g::
+old := ClipboardAll
+Send ^c
+ClipWait, 1
+Run "https://google.com/search?q=%clipboard%"
+Clipboard := old
+return
