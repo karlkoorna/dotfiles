@@ -24,7 +24,7 @@ return
 Send ^c
 ClipWait, 1
 ToolTip, % StrLen(Clipboard)
-SetTimer, RemoveToolTip, 5000
+SetTimer, RemoveToolTip, 3000
 return
 
 ; CTRL+ALT+G -- Google search selection.
