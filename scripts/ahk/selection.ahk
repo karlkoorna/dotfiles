@@ -1,6 +1,7 @@
-RemoveToolTip:
-ToolTip
-return
+; Remove tooltip.
+RemoveToolTip() {
+	ToolTip
+}
 
 ; CTRL+ALT+X -- Delete selection without copying to clipboard.
 ^!x::
@@ -38,11 +39,11 @@ return
 
 ; CTRL+ALT+E -- Copy public IP to clipboard.
 ^!e::
-ip=0.0.0.0
-tmp=%WinDir%/temp/ip.tmp
-UrlDownloadToFile, https://checkip.amazonaws.com, %tmp%
-FileReadLine, ip, %tmp%, 1
-FileDelete, %tmp%
+ip := 0.0.0.0
+tmp := WinDir . "/temp/ip.tmp"
+UrlDownloadToFile, https://checkip.amazonaws.com, % tmp
+FileReadLine, ip, % tmp, 1
+FileDelete, % tmp
 Clipboard := ip
 ToolTip, Copied
 SetTimer, RemoveToolTip, 500
