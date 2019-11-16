@@ -7,8 +7,9 @@ RemoveToolTip() {
 ExplorerPath() {
 	hwnd := WinExist("A")
 	for window in ComObjCreate("Shell.Application").Windows
-		if (window.hwnd == hwnd) return window.Document.Folder.Self.Path
-	return
+		if (window.hwnd == hwnd) itemPath := window.Document.FocusedItem.path
+	SplitPath, itemPath,, path
+	return path
 }
 
 ; CTRL+T -- Open bash terminals from File Explorer.
