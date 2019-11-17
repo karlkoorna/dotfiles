@@ -93,6 +93,8 @@ Turn on the following Windows Features:
 
 ### [Android Studio](https://developer.android.com/studio) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/androidstudio)
 
+### [Audacity](https://audacityteam.org)
+
 ### [AutoHotKey](https://autohotkey.com) [📁](https://github.com/karlkoorna/dotfiles/tree/master/scripts/ahk)
 
 ### [Blender](https://blender.org)
@@ -137,6 +139,8 @@ Turn on the following Windows Features:
 ### [GitHub Desktop](https://desktop.github.com)
 
 ### [Go](https://golang.org)
+
+### [HxD](https://mh-nexus.de/en/hxd)
 
 ### [Insomnia](https://insomnia.rest)
 
