@@ -148,7 +148,7 @@ Turn on the following Windows Features:
 
 ### [Microsoft Office](https://office.com) (Word, Excel, PowerPoint)
 
-### [MP3Tag](https://mp3tag.de) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/mp3tag)
+### [MP3Tag](https://mp3tag.de)
 
 ### [MySQL](https://dev.mysql.com/downloads/mysql)
 
