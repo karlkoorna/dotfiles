@@ -3,8 +3,8 @@ My way of Windows.
 
 ## Fonts
 
-[FiraCode](https://github.com/tonsky/FiraCode/releases)\
-[FontAwesome](https://fontawesome.com/how-to-use/on-the-desktop/setup/getting-started)
+* [FiraCode](https://github.com/tonsky/FiraCode/releases)
+* [FontAwesome](https://fontawesome.com/how-to-use/on-the-desktop/setup/getting-started)
 
 ## Operating System
 *(Windows 10 64-bit Professional Edition)*
