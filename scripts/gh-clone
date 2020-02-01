@@ -1,25 +1,35 @@
-#!/usr/bin/env python
-from argparse import ArgumentParser
-from subprocess import Popen, STDOUT, DEVNULL
-from urllib.error import HTTPError
-from urllib import request
+##!/usr/bin/env python
+
+import argparse
 import json
 import os
+import subprocess
+import urllib.request
 
-# CLI definition.
-parser = ArgumentParser(description="Clone GitHub user's all repositories.")
-parser.add_argument("user", help="GitHub username.")
+parser = argparse.ArgumentParser(description="Clone GitHub user's all repositories.")
+parser.add_argument("user", help="GitHub username")
 args = parser.parse_args()
 
-# Clone repositories.
+repos = []
+
+
+def get(url, page):
+	isLast = True
+	for repo in json.loads(urllib.request.urlopen(url + "?page=" + str(page)).read().decode("utf-8")):
+		isLast = False
+		if not os.path.isdir(repo["name"]) or len(os.listdir(repo["name"])) == 0:
+			repos.append(repo["clone_url"])
+	if not isLast:
+		get(url, page + 1)
+
+
 try:
-	repos = []
-	for repo in json.loads(request.urlopen(f"https://api.github.com/users/{args.user}/repos").read().decode("utf-8")):
-		if not os.path.isdir(repo['name']) or len(os.listdir(repo['name'])) == 0:
-			repos.append(repo['name'])
-		Popen(f"git clone {repo['clone_url']}", stdout=DEVNULL, stderr=STDOUT)
-	if len(repos):
-		print(f"Cloning {', '.join(repos)}...")
-except HTTPError:
-	print("Failed to find GitHub user!")
+	get(f"https://api.github.com/users/{args.user}/repos", 1)
+except Exception:
+	print("RATE LIMIT / USER NOT FOUND")
 	exit(1)
+
+print(f"Cloning {len(repos)} repositories...")
+
+for repo in repos:
+	subprocess.Popen(f"git clone " + repo, stdout=DEVNULL, stderr=STDOUT)
