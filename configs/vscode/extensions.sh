@@ -10,12 +10,10 @@ code-insiders --install-extension icrawl.discord-vscode
 code-insiders --install-extension jcbuisson.vue
 code-insiders --install-extension mechatroner.rainbow-csv
 code-insiders --install-extension mikestead.dotenv
-code-insiders --install-extension ms-azuretools.vscode-docker
 code-insiders --install-extension ms-python.python
 code-insiders --install-extension ms-vscode.Go
 code-insiders --install-extension richie5um2.vscode-sort-json
 code-insiders --install-extension shardulm94.trailing-spaces
-code-insiders --install-extension shinnn.stylelint
 code-insiders --install-extension vscode-icons-team.vscode-icons
 code-insiders --install-extension wayou.vscode-todo-highlight
 code-insiders --install-extension william-voyek.vscode-nginx

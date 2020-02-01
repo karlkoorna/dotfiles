@@ -60,7 +60,7 @@
 	"sortLines.sortEntireFile": true,
 	"telemetry.enableCrashReporter": false,
 	"telemetry.enableTelemetry": false,
-	"terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+	"terminal.integrated.shell.windows": "C:/Program Files/Git/bin/bash.exe",
 	"trailing-spaces.highlightCurrentLine": false,
 	"trailing-spaces.includeEmptyLines": false,
 	"trailing-spaces.trimOnSave": true,

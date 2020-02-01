@@ -1,4 +1,3 @@
-; Remove tooltip.
 RemoveToolTip() {
 	ToolTip
 }

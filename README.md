@@ -101,18 +101,16 @@ Turn on the following Windows Features:
 
 ### [Bulk Rename Utility](https://bulkrenameutility.co.uk)
 
-### [Chrome Canary](https://google.com/chrome/canary)
+### [Chrome Beta](https://google.com/chrome/beta)
 
 * Hide home button.
 * Show bookmarks bar.
 
-#### [Better TTV](https://chrome.google.com/webstore/detail/betterttv/ajopnjidmegmdimjlfnijceegpefgped), [Currently](https://chrome.google.com/webstore/detail/currently/ojhmphdkpgbibohbnpbfiefkgieacjmh), [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa), [OneTab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall), [Reddit Enhancement Suite](https://chrome.google.com/webstore/detail/reddit-enhancement-suite/kbmfpngjjgdllneeigpgjifpgocmfgmb), [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg)
+#### [Currently](https://chrome.google.com/webstore/detail/currently/ojhmphdkpgbibohbnpbfiefkgieacjmh), [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa), [OneTab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall), [Reddit Enhancement Suite](https://chrome.google.com/webstore/detail/reddit-enhancement-suite/kbmfpngjjgdllneeigpgjifpgocmfgmb), [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg)
 
 ### [Creative Cloud](https://creative.adobe.com/products/download/creative-cloud) (Photoshop, Illustrator, Premiere, After Effects, Acrobat)
 
-### [Deluge](https://deluge-torrent.org)
-
-* Disable system tray icon.
+### [qBittorrent](https://www.qbittorrent.org/download.php)
 
 ### [Discord](https://discordapp.com)
 
@@ -188,16 +186,9 @@ Turn on the following Windows Features:
 
 * Open at boot.
 
-### [Unity](https://unity.com)
-
 ### [Visual Studio Code Insiders](https://code.visualstudio.com/insiders) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/vscode)
 
 * Add actions to context menus.
-
-### [Visual Studio Community](https://visualstudio.microsoft.com/vs) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/vs)
-
-* Choose .NET, C++, UWP and ASP.NET workloads.
-* Use the dark theme.
 
 ### [Voicemeeter Banana](https://vb-audio.com/Voicemeeter/banana.htm)
 
