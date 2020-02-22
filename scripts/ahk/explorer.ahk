@@ -3,22 +3,25 @@ RemoveToolTip() {
 }
 
 ExplorerPath() {
-	hwnd := WinExist("A")
+	HWnd := WinExist("A")
 	for window in ComObjCreate("Shell.Application").Windows
-		if (window.hwnd == hwnd) itemPath := window.Document.FocusedItem.path
-	SplitPath, itemPath,, path
-	return path
+		if (window.HWnd == HWnd) {
+			path := window.LocationURL
+			Break
+		}
+	return StrReplace(SubStr(path, 9), "%20", " ")
 }
 
-; CTRL+T -- Open bash terminals from File Explorer.
+; CTRL+T -- Open Git Bash and WSL from File Explorer.
 #IfWinActive ahk_class CabinetWClass
 ^t::
 SetWorkingDir, % ExplorerPath()
 Run, C:/Program Files/Git/git-bash.exe
 return
 ^+t::
-SetWorkingDir, % ExplorerPath()
-Run, bash, % ExplorerPath()
+path := ExplorerPath()
+SetWorkingDir, % path
+Run, bash, % path
 return
 #IfWinActive
 
