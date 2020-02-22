@@ -77,14 +77,14 @@
 		"scope": "javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"require": {
-		"prefix": "req",
+		"prefix": "require",
 		"body": [
 			"const $1 = require('$0');"
 		],
 		"scope": "javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"import": {
-		"prefix": "imp",
+		"prefix": "import",
 		"body": [
 			"import ${1:{ $2 \\}} from '$0';"
 		],
@@ -109,20 +109,20 @@
 		"scope": "javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"setTimeout": {
-		"prefix": "timeout",
+		"prefix": "st",
 		"body": [
-			"setTimeout(() => {",
+			"$1setTimeout(() => {",
 			"\t$0",
-			"}, $1);"
+			"}, $2);"
 		],
 		"scope": "javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"setInterval": {
-		"prefix": "interval",
+		"prefix": "si",
 		"body": [
-			"setInterval(() => {",
+			"$1setInterval(() => {",
 			"\t$0",
-			"}, $1);"
+			"}, $2);"
 		],
 		"scope": "javascript,javascriptreact,typescript,typescriptreact"
 	},
@@ -138,8 +138,8 @@
 	"setState": {
 		"prefix": "ss",
 		"body": [
-			"this.setState({ $1 });"
+			"this.setState(${2:{ $1 \\}});"
 		],
-		"scope": "javascript,javascriptreact,typescript,typescriptreact"
+		"scope": "javascriptreact,typescriptreact"
 	}
 }
