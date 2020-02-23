@@ -8,7 +8,7 @@
 
 function format(bytes) {
 	const exp = Math.floor(Math.log(Math.abs(bytes)) / Math.log(1024));
-	return (bytes / Math.pow(1024, exp)).toFixed(2) + ' ' + [ 'B', 'KB', 'MB', 'GB', 'TB' ][exp];
+	return (bytes / Math.pow(1024, exp)).toFixed(2) + ' ' + [ 'B', 'KiB', 'MiB', 'GiB', 'TiB' ][exp];
 }
 
 const up = document.querySelector('.userstatsright dd:nth-of-type(1) span').title;
