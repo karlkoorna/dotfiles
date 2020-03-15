@@ -17,11 +17,13 @@ ExplorerPath() {
 ^t::
 SetWorkingDir, % ExplorerPath()
 Run, C:/Program Files/Git/git-bash.exe
+SetWorkingDir, % A_ScriptDir
 return
 ^+t::
 path := ExplorerPath()
 SetWorkingDir, % path
 Run, bash, % path
+SetWorkingDir, % A_ScriptDir
 return
 #IfWinActive
 
