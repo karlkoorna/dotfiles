@@ -16,11 +16,11 @@ Turn on the following Windows Features:
 
 ### System
 
-* **Notifications & actions**
+* **Notifications & Actions**
 	* Remove all quick actions.
-* **Focus assist**
+* **Focus Assist**
 	* Disable focus assist and automatic rules.
-* **Power & sleep**
+* **Power & Sleep**
 	* The computer should never turn off the screen or go to sleep.
 * **Clipboard**
 	* Enable clipboard history.
@@ -29,52 +29,57 @@ Turn on the following Windows Features:
 
 * **Colors**
 	* Show accent color on all surfaces.
-* **Lock screen**
+* **Lock Screen**
 	* Show detailed weather status on the lock screen.
 * **Start**
 	* Hide app list in start menu.
 	* Show recently added and most used apps.
-	* Keep only Settings and Personal folder visible.
+	* Choose only Settings and Personal folders to appear on Start.
 	* Unpin all tiles.
 * **Taskbar**
 	* Do not show taskbars on all displays.
 	* Show search as an icon.
 	* Hide task view and Windows Ink buttons.
-	* Unpin all shortcuts except File Explorer and Google Chrome.
+	* Unpin all shortcuts except File Explorer and Chrome.
 
 ### Accounts
 
-* **Email & accounts**
+* **Email & Accounts**
 	* Add a mail, calendar and people account.
 	* Download new emails as items arrive.
 
 ### Time & Language
 
-* **Date & time**
+* **Date & Time**
 	* Set time zone automatically.
 * **Region**
 	* Update data formats.
 * **Language**
-	* Add preferred languages.
+	* Add Estonian, Russian and Japanese.
 
 ### Gaming
 
-* **Captures**
-* Record high quality 60fps video.
+* **Game Bar**
+* Do not record game clips, screenshots and broadcast using game bar.
+* Do not open game bar using this button on a controller.
 
 ### Ease of Access
 
 * **Narrator**
 	* Disable the shortcut key.
 * **Keyboard**
-	* Disable sticky, toggle and filter keys' shortcut keys.
+	* Disable sticky keys.
+	* Disable toggle keys.
+	* Disable filter keys.
 
-### Update & security
+### Update & Security
 
 * **Windows Update**
-	* Install all available updates. Repeat until none are left.
-* **For developers**
-	* Enable developer mode, show file extensions, hidden files and full path.
+	* Install all available updates.
+* **For Developers**
+	* Enable developer mode.
+	* Show file extensions.
+	* Hidden files and full path.
 
 ### Search
 
@@ -87,8 +92,6 @@ Turn on the following Windows Features:
 
 * Show icons in context menu.
 * Keep only `Open archive`, `Extract files...`, `Extract here` and `Add to archive` context menu items.
-* Use PotPlayer as the viewer.
-* Use Notepad++ as the editor.
 * Enable full row select.
 
 ### [Android Studio](https://developer.android.com/studio) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/androidstudio)
@@ -101,14 +104,14 @@ Turn on the following Windows Features:
 
 ### [Bulk Rename Utility](https://bulkrenameutility.co.uk)
 
-### [Chrome Beta](https://google.com/chrome/beta)
+### [Chrome](https://google.com/chrome)
 
 * Hide home button.
 * Show bookmarks bar.
 
 #### [Currently](https://chrome.google.com/webstore/detail/currently/ojhmphdkpgbibohbnpbfiefkgieacjmh), [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa), [OneTab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall), [Reddit Enhancement Suite](https://chrome.google.com/webstore/detail/reddit-enhancement-suite/kbmfpngjjgdllneeigpgjifpgocmfgmb), [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg)
 
-### [Creative Cloud](https://creative.adobe.com/products/download/creative-cloud) (Photoshop, Illustrator, Premiere, After Effects, Acrobat)
+### Creative Cloud (Photoshop, Illustrator, Premiere, After Effects, Audition, Media Encoder, Lightroom, InDesign, Dimension, XD, Acrobat)
 
 ### [qBittorrent](https://www.qbittorrent.org/download.php)
 
@@ -120,6 +123,10 @@ Turn on the following Windows Features:
 
 ### [Docker](https://docker.com/products/docker-desktop)
 
+### [FileZilla](https://filezilla-project.org)
+
+### [Foobar2000](https://foobar2000.org)
+
 ### [Firefox Developer Edition](https://mozilla.org/en-US/firefox/developer)
 
 * Switch to default theme.
@@ -128,10 +135,10 @@ Turn on the following Windows Features:
 
 #### [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin)
 
-### [Git](https://git-scm.com) [📄](https://gist.github.com/karlkoorna/c5e85b426e0bd36a9084485f126cc968)
+### [Git](https://git-scm.com) [📄](https://github.com/karlkoorna/dotfiles/blob/master/scripts/py/ghclone.py)
 
 * Disable Git GUI context menu item.
-* Use Visual Studio Code Insiders as Git’s default editor.
+* Use Visual Studio Code Insiders as Git's default editor.
 * Checkout as-is, commit Unix-style line endings.
 
 ### [GitHub Desktop](https://desktop.github.com)
@@ -144,11 +151,13 @@ Turn on the following Windows Features:
 
 * Do not validate certificates.
 
-### [Microsoft Office](https://office.com) (Word, Excel, PowerPoint)
+### [IntelliJ Community](https://www.jetbrains.com/idea)
+
+### Microsoft Office (Word, Excel, PowerPoint)
 
 ### [MP3Tag](https://mp3tag.de)
 
-### [MySQL](https://dev.mysql.com/downloads/mysql)
+### [MySQL Community](https://dev.mysql.com)
 
 * Install MySQL Server, MySQL Workbench and MySQL for Excel.
 * Use Legacy Authentication Method.
@@ -163,7 +172,11 @@ Turn on the following Windows Features:
 
 ### [PotPlayer](https://potplayer.daum.net)
 
-### [Python](https://python.org/downloads)
+* Do not use default window size.
+
+### [PyCharm Community](https://www.jetbrains.com/pycharm)
+
+### [Python](https://python.org)
 
 ### [Snipaste](https://snipaste.com) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/snipaste)
 
@@ -178,7 +191,9 @@ Turn on the following Windows Features:
 
 #### [Wallpaper Engine](https://store.steampowered.com/app/431960/Wallpaper_Engine)
 
-* Highest quality settings.
+* Keep running when other application is maximized.
+* Stop when other application is fullscreen.
+* Highest quality preset.
 * Auto start with high priority.
 * Do not output audio.
 
@@ -201,4 +216,9 @@ Turn on the following Windows Features:
 * Hook volume keys for A1.
 * Pin system tray icon.
 
-### [Wireshark](https://wireshark.org)
+### [VLC](https://videolan.org/vlc)
+
+* Do not resize interface to video size.
+* Do not allow only one instance when started from file.
+
+### [VirtualBox](https://virtualbox.org)
