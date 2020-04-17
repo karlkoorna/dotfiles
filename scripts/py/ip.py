@@ -6,7 +6,7 @@ import urllib.request
 
 parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter, description="Get IP.")
 parser.add_argument("--type", choices=("public", "local"), default="public", help="specify type")
-parser.add_argument( "--copy", action="store_true", help="copy to clipboard")
+parser.add_argument("--copy", action="store_true", help="copy to clipboard")
 args = parser.parse_args()
 
 ip = None
@@ -19,6 +19,6 @@ elif args.type == "local":
 
 print(ip, end="")
 if (args.copy):
-	process = subprocess.Popen({ "Windows": "clip", "Darwin": "pbcopy", "Linux": "xclip" }[platform.system()], stdin=subprocess.PIPE)
+	process = subprocess.Popen({"Windows": "clip", "Darwin": "pbcopy", "Linux": "xclip"}[platform.system()], stdin=subprocess.PIPE)
 	process.stdin.write(bytes(ip, "utf-8"))
 	process.stdin.flush()

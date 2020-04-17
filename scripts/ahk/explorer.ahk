@@ -2,6 +2,12 @@ RemoveToolTip() {
 	ToolTip
 }
 
+DecodeURL(url) {
+	doc := ComObjCreate("HTMLfile")
+	doc.write("<script>document.write(decodeURIComponent('" . url . "'));</script>")
+	return doc.body.innerText
+}
+
 ExplorerPath() {
 	HWnd := WinExist("A")
 	for window in ComObjCreate("Shell.Application").Windows
@@ -9,10 +15,10 @@ ExplorerPath() {
 			path := window.LocationURL
 			Break
 		}
-	return StrReplace(SubStr(path, 9), "%20", " ")
+	return DecodeURL(SubStr(path, 9))
 }
 
-; CTRL+T -- Open Git Bash and WSL from File Explorer.
+; CTRL+T -- Open Git Bash or WSL from File Explorer.
 #IfWinActive ahk_class CabinetWClass
 ^t::
 SetWorkingDir, % ExplorerPath()
