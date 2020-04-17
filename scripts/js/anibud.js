@@ -3,7 +3,7 @@
 // @description  Display download budget on AnimeBytes.
 // @author       Karl Köörna
 // @version      1.0.0
-// @match        https://animebytes.tv/*
+// @match        https://animebytes.tv/user.php*
 // ==/UserScript==
 
 function format(bytes) {
