@@ -1,10 +1,8 @@
 {
 	"[json]": {
-		"editor.insertSpaces": false,
 		"editor.tabSize": 2
 	},
 	"[jsonc]": {
-		"editor.insertSpaces": false,
 		"editor.tabSize": 2
 	},
 	"[python]": {
@@ -24,7 +22,6 @@
 	"editor.insertSpaces": false,
 	"editor.mouseWheelZoom": true,
 	"editor.smoothScrolling": true,
-	"editor.snippetSuggestions": "top",
 	"editor.suggestSelection": "first",
 	"editor.trimAutoWhitespace": false,
 	"explorer.confirmDelete": false,

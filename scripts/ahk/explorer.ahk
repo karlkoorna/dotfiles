@@ -18,7 +18,7 @@ ExplorerPath() {
 	return DecodeURL(SubStr(path, 9))
 }
 
-; CTRL+T -- Open Git Bash or WSL from File Explorer.
+; CTRL+T -- Open Git Bash, WSL or PowerShell from File Explorer.
 #IfWinActive ahk_class CabinetWClass
 ^t::
 SetWorkingDir, % ExplorerPath()
@@ -26,9 +26,13 @@ Run, C:/Program Files/Git/git-bash.exe
 SetWorkingDir, % A_ScriptDir
 return
 ^+t::
-path := ExplorerPath()
-SetWorkingDir, % path
-Run, bash, % path
+SetWorkingDir, % ExplorerPath()
+Run, bash
+SetWorkingDir, % A_ScriptDir
+return
+^!t::
+SetWorkingDir, % ExplorerPath()
+Run, powershell
 SetWorkingDir, % A_ScriptDir
 return
 #IfWinActive

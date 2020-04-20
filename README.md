@@ -94,7 +94,7 @@ Turn on the following Windows Features:
 * Keep only `Open archive`, `Extract files...`, `Extract here` and `Add to archive` context menu items.
 * Enable full row select.
 
-### [Android Studio](https://developer.android.com/studio) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/androidstudio)
+### [Android Studio](https://developer.android.com/studio)
 
 ### [Audacity](https://audacityteam.org)
 
@@ -135,7 +135,7 @@ Turn on the following Windows Features:
 
 #### [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin)
 
-### [Git](https://git-scm.com) [📄](https://github.com/karlkoorna/dotfiles/blob/master/scripts/py/ghclone.py)
+### [Git](https://git-scm.com)
 
 * Disable Git GUI context menu item.
 * Use Visual Studio Code Insiders as Git's default editor.
@@ -201,7 +201,7 @@ Turn on the following Windows Features:
 
 * Open at boot.
 
-### [Visual Studio Code Insiders](https://code.visualstudio.com/insiders) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/vscode)
+### [Visual Studio Code](https://code.visualstudio.com) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/vscode)
 
 * Add actions to context menus.
 
