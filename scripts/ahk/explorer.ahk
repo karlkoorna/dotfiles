@@ -2,45 +2,51 @@ RemoveToolTip() {
 	ToolTip
 }
 
-DecodeURL(url) {
-	doc := ComObjCreate("HTMLfile")
-	doc.write("<script>document.write(decodeURIComponent('" . url . "'));</script>")
-	return doc.body.innerText
+Notify(msg, delay) {
+	ToolTip % msg
+	SetTimer RemoveToolTip, % delay
+}
+
+DecodeURL(str) {
+	while index := RegExMatch(str, "(?<=%)[\da-f]{2}", hex, index++) {
+		StringReplace str, str, `%%hex%, % Chr("0x" . hex), ALL
+	}
+	return str
 }
 
 ExplorerPath() {
 	HWnd := WinExist("A")
-	for window in ComObjCreate("Shell.Application").Windows
+	for window in ComObjCreate("Shell.Application").Windows {
 		if (window.HWnd == HWnd) {
 			path := window.LocationURL
 			Break
 		}
+	}
 	return DecodeURL(SubStr(path, 9))
 }
 
 ; CTRL+T -- Open Git Bash, WSL or PowerShell from File Explorer.
 #IfWinActive ahk_class CabinetWClass
 ^t::
-SetWorkingDir, % ExplorerPath()
-Run, C:/Program Files/Git/git-bash.exe
-SetWorkingDir, % A_ScriptDir
-return
+	SetWorkingDir % ExplorerPath()
+	Run "C:/Program Files/Git/git-bash.exe"
+	SetWorkingDir % A_ScriptDir
+	return
 ^+t::
-SetWorkingDir, % ExplorerPath()
-Run, bash
-SetWorkingDir, % A_ScriptDir
-return
+	SetWorkingDir % ExplorerPath()
+	Run bash
+	SetWorkingDir % A_ScriptDir
+	return
 ^!t::
-SetWorkingDir, % ExplorerPath()
-Run, powershell
-SetWorkingDir, % A_ScriptDir
-return
+	SetWorkingDir % ExplorerPath()
+	Run powershell
+	SetWorkingDir % A_ScriptDir
+	return
 #IfWinActive
 
 ; CTRL+ALT+F -- Toggle window always on top.
 ^!f::
-Winset, AlwaysOnTop, Toggle, A
-WinGet, ExStyle, ExStyle, A
-ToolTip, % ExStyle & 0x8 ? "Marked" : "Unmarked"
-SetTimer, RemoveToolTip, 500
-return
+	Winset AlwaysOnTop, Toggle, A
+	WinGet ExStyle, ExStyle, A
+	Notify(ExStyle & 0x8 ? "Marked" : "Unmarked", 500)
+	return
