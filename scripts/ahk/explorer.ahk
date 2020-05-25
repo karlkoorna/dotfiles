@@ -8,8 +8,10 @@ Notify(msg, delay) {
 }
 
 DecodeURL(str) {
-	while index := RegExMatch(str, "(?<=%)[\da-f]{2}", hex, index++) {
-		StringReplace str, str, `%%hex%, % Chr("0x" . hex), ALL
+	loop {
+		if RegExMatch(str, "i)(?<=%)[\da-f]{1,2}", hex) {
+			StringReplace, str, str, `%%hex%, % Chr("0x" . hex), ALL
+		} else break
 	}
 	return str
 }
