@@ -2,49 +2,61 @@ RemoveToolTip() {
 	ToolTip
 }
 
-Notify(msg, delay) {
-	ToolTip % msg
+Notify(str, delay) {
+	ToolTip % str
 	SetTimer RemoveToolTip, % delay
 }
 
-DecodeURL(str) {
-	loop {
-		if RegExMatch(str, "i)(?<=%)[\da-f]{1,2}", hex) {
-			StringReplace, str, str, `%%hex%, % Chr("0x" . hex), ALL
-		} else break
-	}
-	return str
+ExplorerAddress() {
+	WinGetText content
+	RegExMatch(content, "Address: (.*)", address)
+	return SubStr(address, 10)
 }
 
-ExplorerPath() {
-	HWnd := WinExist("A")
-	for window in ComObjCreate("Shell.Application").Windows {
-		if (window.HWnd == HWnd) {
-			path := window.LocationURL
-			Break
-		}
-	}
-	return DecodeURL(SubStr(path, 9))
+ExplorerTerminal(executable) {
+	SetWorkingDir % ExplorerAddress()
+	Run % executable
+	SetWorkingDir % A_ScriptDir
 }
 
-; CTRL+T -- Open Git Bash, WSL or PowerShell from File Explorer.
+; CTRL+T -- Open Git Bash from File Explorer.
 #IfWinActive ahk_class CabinetWClass
 ^t::
-	SetWorkingDir % ExplorerPath()
-	Run "C:/Program Files/Git/git-bash.exe"
-	SetWorkingDir % A_ScriptDir
-	return
-^+t::
-	SetWorkingDir % ExplorerPath()
-	Run bash
-	SetWorkingDir % A_ScriptDir
-	return
-^!t::
-	SetWorkingDir % ExplorerPath()
-	Run powershell
-	SetWorkingDir % A_ScriptDir
+#IfWinActive ahk_class #32770
+^t::
+	ExplorerTerminal("C:/Program Files/Git/git-bash.exe")
 	return
 #IfWinActive
+
+; CTRL+SHIFT+T -- Open WSL from File Explorer.
+#IfWinActive ahk_class CabinetWClass
+^+t::
+#IfWinActive ahk_class #32770
+^+t::
+	ExplorerTerminal("bash")
+	return
+#IfWinActive
+
+; CTRL+ALT+T -- Open Powershell from File Explorer.
+#IfWinActive ahk_class CabinetWClass
+^!t::
+#IfWinActive ahk_class #32770
+^!t::
+	ExplorerTerminal("powershell")
+	return
+#IfWinActive
+
+; CTRL+F -- Open Everything from File Explorer.
+#IfWinActive ahk_class CabinetWClass
+^f::
+	address := ExplorerAddress()
+	Run "C:/Program Files/Everything/Everything.exe" -path "%address%"
+	return
+
+; WIN+F -- Open Everything.
+#f::
+	Run "C:/Program Files/Everything/Everything.exe"
+	return
 
 ; CTRL+ALT+F -- Toggle window always on top.
 ^!f::
