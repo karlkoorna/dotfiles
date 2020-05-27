@@ -2,17 +2,17 @@ RemoveToolTip() {
 	ToolTip
 }
 
-Notify(msg, delay) {
-	ToolTip % msg
+Notify(str, delay) {
+	ToolTip % str
 	SetTimer RemoveToolTip, % delay
 }
 
 EncodeB64(str) {
 	VarSetCapacity(bin, StrPut(str, "UTF-8"))
 	len := StrPut(str, &bin, "UTF-8") - 1
-	DllCall("crypt32\CryptBinaryToString", "ptr", &bin, "uint", len, "uint", 0x40000001, "ptr", 0, "uint*", size)
+	DllCall("Crypt32\CryptBinaryToString", "ptr", &bin, "uint", len, "uint", 0x40000001, "ptr", 0, "uint*", size)
 	VarSetCapacity(buf, size << 1, 0)
-	DllCall("crypt32\CryptBinaryToString", "ptr", &bin, "uint", len, "uint", 0x40000001, "ptr", &buf, "uint*", size)
+	DllCall("Crypt32\CryptBinaryToString", "ptr", &bin, "uint", len, "uint", 0x40000001, "ptr", &buf, "uint*", size)
 	return StrGet(&buf)
 }
 
