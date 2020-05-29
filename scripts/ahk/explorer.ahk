@@ -8,9 +8,9 @@ Notify(str, delay) {
 }
 
 ExplorerAddress() {
-	WinGetText content
-	RegExMatch(content, "Address: (.*)", address)
-	return SubStr(address, 10)
+	WinGetText texts
+	RegExMatch(texts, "Address: (.*)", address)
+	return RegExMatch(SubStr(address, 10), "^\w:\\", b) ? SubStr(address, 10) : USERPROFILE . "\" . SubStr(address, 10)
 }
 
 ExplorerTerminal(executable) {
