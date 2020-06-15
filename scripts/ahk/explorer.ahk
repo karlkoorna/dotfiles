@@ -52,6 +52,7 @@ ExplorerTerminal(executable) {
 	address := ExplorerAddress()
 	Run "C:/Program Files/Everything/Everything.exe" -path "%address%"
 	return
+#IfWinActive
 
 ; WIN+F -- Open Everything.
 #f::
