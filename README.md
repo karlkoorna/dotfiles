@@ -166,10 +166,6 @@ Turn on the following Windows Features:
 
 ### [Notepad++](https://notepad-plus-plus.org) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/notepad++)
 
-### [eID](https://installer.id.ee)
-
-* Uncheck TeRa Client and Internet Explorer support.
-
 ### [PotPlayer](https://potplayer.daum.net)
 
 * Do not use default window size.
