@@ -156,8 +156,6 @@ Turn on the following Windows Features:
 
 ### [Notepad++](https://notepad-plus-plus.org) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/notepad++)
 
-### [PyCharm Community](https://www.jetbrains.com/pycharm)
-
 ### [Python](https://python.org)
 
 ### [Snipaste](https://snipaste.com) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/snipaste)
