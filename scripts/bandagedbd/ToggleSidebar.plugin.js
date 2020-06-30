@@ -40,9 +40,11 @@ class ToggleSidebar {
 	}
 	
 	observer(e) {
-		if (isVisible || !e.addedNodes.length || !e.addedNodes[0].className || e.addedNodes[0].className.slice(0, 12) !== 'membersGroup') return;
+		if (isVisible) return;
 		
 		const el = document.querySelector('[class^="membersWrap"]');
+		if (!el) return;
+		
 		el.classList.add('is-hidden');
 		el.style.width = 0;
 		setTimeout(() => {
