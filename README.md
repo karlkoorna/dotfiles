@@ -94,13 +94,9 @@ Turn on the following Windows Features:
 * Keep only `Open archive`, `Extract files...`, `Extract here` and `Add to archive` context menu items.
 * Enable full row select.
 
-### [Android Studio](https://developer.android.com/studio)
-
 ### [Audacity](https://audacityteam.org)
 
 ### [AutoHotKey](https://autohotkey.com) [📁](https://github.com/karlkoorna/dotfiles/tree/master/scripts/ahk)
-
-### [Blender](https://blender.org)
 
 ### [Bulk Rename Utility](https://bulkrenameutility.co.uk)
 
@@ -123,10 +119,6 @@ Turn on the following Windows Features:
 
 ### [Docker](https://docker.com/products/docker-desktop)
 
-### [FileZilla](https://filezilla-project.org)
-
-### [Foobar2000](https://foobar2000.org)
-
 ### [Firefox Developer Edition](https://mozilla.org/en-US/firefox/developer)
 
 * Switch to default theme.
@@ -142,8 +134,6 @@ Turn on the following Windows Features:
 * Checkout as-is, commit Unix-style line endings.
 
 ### [GitHub Desktop](https://desktop.github.com)
-
-### [Go](https://golang.org)
 
 ### [HxD](https://mh-nexus.de/en/hxd)
 
@@ -166,10 +156,6 @@ Turn on the following Windows Features:
 
 ### [Notepad++](https://notepad-plus-plus.org) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/notepad++)
 
-### [PotPlayer](https://potplayer.daum.net)
-
-* Do not use default window size.
-
 ### [PyCharm Community](https://www.jetbrains.com/pycharm)
 
 ### [Python](https://python.org)
@@ -177,6 +163,8 @@ Turn on the following Windows Features:
 ### [Snipaste](https://snipaste.com) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/snipaste)
 
 ### [SpeedCrunch](https://speedcrunch.org) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/speedcrunch)
+
+### [Spek](http://spek.cc)
 
 ### [Steam](https://store.steampowered.com)
 
@@ -211,10 +199,5 @@ Turn on the following Windows Features:
 * Pin to system tray and run at startup.
 * Hook volume keys for A1.
 * Pin system tray icon.
-
-### [VLC](https://videolan.org/vlc)
-
-* Do not resize interface to video size.
-* Do not allow only one instance when started from file.
 
 ### [VirtualBox](https://virtualbox.org)
