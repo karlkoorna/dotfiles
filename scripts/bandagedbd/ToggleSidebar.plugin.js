@@ -6,7 +6,7 @@ function toggle(e) {
 	if (!e.ctrlKey || e.key !== 's') return;
 	
 	const el = document.querySelector('[class^="membersWrap"]');
-	[ isVisible, el.style.width ] = el.clientWidth ? [ false, 0 ] : [ true, '240px' ];
+	[ isVisible, el.style.width ] = isVisible ? [ false, 0 ] : [ true, '240px' ];
 	BdApi.saveData('ToggleSidebar', 'visible', el.clientWidth !== 0);
 }
 
