@@ -46,14 +46,6 @@ ExplorerTerminal(executable) {
 	return
 #IfWinActive
 
-; CTRL+F -- Open Everything from File Explorer.
-#IfWinActive ahk_class CabinetWClass
-^f::
-	address := ExplorerAddress()
-	Run "C:/Program Files/Everything/Everything.exe" -path "%address%"
-	return
-#IfWinActive
-
 ; WIN+F -- Open Everything.
 #f::
 	Run "C:/Program Files/Everything/Everything.exe"
