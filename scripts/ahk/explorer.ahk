@@ -1,4 +1,4 @@
-RemoveToolTip() {
+﻿RemoveToolTip() {
 	ToolTip
 }
 
@@ -46,14 +46,14 @@ ExplorerTerminal(executable) {
 	return
 #IfWinActive
 
-; WIN+F -- Open Everything.
-#f::
-	Run "C:/Program Files/Everything/Everything.exe"
-	return
-
 ; CTRL+ALT+F -- Toggle window always on top.
 ^!f::
 	Winset AlwaysOnTop, Toggle, A
 	WinGet ExStyle, ExStyle, A
 	Notify(ExStyle & 0x8 ? "Marked" : "Unmarked", 500)
+	return
+
+; WIN+F -- Open Everything.
+#f::
+	Run "C:/Program Files/Everything/Everything.exe"
 	return

@@ -1,4 +1,4 @@
-RemoveToolTip() {
+﻿RemoveToolTip() {
 	ToolTip
 }
 

@@ -1,0 +1,31 @@
+﻿:?*:compatab::compatib
+::proccess::process
+::literaly::literally
+::lit::literally
+::u::you
+::ud::you'd
+::aswell::as well
+::attendent::attendant
+::attendents::attendants
+::id::I'd
+::shouldnt::shouldn't
+::wouldnt::wouldn't
+::cant::can't
+::should of::should have
+::monday::Monday
+::tuesday::Tuesday
+::wednesday::Wednesday
+::thursday::Thursday
+::friday::Friday
+::saturday::Saturday
+::sunday::Sunday
+::january::January
+::february::February
+::april::April
+::june::June
+::july::July
+::august::August
+::september::September
+::october::October
+::november::November
+::december::December
