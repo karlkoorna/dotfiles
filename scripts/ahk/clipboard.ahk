@@ -39,8 +39,8 @@ EncodeB64(str) {
 	old := Clipboard
 	Send ^c
 	ClipWait 1
-	Clipboard := old
 	Notify(StrLen(Clipboard), 3000)
+	Clipboard := old
 	return
 
 ; CTRL+ALT+G -- Google search selection.
