@@ -2,6 +2,7 @@
 ::proccess::process
 ::literaly::literally
 ::lit::literally
+::def::definitely
 ::u::you
 ::ud::you'd
 ::aswell::as well
@@ -10,8 +11,10 @@
 ::id::I'd
 ::shouldnt::shouldn't
 ::wouldnt::wouldn't
+::couldnt::couldn't
 ::cant::can't
 ::should of::should have
+::shouldve::should've
 ::monday::Monday
 ::tuesday::Tuesday
 ::wednesday::Wednesday
@@ -29,3 +32,8 @@
 ::october::October
 ::november::November
 ::december::December
+::mustve::must've
+::muse::μ's
+::dont::don't
+::whats::what's
+::havent::haven't
