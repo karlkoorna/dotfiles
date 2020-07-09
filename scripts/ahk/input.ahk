@@ -37,3 +37,5 @@
 ::dont::don't
 ::whats::what's
 ::havent::haven't
+::ep::episode
+::eps::episodes
