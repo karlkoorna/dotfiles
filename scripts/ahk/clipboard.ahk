@@ -34,12 +34,21 @@ EncodeB64(str) {
 	Send {BS}
 	return
 
-; CTRL+ALT+D -- Display length of selection.
+; CTRL+ALT+D -- Display chars in selection.
 ^!d::
 	old := Clipboard
 	Send ^c
 	ClipWait 1
-	Notify(StrLen(Clipboard), 3000)
+	Notify(StrLen(StrReplace(Clipboard, "`n")) . " chars", 3000)
+	Clipboard := old
+	return
+
+; CTRL+ALT+SHIFT+D -- Display lines in selection.
+^!+d::
+	old := Clipboard
+	Send ^c
+	ClipWait 1
+	Notify(StrSplit(Clipboard, "`n").maxindex() . " lines", 3000)
 	Clipboard := old
 	return
 

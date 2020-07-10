@@ -8,7 +8,6 @@
 ::aswell::as well
 ::attendent::attendant
 ::attendents::attendants
-::id::I'd
 ::shouldnt::shouldn't
 ::wouldnt::wouldn't
 ::couldnt::couldn't
@@ -39,3 +38,6 @@
 ::havent::haven't
 ::ep::episode
 ::eps::episodes
+::prob::probably
+::theres::there's
+::scroble::scrobble
