@@ -41,3 +41,4 @@
 ::prob::probably
 ::theres::there's
 ::scroble::scrobble
+::itd::it'd
