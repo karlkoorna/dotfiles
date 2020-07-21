@@ -4,7 +4,7 @@ function toggle(e) {
 	if (e.ctrlKey && e.key === 's') document.querySelector('[aria-label="Member List"]').click();
 }
 
-class ToggleSidebar {
+class MemberList {
 	
 	getName = () => 'Member List';
 	getShortName = () => 'MemberList';
