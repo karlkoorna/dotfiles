@@ -42,3 +42,4 @@
 ::theres::there's
 ::scroble::scrobble
 ::itd::it'd
+::acurate::accurate
