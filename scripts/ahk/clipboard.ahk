@@ -34,7 +34,7 @@ EncodeB64(str) {
 	Send {BS}
 	return
 
-; CTRL+ALT+D -- Display chars in selection.
+; CTRL+ALT+D -- Display char count in selection.
 ^!d::
 	old := Clipboard
 	Send ^c
@@ -43,7 +43,7 @@ EncodeB64(str) {
 	Clipboard := old
 	return
 
-; CTRL+ALT+SHIFT+D -- Display lines in selection.
+; CTRL+ALT+SHIFT+D -- Display line count in selection.
 ^!+d::
 	old := Clipboard
 	Send ^c
