@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         AniBud
-// @description  Display download budget on AnimeBytes.
+// @description  Display budget on AnimeBytes.
 // @author       Karl Köörna
 // @version      1.0.0
 // @match        https://animebytes.tv/user.php*
@@ -11,11 +11,10 @@ function format(bytes) {
 	return (bytes / Math.pow(1024, exp)).toFixed(2) + ' ' + [ 'B', 'KiB', 'MiB', 'GiB', 'TiB' ][exp];
 }
 
-const up = document.querySelector('.userstatsright dd:nth-of-type(1) span').title;
-const down = document.querySelector('.userstatsright dd:nth-of-type(2) span').title;
+const up = document.querySelector('.userstatsright dd:nth-of-type(1) > span').title;
+const down = document.querySelector('.userstatsright dd:nth-of-type(2) > span').title;
 
 document.querySelector('.userstatsright dd:nth-of-type(3)').insertAdjacentHTML('afterend', [ 3, 2, 1, 10 ].map((ratio) => {
 	const budget = Math.floor(up / ratio - down);
-	if (budget < 0) return '';
-	return `<dt style="padding: 2px 0; padding-left: 15px; font-weight: normal;">Budget until ${ratio}</dt><dd style="padding: 2px 0;"><span title="${budget}">${format(budget)}</span></dd>`;
+	return budget <= 0 ? '' : `<dt style="padding: 2px 0; padding-left: 15px; font-weight: normal;">Budget until ${ratio}</dt><dd style="padding: 2px 0;"><span title="${budget}">${format(budget)}</span></dd>`;
 }).join(''));

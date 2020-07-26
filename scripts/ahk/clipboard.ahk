@@ -20,12 +20,12 @@ EncodeB64(str) {
 ^!v::
 	old := Clipboard
 	Send ^c
-	ClipWait 1
+	ClipWait 10
 	new := Clipboard
 	Clipboard := old
-	ClipWait 1
+	ClipWait 10
 	Send ^v
-	ClipWait 1
+	ClipWait 10
 	Clipboard := new
 	return
 
@@ -38,7 +38,7 @@ EncodeB64(str) {
 ^!d::
 	old := Clipboard
 	Send ^c
-	ClipWait 1
+	ClipWait 10
 	Notify(StrLen(StrReplace(Clipboard, "`n")) . " chars", 3000)
 	Clipboard := old
 	return
@@ -47,7 +47,7 @@ EncodeB64(str) {
 ^!+d::
 	old := Clipboard
 	Send ^c
-	ClipWait 1
+	ClipWait 10
 	Notify(StrSplit(Clipboard, "`n").maxindex() . " lines", 3000)
 	Clipboard := old
 	return
@@ -56,7 +56,7 @@ EncodeB64(str) {
 ^!g::
 	old := Clipboard
 	Send ^c
-	ClipWait 1
+	ClipWait 10
 	Clipboard := old
 	Run "https://google.com/search?q=%clipboard%"
 	return
@@ -84,8 +84,8 @@ EncodeB64(str) {
 	}
 	old := Clipboard
 	Clipboard := out . SubStr(Clipboard, offset)
-	ClipWait 1
+	ClipWait 10
 	Send ^v
-	ClipWait 1
+	ClipWait 10
 	Clipboard := old
 	return
