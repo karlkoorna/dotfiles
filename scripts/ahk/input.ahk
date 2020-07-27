@@ -10,8 +10,6 @@
 ::december::December
 ::def::definitely
 ::dont::don't
-::ep::episode
-::eps::episodes
 ::february::February
 ::friday::Friday
 ::havent::haven't
