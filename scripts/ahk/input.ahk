@@ -6,6 +6,7 @@
 ::august::August
 ::cant::can't
 ::couldnt::couldn't
+::couldntve::couldn't've
 ::december::December
 ::def::definitely
 ::dont::don't
@@ -21,6 +22,8 @@
 ::june::June
 ::lit::literally
 ::literaly::literally
+::mightntve::mightn't've
+::mightve::might've
 ::monday::Monday
 ::muse::μ's
 ::mustve::must've
@@ -33,9 +36,11 @@
 ::september::September
 ::should of::should have
 ::shouldnt::shouldn't
+::shouldntve::shouldn't've
 ::shouldve::should've
 ::sunday::Sunday
 ::theres::there's
+::theyre::they're
 ::thursday::Thursday
 ::tuesday::Tuesday
 ::u::you
