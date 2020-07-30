@@ -9,11 +9,13 @@
 ::couldntve::couldn't've
 ::december::December
 ::def::definitely
+::didnt::didn't
 ::dont::don't
 ::february::February
 ::friday::Friday
 ::havent::haven't
 ::im::I'm
+::isnt::isn't
 ::itd::it'd
 ::january::January
 ::july::July
@@ -25,6 +27,7 @@
 ::monday::Monday
 ::muse::μ's
 ::mustve::must've
+::neednt::needn't
 ::november::November
 ::october::October
 ::prob::probably
@@ -43,8 +46,10 @@
 ::tuesday::Tuesday
 ::u::you
 ::ud::you'd
+::wasnt::wasn't
 ::wednesday::Wednesday
 ::whats::what's
+::wont::won't
 ::wouldnt::wouldn't
 ::youre::you're
 :?*:compatab::compatib
