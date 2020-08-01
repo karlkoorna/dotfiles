@@ -10,6 +10,7 @@
 ::december::December
 ::def::definitely
 ::didnt::didn't
+::doesnt::doesn't
 ::dont::don't
 ::february::February
 ::friday::Friday
