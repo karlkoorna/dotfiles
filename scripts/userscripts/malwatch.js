@@ -74,7 +74,7 @@ const sources = [
 		delay: 200,
 		async search(title, episode) {
 			const torrents = [ ...new DOMParser().parseFromString(await get(`https://nyaa.si/?page=rss&c=1_2&s=seeders&o=desc&q=${title.replace(/[^a-zA-Z0-9]/, ' ')} ${episode} 1080`), 'text/xml').getElementsByTagName('item') ].map((el) => Object.fromEntries(Array.from(el.children).map((el) => [ el.nodeName.replace('nyaa:', ''), isNaN(el.textContent) ? el.textContent : Number(el.textContent) ]))).filter((torrent) => torrent.seeders >= 3 && torrent.title.replace(/\[.*?\]/g, '').includes(episode) && !torrent.title.replace(/\[.*?\]/g, '').includes((episode - 1).toString().padStart(2, '0')));
-			if (torrents.length) return `magnet:?xt=urn:btih:${torrents[0].infoHash}&dn=%5BMoe-Raws%5D%20THE%20GOD%20OF%20HIGH%20SCHOOL%20%2303%20%28AT-X%201280x720%20x264%20AAC%29.mp4&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce`;
+			if (torrents.length) return `magnet:?xt=urn:btih:${torrents[0].infoHash}&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce`;
 		}
 	}
 ];
@@ -99,7 +99,7 @@ setTimeout(() => {
 			
 			show.links[source.name] = link;
 			if (Object.keys(show.links).length === sources.length) {
-				if (!show.found && schedule[show.id]) el.innerHTML = `<span class="malwatch-time">${schedule[show.id]}</span>`;
+				if (!show.found && schedule[show.id]) el.innerHTML = schedule[show.id];
 				el.classList.add('is-done');
 			}
 			
@@ -110,6 +110,11 @@ setTimeout(() => {
 			if (source.delay) await new Promise((resolve) => setTimeout(resolve, source.delay));
 		}
 	})();
+	
+	for (const el of document.querySelectorAll('.icon-add-episode')) el.addEventListener('click', () => {
+		const parentEl = el.parentElement.parentElement.parentElement, targetEl = parentEl.querySelector('.malwatch-links');
+		targetEl.innerHTML = targetEl.firstElementChild && schedule[parentEl.querySelector('.title a').href.split('/')[4]] || '';
+	});
 }, 100);
 
 GM.addStyle(`
