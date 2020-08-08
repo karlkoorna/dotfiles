@@ -73,7 +73,7 @@ const sources = [
 		name: 'Nyaa',
 		delay: 200,
 		async search(title, episode) {
-			const torrents = [ ...new DOMParser().parseFromString(await get(`https://nyaa.si/?page=rss&c=1_2&s=seeders&o=desc&q=${title.replace(/[^a-zA-Z0-9]/, ' ')} ${episode} 1080`), 'text/xml').getElementsByTagName('item') ].map((el) => Object.fromEntries(Array.from(el.children).map((el) => [ el.nodeName.replace('nyaa:', ''), isNaN(el.textContent) ? el.textContent : Number(el.textContent) ]))).filter((torrent) => torrent.seeders >= 3 && torrent.title.replace(/\[.*?\]/g, '').includes(episode) && !torrent.title.replace(/\[.*?\]/g, '').includes((episode - 1).toString().padStart(2, '0')));
+			const torrents = [ ...new DOMParser().parseFromString(await get(`https://nyaa.si/?page=rss&c=1_2&s=seeders&o=desc&q=${title.replace(/[^a-zA-Z0-9]/, ' ')} ${episode} 1080`), 'text/xml').getElementsByTagName('item') ].map((el) => Object.fromEntries(Array.from(el.children).map((el) => [ el.nodeName.replace('nyaa:', ''), isNaN(el.textContent) ? el.textContent : Number(el.textContent) ]))).filter((torrent) => torrent.seeders >= 3 && torrent.title.replace(/(\[.*?\]|60fps|x264|x265)/g, '').includes(episode) && !torrent.title.replace(/\(\[.*?\]|60fps|x264|x265)/g, '').includes((episode - 1).toString().padStart(2, '0')));
 			if (torrents.length) return `magnet:?xt=urn:btih:${torrents[0].infoHash}&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce`;
 		}
 	}
