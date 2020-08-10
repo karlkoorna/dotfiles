@@ -8,7 +8,6 @@
 ::couldnt::couldn't
 ::couldntve::couldn't've
 ::december::December
-::def::definitely
 ::didnt::didn't
 ::doesnt::doesn't
 ::dont::don't
@@ -52,5 +51,7 @@
 ::whats::what's
 ::wont::won't
 ::wouldnt::wouldn't
+::wouldntve::wouldn't've
+::wouldve::would've
 ::youre::you're
 :?*:compatab::compatib
