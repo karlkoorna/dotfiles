@@ -12,40 +12,44 @@
 // ==/UserScript==
 
 async function get(url) {
-	return new Promise((resolve, onerror) => GM.xmlHttpRequest({
-		url,
-		headers: { 'x-access-token': '1rj2vRtegS8Y60B3w3qNZm5T2Q0TN2NR' }, // For Twist
-		onerror,
-		onload(res) {
-			resolve(res.responseText);
-		}
-	}));
+	return new Promise((resolve, onerror) => {
+		GM.xmlHttpRequest({
+			url,
+			headers: { 'x-access-token': '1rj2vRtegS8Y60B3w3qNZm5T2Q0TN2NR' }, // For Twist
+			onerror,
+			onload(res) {
+				resolve(res.responseText);
+			}
+		});
+	});
 }
 
 async function getSchedule(shows) {
-	return new Promise((resolve, reject) => GM.xmlHttpRequest({
-		url: 'https://graphql.anilist.co',
-		method: 'POST',
-		headers: { 'Content-Type': 'application/json' },
-		data: JSON.stringify({
-			query: `
-				query ($ids: [Int]) {
-					Page {
-						media(idMal_in: $ids) {
-							idMal nextAiringEpisode { timeUntilAiring }
+	return new Promise((resolve) => {
+		GM.xmlHttpRequest({
+			url: 'https://graphql.anilist.co',
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			data: JSON.stringify({
+				query: `
+					query ($ids: [Int]) {
+						Page {
+							media(idMal_in: $ids) {
+								idMal nextAiringEpisode { timeUntilAiring }
+							}
 						}
 					}
-				}
-			`,
-			variables: { ids: shows.map((show) => show.id) }
-		}),
-		onload(res) {
-			resolve(Object.fromEntries(JSON.parse(res.responseText).data.Page.media.filter((show) => show.nextAiringEpisode).map((show) => {
-				const s = show.nextAiringEpisode.timeUntilAiring, d = Math.floor(s / 86400), h = Math.floor(s / 3600) % 24;
-				return [ show.idMal, (d ? d + ' day' + (d > 1 ? 's' : '') : '') + (h ? ' ' + h + ' hour' + (h > 1 ? 's' : ''): '') ];
-			})));
-		}
-	}));
+				`,
+				variables: { ids: shows.map((show) => show.id) }
+			}),
+			onload(res) {
+				resolve(Object.fromEntries(JSON.parse(res.responseText).data.Page.media.filter((show) => show.nextAiringEpisode).map((show) => {
+					const s = show.nextAiringEpisode.timeUntilAiring, d = Math.floor(s / 86400), h = Math.floor(s / 3600) % 24;
+					return [ show.idMal, (d ? d + ' day' + (d > 1 ? 's' : '') : '') + (h ? ' ' + h + ' hour' + (h > 1 ? 's' : ''): '') ];
+				})));
+			}
+		});
+	});
 }
 
 const db = {};
