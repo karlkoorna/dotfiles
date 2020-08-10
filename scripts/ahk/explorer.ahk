@@ -46,14 +46,24 @@ ExplorerTerminal(executable) {
 	return
 #IfWinActive
 
+; WIN+F -- Open Everything from File Explorer.
+#IfWinActive ahk_class CabinetWClass
+#f::
+#IfWinActive ahk_class #32770
+#f::
+	path := ExplorerAddress()
+	Run "C:/Program Files/Everything/Everything.exe" -p "%path%"
+	return
+#IfWinActive
+
+; WIN+F -- Open Everything.
+#f::
+	Run "C:/Program Files/Everything/Everything.exe"
+	return
+
 ; CTRL+ALT+F -- Toggle window always on top.
 ^!f::
 	Winset AlwaysOnTop, Toggle, A
 	WinGet ExStyle, ExStyle, A
 	Notify(ExStyle & 0x8 ? "Marked" : "Unmarked", 500)
-	return
-
-; WIN+F -- Open Everything.
-#f::
-	Run "C:/Program Files/Everything/Everything.exe"
 	return
