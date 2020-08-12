@@ -35,7 +35,7 @@ async function getSchedule(shows) {
 					query ($ids: [Int]) {
 						Page {
 							media(idMal_in: $ids) {
-								idMal nextAiringEpisode { timeUntilAiring }
+								idMal nextAiringEpisode { episode timeUntilAiring }
 							}
 						}
 					}
@@ -43,10 +43,20 @@ async function getSchedule(shows) {
 				variables: { ids: shows.map((show) => show.id) }
 			}),
 			onload(res) {
-				resolve(Object.fromEntries(JSON.parse(res.responseText).data.Page.media.filter((show) => show.nextAiringEpisode).map((show) => {
-					const s = show.nextAiringEpisode.timeUntilAiring, d = Math.floor(s / 86400), h = Math.floor(s / 3600) % 24;
-					return [ show.idMal, (d ? d + ' day' + (d > 1 ? 's' : '') : '') + (h ? ' ' + h + ' hour' + (h > 1 ? 's' : ''): '') ];
-				})));
+				const schedule = {};
+				
+				for (const show of JSON.parse(res.responseText).data.Page.media) {
+					if (!show.nextAiringEpisode) continue;
+					
+					const d = Math.floor(show.nextAiringEpisode.timeUntilAiring / 86400);
+					const h = Math.floor(show.nextAiringEpisode.timeUntilAiring / 3600) % 24;
+					schedule[show.idMal] = {
+						episode: show.nextAiringEpisode.episode,
+						time: (d ? d + ' day' + (d > 1 ? 's' : '') : '') + (h ? ' ' + h + ' hour' + (h > 1 ? 's' : ''): '')
+					};
+				}
+				
+				resolve(schedule);
 			}
 		});
 	});
@@ -77,7 +87,7 @@ const sources = [
 		name: 'Nyaa',
 		delay: 200,
 		async search(title, episode) {
-			const torrents = [ ...new DOMParser().parseFromString(await get(`https://nyaa.si/?page=rss&c=1_2&s=seeders&o=desc&q=${title.replace(/[^a-zA-Z0-9]/, ' ')} ${episode} 1080`), 'text/xml').getElementsByTagName('item') ].map((el) => Object.fromEntries(Array.from(el.children).map((el) => [ el.nodeName.replace('nyaa:', ''), isNaN(el.textContent) ? el.textContent : Number(el.textContent) ]))).filter((torrent) => torrent.seeders >= 3 && torrent.title.replace(/(\[.*?\]|60fps|x264|x265)/g, '').includes(episode) && !torrent.title.replace(/(\[.*?\]|60fps|x264|x265)/g, '').includes((episode - 1).toString().padStart(2, '0')));
+			const torrents = [ ...new DOMParser().parseFromString(await get(`https://nyaa.si/?page=rss&c=1_2&s=seeders&o=desc&q=${title.replace(/[^\w]/, ' ')} ${episode} 1080`), 'text/xml').getElementsByTagName('item') ].map((el) => Object.fromEntries([ ...el.children ].map((el) => [ el.nodeName.replace('nyaa:', ''), isNaN(el.textContent) ? el.textContent : Number(el.textContent) ]))).filter((torrent) => torrent.seeders > 3 && torrent.title.replace(/(\[.*?\]|\(.*?\)|1280|720|1920|1080|x264|x265|60fps)/g, '').includes(episode));
 			if (torrents.length) return `magnet:?xt=urn:btih:${torrents[0].infoHash}&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce`;
 		}
 	}
@@ -89,35 +99,38 @@ setTimeout(() => {
 		title: el.querySelector('.title a').innerText,
 		episode: Number(el.querySelector('.progress a').innerText) || 0,
 		found: false,
-		links: {},
-		index
+		links: {}
 	});
 	
 	let schedule = {};
-	getSchedule(shows).then((_schedule) => { schedule = _schedule });
-	for (const source of sources) (async () => {
-		for (const show of shows) {
+	getSchedule(shows).then((_schedule) => { schedule = _schedule; });
+	
+	for (const source of sources) (async function() {
+		shows.forEach(async (show, i) => {
 			let link = null;
 			try { link = await source.search(show.title, show.episode + 1) || null; } catch (ex) { console.error(ex); }
-			const el = document.querySelector(`.list-item:nth-of-type(${show.index + 2}) .malwatch-links`);
-			
+			const el = document.querySelector(`.list-item:nth-of-type(${i + 2}) .malwatch-links`);
 			show.links[source.name] = link;
+			
+			if (link) {
+				show.found = true;
+				el.innerHTML = sources.filter((source) => show.links[source.name]).map((source) => `<a class="malwatch-link" href="${show.links[source.name]}" target="_blank" rel="nofollower noreferrer">${source.name}</a>`).join(', ');
+			}
+			
 			if (Object.keys(show.links).length === sources.length) {
-				if (!show.found && schedule[show.id]) el.innerHTML = schedule[show.id];
+				if (!show.found && schedule[show.id]?.episode === show.episode + 1) el.innerHTML = schedule[show.id].time;
 				el.classList.add('is-done');
 			}
 			
-			if (!link) continue;
-			show.found = true;
-			
-			el.innerHTML = sources.filter((source) => show.links[source.name]).map((source) => `<a class="malwatch-link" href="${show.links[source.name]}" target="_blank" rel="nofollower noreferrer">${source.name}</a>`).join(', ');
 			if (source.delay) await new Promise((resolve) => setTimeout(resolve, source.delay));
-		}
+		});
 	})();
 	
 	for (const el of document.querySelectorAll('.icon-add-episode')) el.addEventListener('click', () => {
-		const parentEl = el.parentElement.parentElement.parentElement, targetEl = parentEl.querySelector('.malwatch-links');
-		targetEl.innerHTML = targetEl.firstElementChild && schedule[parentEl.querySelector('.title a').href.split('/')[4]] || '';
+		const parentEl = el.parentElement.parentElement.parentElement;
+		const targetEl = parentEl.querySelector('.malwatch-links');
+		
+		targetEl.innerHTML = targetEl.firstElementChild && schedule[parentEl.querySelector('.title a').href.split('/')[4]]?.time || '';
 	});
 }, 100);
 
