@@ -16,7 +16,7 @@ async function get(url) {
 		GM.xmlHttpRequest({
 			url,
 			headers: { 'x-access-token': '1rj2vRtegS8Y60B3w3qNZm5T2Q0TN2NR' }, // For Twist
-			timeout: 1000,
+			timeout: 3000,
 			onerror,
 			ontimeout() {
 				resolve('');
