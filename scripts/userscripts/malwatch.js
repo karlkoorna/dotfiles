@@ -16,7 +16,11 @@ async function get(url) {
 		GM.xmlHttpRequest({
 			url,
 			headers: { 'x-access-token': '1rj2vRtegS8Y60B3w3qNZm5T2Q0TN2NR' }, // For Twist
+			timeout: 1000,
 			onerror,
+			ontimeout() {
+				resolve('');
+			},
 			onload(res) {
 				resolve(res.responseText);
 			}
@@ -105,7 +109,7 @@ setTimeout(() => {
 	let schedule = {};
 	getSchedule(shows).then((_schedule) => { schedule = _schedule; });
 	
-	for (const source of sources) (async function() {
+	for (const source of sources) (async () => {
 		shows.forEach(async (show, i) => {
 			let link = null;
 			try { link = await source.search(show.title, show.episode + 1) || null; } catch (ex) { console.error(ex); }
