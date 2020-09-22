@@ -4,11 +4,11 @@
 // @author       Karl Köörna
 // @version      1.0.0
 // @include      /myanimelist\.net\/animelist\/[^?]+(\?status=1)?$/
-// @grant        GM.xmlHttpRequest
-// @grant        GM.addStyle
 // @connect      anipahe.com
 // @connect      twist.moe
 // @connect      nyaa.si
+// @grant        GM.xmlHttpRequest
+// @grant        GM.addStyle
 // ==/UserScript==
 
 async function get(url) {
