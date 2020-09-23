@@ -20,12 +20,12 @@ EncodeB64(str) {
 ^!v::
 	old := Clipboard
 	Send ^c
-	ClipWait 10
+	ClipWait 100
 	new := Clipboard
 	Clipboard := old
-	ClipWait 10
+	ClipWait 100
 	Send ^v
-	ClipWait 10
+	ClipWait 100
 	Clipboard := new
 	return
 
@@ -34,35 +34,21 @@ EncodeB64(str) {
 	Send {BS}
 	return
 
-; CTRL+ALT+D -- Display char count in selection.
+; CTRL+ALT+D -- Display selection info.
 ^!d::
 	old := Clipboard
 	Send ^c
-	ClipWait 10
-	Notify(StrLen(StrReplace(Clipboard, "`n")) . " chars", 3000)
+	ClipWait 100
+	RegExReplace(Clipboard, "\b\S+\b", "", count, -1, 1)
+	out := "Characters: " . StrLen(StrReplace(StrReplace(Clipboard, "`r"), "`n")) . "`n"
+	out .= "Words: " . count . "`n"
+	out .= "Lines: " . StrSplit(StrReplace(Clipboard, "`r"), "`n").maxindex()
+	Notify(out, 3000)
 	Clipboard := old
 	return
 
-; CTRL+ALT+SHIFT+D -- Display line count in selection.
-^!+d::
-	old := Clipboard
-	Send ^c
-	ClipWait 10
-	Notify(StrSplit(Clipboard, "`n").maxindex() . " lines", 3000)
-	Clipboard := old
-	return
-
-; CTRL+ALT+G -- Google search selection.
-^!g::
-	old := Clipboard
-	Send ^c
-	ClipWait 10
-	Clipboard := old
-	Run "https://google.com/search?q=%clipboard%"
-	return
-
-; CTRL+ALT+E -- Copy public IP to clipboard.
-^!e::
+; CTRL+ALT+A -- Copy public IP to clipboard.
+^!a::
 	ip := "0.0.0.0"
 	tmp := WinDir . "/temp/ip.tmp"
 	UrlDownloadToFile https://checkip.amazonaws.com, % tmp
@@ -72,7 +58,7 @@ EncodeB64(str) {
 	Notify("Copied", 500)
 	return
 
-; CTRL+ALT+B -- Paste clipboard with encoded links.
+; CTRL+ALT+B -- Paste clipboard with base64 encoded links.
 ^!b::
 	out := ""
 	index := 1
@@ -84,8 +70,8 @@ EncodeB64(str) {
 	}
 	old := Clipboard
 	Clipboard := out . SubStr(Clipboard, offset)
-	ClipWait 10
+	ClipWait 100
 	Send ^v
-	ClipWait 10
+	ClipWait 100
 	Clipboard := old
 	return

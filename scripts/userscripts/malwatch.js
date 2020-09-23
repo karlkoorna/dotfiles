@@ -15,7 +15,9 @@ async function get(url) {
 	return new Promise((resolve, onerror) => {
 		GM.xmlHttpRequest({
 			url,
-			headers: { 'x-access-token': '1rj2vRtegS8Y60B3w3qNZm5T2Q0TN2NR' }, // For Twist
+			headers: {
+				'x-access-token': '1rj2vRtegS8Y60B3w3qNZm5T2Q0TN2NR' // For Twist
+			},
 			timeout: 3000,
 			onerror,
 			ontimeout() {
@@ -56,7 +58,7 @@ async function getSchedule(shows) {
 					const h = Math.floor(show.nextAiringEpisode.timeUntilAiring / 3600) % 24;
 					schedule[show.idMal] = {
 						episode: show.nextAiringEpisode.episode,
-						time: (d ? d + ' day' + (d > 1 ? 's' : '') : '') + (h ? ' ' + h + ' hour' + (h > 1 ? 's' : ''): '')
+						time: (d ? d + ' day' + (d > 1 ? 's ' : ' ') : '') + (h ? h + ' hour' + (h > 1 ? 's' : '') : '').trim()
 					};
 				}
 				
@@ -97,8 +99,8 @@ const sources = [
 	}
 ];
 
-setTimeout(() => {
-	const shows = [ ...document.querySelectorAll('.list-item') ].map((el, index) => el.querySelector('.content-status').insertAdjacentHTML('afterend', '<span class="malwatch-links">') || {
+setTimeout(async () => {
+	const shows = [ ...document.querySelectorAll('.list-item') ].map((el) => el.querySelector('.content-status').insertAdjacentHTML('afterend', '<span class="malwatch-links">') || {
 		id: el.querySelector('.title a').href.split('/')[4],
 		title: el.querySelector('.title a').innerText,
 		episode: Number(el.querySelector('.progress a').innerText) || 0,
@@ -106,36 +108,24 @@ setTimeout(() => {
 		links: {}
 	});
 	
-	let schedule = {};
-	getSchedule(shows).then((_schedule) => { schedule = _schedule; });
+	const schedule = await getSchedule(shows);
 	
 	for (const source of sources) (async () => {
 		shows.forEach(async (show, i) => {
 			let link = null;
-			try { link = await source.search(show.title, show.episode + 1) || null; } catch (ex) { console.error(ex); }
+			try { link = await source.search(show.title, show.episode + 1) || null; } catch (ex) { console.error(source.name, ex); }
 			const el = document.querySelector(`.list-item:nth-of-type(${i + 2}) .malwatch-links`);
-			show.links[source.name] = link;
 			
-			if (link) {
+			if (show.links[source.name] = link) {
 				show.found = true;
 				el.innerHTML = sources.filter((source) => show.links[source.name]).map((source) => `<a class="malwatch-link" href="${show.links[source.name]}" target="_blank" rel="nofollower noreferrer">${source.name}</a>`).join(', ');
 			}
 			
-			if (Object.keys(show.links).length === sources.length) {
-				if (!show.found && schedule[show.id]?.episode === show.episode + 1) el.innerHTML = schedule[show.id].time;
-				el.classList.add('is-done');
-			}
-			
+			if (!show.found && (schedule[show.id] || {}).episode === show.episode + 1) el.innerHTML = schedule[show.id].time;
+			if (Object.keys(show.links).length === sources.length) el.classList.add('is-done');
 			if (source.delay) await new Promise((resolve) => setTimeout(resolve, source.delay));
 		});
 	})();
-	
-	for (const el of document.querySelectorAll('.icon-add-episode')) el.addEventListener('click', () => {
-		const parentEl = el.parentElement.parentElement.parentElement;
-		const targetEl = parentEl.querySelector('.malwatch-links');
-		
-		targetEl.innerHTML = targetEl.firstElementChild && schedule[parentEl.querySelector('.title a').href.split('/')[4]]?.time || '';
-	});
 }, 100);
 
 GM.addStyle(`

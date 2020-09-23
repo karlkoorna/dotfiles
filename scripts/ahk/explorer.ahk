@@ -10,10 +10,10 @@ Notify(str, delay) {
 ExplorerAddress() {
 	WinGetText texts
 	RegExMatch(texts, "Address: (.*)", address)
-	return RegExMatch(SubStr(address, 10), "^\w:\\", b) ? SubStr(address, 10) : USERPROFILE . "\" . SubStr(address, 10)
+	return RegExMatch(SubStr(address, 10), "^[A-Z]:\\") ? SubStr(address, 10) : USERPROFILE . "\" . SubStr(address, 10)
 }
 
-ExplorerTerminal(executable) {
+OpenTerminal(executable) {
 	SetWorkingDir % ExplorerAddress()
 	Run % executable
 	SetWorkingDir % A_ScriptDir
@@ -24,7 +24,7 @@ ExplorerTerminal(executable) {
 ^t::
 #IfWinActive ahk_class #32770
 ^t::
-	ExplorerTerminal("C:/Program Files/Git/git-bash.exe")
+	OpenTerminal("C:/Program Files/Git/git-bash.exe")
 	return
 #IfWinActive
 
@@ -33,16 +33,16 @@ ExplorerTerminal(executable) {
 ^+t::
 #IfWinActive ahk_class #32770
 ^+t::
-	ExplorerTerminal("bash")
+	OpenTerminal("bash")
 	return
 #IfWinActive
 
-; CTRL+ALT+T -- Open Powershell from File Explorer.
+; CTRL+ALT+T -- Open PowerShell from File Explorer.
 #IfWinActive ahk_class CabinetWClass
 ^!t::
 #IfWinActive ahk_class #32770
 ^!t::
-	ExplorerTerminal("powershell")
+	OpenTerminal("powershell")
 	return
 #IfWinActive
 
