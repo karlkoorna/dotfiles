@@ -12,17 +12,15 @@
 // ==/UserScript==
 
 async function get(url) {
-	return new Promise((resolve, onerror) => {
+	return new Promise((resolve, reject) => {
 		GM.xmlHttpRequest({
 			url,
 			headers: {
 				'x-access-token': '1rj2vRtegS8Y60B3w3qNZm5T2Q0TN2NR' // For Twist
 			},
 			timeout: 3000,
-			onerror,
-			ontimeout() {
-				resolve('');
-			},
+			onerror: reject,
+			ontimeout: reject,
 			onload(res) {
 				resolve(res.responseText);
 			}
