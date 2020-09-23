@@ -1,8 +1,6 @@
 ﻿::acurate::accurate
 ::april::April
 ::aswell::as well
-::attendent::attendant
-::attendents::attendants
 ::august::August
 ::cant::can't
 ::couldnt::couldn't
@@ -11,6 +9,7 @@
 ::didnt::didn't
 ::doesnt::doesn't
 ::dont::don't
+::etoile::étoile
 ::february::February
 ::friday::Friday
 ::havent::haven't
@@ -28,6 +27,7 @@
 ::muse::μ's
 ::mustve::must've
 ::neednt::needn't
+::noone::no one
 ::november::November
 ::october::October
 ::prob::probably
@@ -44,8 +44,6 @@
 ::theyre::they're
 ::thursday::Thursday
 ::tuesday::Tuesday
-::u::you
-::ud::you'd
 ::wasnt::wasn't
 ::wednesday::Wednesday
 ::whats::what's
@@ -54,4 +52,5 @@
 ::wouldntve::wouldn't've
 ::wouldve::would've
 ::youre::you're
+:?*:attenden::attendan
 :?*:compatab::compatib
