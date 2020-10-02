@@ -20,12 +20,12 @@ EncodeB64(str) {
 ^!v::
 	old := Clipboard
 	Send ^c
-	ClipWait 100
+	ClipWait 1000
 	new := Clipboard
 	Clipboard := old
-	ClipWait 100
+	ClipWait 1000
 	Send ^v
-	ClipWait 100
+	ClipWait 1000
 	Clipboard := new
 	return
 
@@ -38,7 +38,7 @@ EncodeB64(str) {
 ^!d::
 	old := Clipboard
 	Send ^c
-	ClipWait 100
+	ClipWait 1000
 	RegExReplace(Clipboard, "\b\S+\b", "", count, -1, 1)
 	out := "Characters: " . StrLen(StrReplace(StrReplace(Clipboard, "`r"), "`n")) . "`n"
 	out .= "Words: " . count . "`n"
@@ -55,7 +55,7 @@ EncodeB64(str) {
 	FileReadLine ip, % tmp, 1
 	FileDelete % tmp
 	Clipboard := ip
-	Notify("Copied", 500)
+	Notify("Copied", 1000)
 	return
 
 ; CTRL+ALT+B -- Paste clipboard with base64 encoded links.
@@ -70,8 +70,8 @@ EncodeB64(str) {
 	}
 	old := Clipboard
 	Clipboard := out . SubStr(Clipboard, offset)
-	ClipWait 100
+	ClipWait 1000
 	Send ^v
-	ClipWait 100
+	ClipWait 1000
 	Clipboard := old
 	return
