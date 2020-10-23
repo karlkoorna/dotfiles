@@ -1,10 +1,12 @@
 # Dotfiles
 My way of Windows.
 
-* Install [FiraCode](https://github.com/tonsky/FiraCode/releases).
-* Enable **Windows Subsystem for Linux**.
+## Miscellaneous
 
-## Configuration
+* Install [FiraCode](https://github.com/tonsky/FiraCode/releases)
+* Enable Windows Subsystem for Linux.
+
+## Settings
 *(Windows 10 64-bit Professional Edition)*
 
 ### System
