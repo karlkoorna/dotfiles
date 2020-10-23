@@ -29,7 +29,7 @@ My way of Windows.
 	* Hide app list in start menu.
 	* Show recently added and most used apps.
 	* Choose only Settings and Personal folder to appear on Start.
-	* Uninstall/unpin tiles.
+	* Unpin all tiles.
 * **Taskbar**
 	* Do not show taskbars on all displays.
 	* Hide search.
