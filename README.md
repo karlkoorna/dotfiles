@@ -14,49 +14,42 @@ My way of Windows.
 * **Notifications & Actions**
 	* Remove all quick actions.
 * **Focus Assist**
-	* Disable focus assist and automatic rules.
+	* Disable automatic rules.
 * **Power & Sleep**
 	* The computer should never turn off the screen or go to sleep.
-* **Clipboard**
-	* Enable clipboard history.
 
 ### Personalization
 
 * **Colors**
 	* Show accent color on all surfaces.
 * **Lock Screen**
-	* Show detailed weather status on the lock screen.
+	* Only show detailed weather status on the lock screen.
 * **Start**
 	* Hide app list in start menu.
 	* Show recently added and most used apps.
-	* Choose only Settings and Personal folders to appear on Start.
-	* Unpin all tiles.
+	* Choose only Settings and Personal folder to appear on Start.
+	* Uninstall/unpin tiles.
 * **Taskbar**
 	* Do not show taskbars on all displays.
-	* Show search as an icon.
-	* Hide task view and Windows Ink buttons.
+	* Hide search.
+	* Hide Cortana and Task View button.
 	* Unpin all shortcuts except File Explorer and Chrome.
-
-### Accounts
-
-* **Email & Accounts**
-	* Add a mail, calendar and people account.
-	* Download new emails as items arrive.
 
 ### Time & Language
 
 * **Date & Time**
 	* Set time zone automatically.
 * **Region**
-	* Update data formats.
+	* Change data formats. *(Control Panel)*
 * **Language**
-	* Add Estonian, Russian and Japanese.
+	* Add Estonian keyboard under English language.
+	* Add Russian and Japanese languages.
 
 ### Gaming
 
-* **Game Bar**
-* Do not record game clips, screenshots and broadcast using game bar.
-* Do not open game bar using this button on a controller.
+* **Xbox Game Bar**
+* Disable Xbox Game Bar.
+* Do not open game bar using the button on a controller.
 
 ### Ease of Access
 
@@ -67,19 +60,17 @@ My way of Windows.
 	* Disable toggle keys.
 	* Disable filter keys.
 
+### Search
+
+* **Searching Windows**
+	* Select enhanced indexing.
+
 ### Update & Security
 
 * **Windows Update**
 	* Install all available updates.
 * **For Developers**
-	* Enable developer mode.
-	* Show file extensions.
-	* Hidden files and full path.
-
-### Search
-
-* **Searching Windows**
-	* Select enhanced indexing.
+	* Show file extensions, hidden files and full path.
 
 ## Software
 
