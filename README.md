@@ -3,8 +3,9 @@ My way of Windows.
 
 ## Miscellaneous
 
-* Install [FiraCode](https://github.com/tonsky/FiraCode/releases)
+* Install [FiraCode](https://github.com/tonsky/FiraCode/releases).
 * Enable Windows Subsystem for Linux.
+* Uninstall all metro apps excepts Sticky Notes.
 
 ## Settings
 *(Windows 10 64-bit Professional Edition)*
@@ -48,8 +49,8 @@ My way of Windows.
 ### Gaming
 
 * **Xbox Game Bar**
-* Disable Xbox Game Bar.
-* Do not open game bar using the button on a controller.
+	* Disable Xbox Game Bar.
+	* Do not open game bar using the button on a controller.
 
 ### Ease of Access
 
