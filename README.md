@@ -1,18 +1,11 @@
 # Dotfiles
 My way of Windows.
 
-## Fonts
+* Install [FiraCode](https://github.com/tonsky/FiraCode/releases).
+* Enable **Windows Subsystem for Linux**.
 
-* [FiraCode](https://github.com/tonsky/FiraCode/releases)
-* [FontAwesome](https://fontawesome.com/how-to-use/on-the-desktop/setup/getting-started)
-
-## Operating System
+## Configuration
 *(Windows 10 64-bit Professional Edition)*
-
-Turn on the following Windows Features:
-* Hyper-V
-* Telnet
-* Subsystem for Linux
 
 ### System
 
