@@ -5,7 +5,7 @@ My way of Windows.
 
 * Install [FiraCode](https://github.com/tonsky/FiraCode/releases).
 * Enable Windows Subsystem for Linux.
-* Uninstall all metro apps excepts Sticky Notes.
+* Uninstall all metro apps except Sticky Notes.
 
 ## Settings
 *(Windows 10 64-bit Professional Edition)*
@@ -78,10 +78,11 @@ My way of Windows.
 ### [7-Zip](https://7-zip.org)
 
 * Show icons in context menu.
-* Keep only `Open archive`, `Extract files...`, `Extract here` and `Add to archive` context menu items.
+* Keep only `Extract files...`, `Extract here` and `Add to archive...` context menu items.
+* Show ".." item.
+* Show real file icons.
 * Enable full row select.
-
-### [Audacity](https://audacityteam.org)
+* Show grid lines.
 
 ### [AutoHotKey](https://autohotkey.com) [📁](https://github.com/karlkoorna/dotfiles/tree/master/scripts/ahk)
 
@@ -89,27 +90,22 @@ My way of Windows.
 
 ### [Chrome](https://google.com/chrome)
 
-* Hide home button.
-* Show bookmarks bar.
+#### [Dark Reader](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh), [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa), [OneTab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall), [Reddit Enhancement Suite](https://chrome.google.com/webstore/detail/reddit-enhancement-suite/kbmfpngjjgdllneeigpgjifpgocmfgmb), [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg)
 
-#### [Currently](https://chrome.google.com/webstore/detail/currently/ojhmphdkpgbibohbnpbfiefkgieacjmh), [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa), [OneTab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall), [Reddit Enhancement Suite](https://chrome.google.com/webstore/detail/reddit-enhancement-suite/kbmfpngjjgdllneeigpgjifpgocmfgmb), [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm), [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg)
-
-### Creative Cloud (Photoshop, Illustrator, Premiere, After Effects, Audition, Media Encoder, Lightroom, InDesign, Dimension, XD, Acrobat)
+### Creative Cloud (Photoshop, Illustrator, Acrobat)
 
 ### [qBittorrent](https://www.qbittorrent.org/download.php)
 
 ### [Discord](https://discordapp.com)
 
-* Set `Voicemeeter Aux Output` as the input device.
+* Set `Voicemeeter Output` as the input device.
 * Set `Voicemeeter Input` as the output device.
 * Disable in-game overlay.
 
-### [Docker](https://docker.com/products/docker-desktop)
+### [Firefox](https://mozilla.org/en-US/firefox)
 
-### [Firefox Developer Edition](https://mozilla.org/en-US/firefox/developer)
-
-* Switch to default theme.
-* Only show developer tools button, URL and bookmarks bars.
+* Only show navigation controls, URL and bookmarks bar.
+* Show nothing on the home screen.
 * Do not warn when closing multiple tabs.
 
 #### [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin)
