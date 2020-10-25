@@ -125,7 +125,7 @@ My way of Windows.
 
 * Do not validate certificates.
 
-### Microsoft Office (Word, Excel, PowerPoint)
+### Office (Word, Excel, PowerPoint)
 
 ### [MP3Tag](https://mp3tag.de)
 
