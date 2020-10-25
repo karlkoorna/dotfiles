@@ -102,6 +102,10 @@ My way of Windows.
 * Set `Voicemeeter Input` as the output device.
 * Disable in-game overlay.
 
+### [Everything](https://voidtools.com/downloads)
+
+* 
+
 ### [Firefox](https://mozilla.org/en-US/firefox)
 
 * Only show navigation controls, URL and bookmarks bar.
