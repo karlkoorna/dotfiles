@@ -158,7 +158,7 @@ My way of Windows.
 
 #### [Wallpaper Engine](https://store.steampowered.com/app/431960/Wallpaper_Engine)
 
-* Keep running when other application is maximized.
+* Start with Windows.
 * High preset at 60 FPS.
 * Auto start with high priority.
 * Do not output audio.
