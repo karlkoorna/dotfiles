@@ -64,7 +64,7 @@ My way of Windows.
 ### Search
 
 * **Searching Windows**
-	* Select enhanced indexing.
+	* Enable enhanced indexing.
 
 ### Update & Security
 
