@@ -181,5 +181,3 @@ My way of Windows.
 * Pin to system tray and run at startup.
 * Hook volume keys for A1.
 * Pin system tray icon.
-
-### [VirtualBox](https://virtualbox.org)
