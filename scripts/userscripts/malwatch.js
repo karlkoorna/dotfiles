@@ -4,7 +4,8 @@
 // @author       Karl Köörna
 // @version      1.0.0
 // @include      /myanimelist\.net\/animelist\/[^?]+(\?status=1)?$/
-// @connect      anipahe.com
+// @connect      graphql.anilist.co
+// @connect      animepahe.com
 // @connect      twist.moe
 // @connect      nyaa.si
 // @grant        GM.xmlHttpRequest
@@ -15,6 +16,7 @@ async function get(url) {
 	return new Promise((resolve, reject) => {
 		GM.xmlHttpRequest({
 			url,
+      method: 'GET',
 			headers: {
 				'x-access-token': '1rj2vRtegS8Y60B3w3qNZm5T2Q0TN2NR' // For Twist
 			},
