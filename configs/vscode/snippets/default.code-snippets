@@ -62,13 +62,6 @@
 		],
 		"scope": "javascript,javascriptreact,typescript,typescriptreact"
 	},
-	"for..in": {
-		"prefix": "fin",
-		"body": [
-			"for (const $1 in $2) "
-		],
-		"scope": "javascript,javascriptreact,typescript,typescriptreact"
-	},
 	"for..of": {
 		"prefix": "fof",
 		"body": [
@@ -134,12 +127,5 @@
 			"});"
 		],
 		"scope": "javascript,javascriptreact,typescript,typescriptreact"
-	},
-	"setState": {
-		"prefix": "ss",
-		"body": [
-			"this.setState(${2:{ $1 \\}});"
-		],
-		"scope": "javascriptreact,typescriptreact"
 	}
 }

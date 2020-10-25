@@ -1,4 +1,4 @@
-﻿::acurate::accurate
+::acurate::accurate
 ::april::April
 ::aswell::as well
 ::august::August

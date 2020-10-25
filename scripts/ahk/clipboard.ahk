@@ -1,19 +1,10 @@
-﻿RemoveToolTip() {
+RemoveToolTip() {
 	ToolTip
 }
 
 Notify(str, delay) {
 	ToolTip % str
 	SetTimer RemoveToolTip, % delay
-}
-
-EncodeB64(str) {
-	VarSetCapacity(bin, StrPut(str, "UTF-8"))
-	len := StrPut(str, &bin, "UTF-8") - 1
-	DllCall("Crypt32\CryptBinaryToString", "ptr", &bin, "uint", len, "uint", 0x40000001, "ptr", 0, "uint*", size)
-	VarSetCapacity(buf, size << 1, 0)
-	DllCall("Crypt32\CryptBinaryToString", "ptr", &bin, "uint", len, "uint", 0x40000001, "ptr", &buf, "uint*", size)
-	return StrGet(&buf)
 }
 
 ; CTRL+ALT+V -- Switch selection and clipboard.
@@ -56,22 +47,4 @@ EncodeB64(str) {
 	FileDelete % tmp
 	Clipboard := ip
 	Notify("Copied", 1000)
-	return
-
-; CTRL+ALT+B -- Paste clipboard with base64 encoded links.
-^!b::
-	out := ""
-	index := 1
-	offset := 1
-	while index := RegExMatch(Clipboard, "O)(https?://)\S*", match, offset) {
-		out .= SubStr(Clipboard, offset, index - offset)
-		out .= RegExMatch(match.0, "(mega(\.co)?\.nz|mediafire\.com|drive\.google\.|onedrive\.live|sharepoint\.com|nyaa\.si|rutracker\.org)") ? EncodeB64(match.0) : match.0
-		offset := index + match.Len
-	}
-	old := Clipboard
-	Clipboard := out . SubStr(Clipboard, offset)
-	ClipWait 1000
-	Send ^v
-	ClipWait 1000
-	Clipboard := old
 	return

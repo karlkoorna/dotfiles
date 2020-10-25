@@ -5,7 +5,6 @@ My way of Windows.
 
 * Install [FiraCode](https://github.com/tonsky/FiraCode/releases).
 * Enable Windows Subsystem for Linux.
-* Uninstall all metro apps except Sticky Notes.
 
 ## Settings
 *(Windows 10 64-bit Professional Edition)*
@@ -94,6 +93,8 @@ My way of Windows.
 
 ### Creative Cloud (Photoshop, Illustrator)
 
+### [Qalculate!](https://qalculate.github.io/downloads)
+
 ### [qBittorrent](https://www.qbittorrent.org/download.php)
 
 ### [Discord](https://discordapp.com)
@@ -104,7 +105,7 @@ My way of Windows.
 
 ### [Everything](https://voidtools.com/downloads)
 
-* 
+*
 
 ### [Firefox](https://mozilla.org/en-US/firefox)
 
@@ -149,8 +150,6 @@ My way of Windows.
 ### [Python](https://python.org)
 
 ### [Snipaste](https://snipaste.com) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/snipaste)
-
-### [SpeedCrunch](https://speedcrunch.org) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/speedcrunch)
 
 ### [Spek](http://spek.cc)
 

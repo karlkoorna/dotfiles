@@ -1,4 +1,4 @@
-﻿RemoveToolTip() {
+RemoveToolTip() {
 	ToolTip
 }
 
@@ -61,9 +61,21 @@ OpenTerminal(executable) {
 	Run "C:/Program Files/Everything/Everything.exe"
 	return
 
+; WIN+C -- Open Qalculate.
+#c::
+	Run "C:/Program Files/Qalculate/qalculate.exe""
+	return
+
 ; CTRL+ALT+F -- Toggle window always on top.
 ^!f::
 	Winset AlwaysOnTop, Toggle, A
 	WinGet ExStyle, ExStyle, A
 	Notify(ExStyle & 0x8 ? "Marked" : "Unmarked", 500)
 	return
+
+; ESC -- Close Qalculate.
+#IfWinActive Qalculate
+Escape::
+	WinClose
+	return
+#IfWinActive
