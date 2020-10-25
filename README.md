@@ -112,8 +112,9 @@ My way of Windows.
 
 ### [Git](https://git-scm.com)
 
-* Disable Git GUI context menu item.
-* Use Visual Studio Code Insiders as Git's default editor.
+* Disable Git GUI Windows Explorer integration.
+* Use Visual Studio Code as Git's default editor.
+* Use Git from Git Bash only.
 * Checkout as-is, commit Unix-style line endings.
 
 ### [GitHub Desktop](https://desktop.github.com)
@@ -123,8 +124,6 @@ My way of Windows.
 ### [Insomnia](https://insomnia.rest)
 
 * Do not validate certificates.
-
-### [IntelliJ Community](https://www.jetbrains.com/idea)
 
 ### Microsoft Office (Word, Excel, PowerPoint)
 
@@ -139,7 +138,9 @@ My way of Windows.
 
 ### [Notepad++](https://notepad-plus-plus.org) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/notepad++)
 
-### [PyCharm Community](https://www.jetbrains.com/pycharm)
+### [OpenJDK](https://adoptopenjdk.net)
+
+* Set JAVA_HOME variable.
 
 ### [Python](https://python.org)
 
@@ -151,16 +152,14 @@ My way of Windows.
 
 ### [Steam](https://store.steampowered.com)
 
-* Disable Big Picture Overlay.
-* Open overlay with `Shift + ~`.
+* Open overlay with `Shift + '`.
 * Allow downloads during gameplay.
 * Pin system tray icon.
 
 #### [Wallpaper Engine](https://store.steampowered.com/app/431960/Wallpaper_Engine)
 
 * Keep running when other application is maximized.
-* Stop when other application is fullscreen.
-* Highest quality preset.
+* High preset at 60 FPS.
 * Auto start with high priority.
 * Do not output audio.
 
