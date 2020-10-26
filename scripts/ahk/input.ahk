@@ -1,3 +1,11 @@
+; CTRL+M4 -- Voicemeeter key.
+^XButton2::F23
+
+; CTRL+M5 -- Snipaste key.
+^XButton1::F24
+
+; Autocorrect
+
 ::acurate::accurate
 ::april::April
 ::aswell::as well
