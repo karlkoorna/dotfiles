@@ -16,7 +16,7 @@ async function get(url) {
 	return new Promise((resolve, reject) => {
 		GM.xmlHttpRequest({
 			url,
-      method: 'GET',
+			method: 'GET',
 			headers: {
 				'x-access-token': '1rj2vRtegS8Y60B3w3qNZm5T2Q0TN2NR' // For Twist
 			},

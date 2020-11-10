@@ -105,7 +105,16 @@ My way of Windows.
 
 ### [Everything](https://voidtools.com/downloads)
 
-*
+* Do not run as administrator.
+* Enable Everything service.
+* Enable full row select.
+* Allow literal operators.
+* Allow round bracket grouping.
+* Replace forward slashes with backslashes.
+* Operator precedence: AND > OR.
+* Hide results when the search is empty.
+* Alternate row color.
+* Index folder size.
 
 ### [Firefox](https://mozilla.org/en-US/firefox)
 

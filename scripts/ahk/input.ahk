@@ -1,4 +1,4 @@
-; CTRL+M4 -- Voicemeeter key.
+﻿; CTRL+M4 -- Voicemeeter key.
 ^XButton2::F23
 
 ; CTRL+M5 -- Snipaste key.

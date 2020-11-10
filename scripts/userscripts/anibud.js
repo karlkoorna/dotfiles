@@ -11,8 +11,8 @@ function format(bytes) {
 	return (bytes / Math.pow(1024, exp)).toFixed(2) + ' ' + [ 'B', 'KiB', 'MiB', 'GiB', 'TiB' ][exp];
 }
 
-const up = document.querySelector('.userstatsright dd:nth-of-type(1) > span').title;
-const down = document.querySelector('.userstatsright dd:nth-of-type(2) > span').title;
+const up = Number(document.querySelector('.userstatsright dd:nth-of-type(1) > span').title);
+const down = Number(document.querySelector('.userstatsright dd:nth-of-type(2) > span').title);
 
 document.querySelector('.userstatsright dd:nth-of-type(3)').insertAdjacentHTML('afterend', [ 3, 2, 1, 10 ].map((ratio) => {
 	const budget = Math.floor(up / ratio - down);
