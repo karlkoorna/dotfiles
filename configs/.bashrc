@@ -4,4 +4,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
-alias pd="cd "$OLDPWD""
+zipdirs () {
+	for name in */; do "C:/Program Files/7-Zip/7z.exe" a -r "${name::-1}.zip" "$name"; done
+}
