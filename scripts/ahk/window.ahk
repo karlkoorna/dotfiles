@@ -1,6 +1,6 @@
 CoordMode Mouse, Screen
-SetWinDelay 0
 SetMouseDelay 0
+SetWinDelay 0
 
 IsWinApplicable(win_id) {
 	WinGetClass win_class, ahk_id %win_id%
