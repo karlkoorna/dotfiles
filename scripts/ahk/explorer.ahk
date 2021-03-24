@@ -7,17 +7,25 @@ Notify(str, delay) {
 	SetTimer RemoveToolTip, % delay
 }
 
-ExplorerAddress() {
+GetAddress() {
 	WinGetText texts
 	RegExMatch(texts, "Address: (.*)", address)
+	Notify(address, 2000)
 	return RegExMatch(SubStr(address, 10), "^[A-Z]:\\") ? SubStr(address, 10) : USERPROFILE . "\" . SubStr(address, 10)
 }
 
-OpenTerminal(executable) {
-	SetWorkingDir % ExplorerAddress()
-	Run % executable
+OpenTerminal(path) {
+	SetWorkingDir % GetAddress()
+	Run % path
 	SetWorkingDir % A_ScriptDir
 }
+
+; CTRL+ALT+F -- Toggle window always on top.
+^!f::
+	Winset AlwaysOnTop, Toggle, A
+	WinGet ExStyle, ExStyle, A
+	Notify(ExStyle & 0x8 ? "Marked" : "Unmarked", 500)
+	return
 
 ; CTRL+T -- Open Git Bash from File Explorer.
 #IfWinActive ahk_class CabinetWClass
@@ -63,14 +71,7 @@ OpenTerminal(executable) {
 
 ; WIN+C -- Open Qalculate.
 #c::
-	Run "C:/Program Files/Qalculate/qalculate.exe""
-	return
-
-; CTRL+ALT+F -- Toggle window always on top.
-^!f::
-	Winset AlwaysOnTop, Toggle, A
-	WinGet ExStyle, ExStyle, A
-	Notify(ExStyle & 0x8 ? "Marked" : "Unmarked", 500)
+	Run "C:/Program Files/Qalculate/qalculate.exe"
 	return
 
 ; ESC -- Close Qalculate.
