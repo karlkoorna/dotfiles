@@ -46,5 +46,14 @@ Notify(str, delay) {
 	FileReadLine ip, % tmp, 1
 	FileDelete % tmp
 	Clipboard := ip
-	Notify("Copied", 1000)
+	Notify("Copied IP", 1000)
+	return
+
+; Automatically decode URIs in clipboard.
+OnClipboardChange:
+	if RegExMatch(Clipboard, "https?:\/\/.*\/(.*)?(%[a-fA-F0-9]{2})+\S*") {
+		str := Clipboard
+		DllCall("Shlwapi.dll\UrlUnescapeW", "Ptr", &str, "Ptr", 0, "UInt", 0, "UInt", 0x00140000, "UInt")
+		Clipboard := str
+	}
 	return
