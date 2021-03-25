@@ -4,7 +4,7 @@ SetWinDelay 0
 
 IsWinApplicable(win_id) {
 	WinGetClass win_class, ahk_id %win_id%
-	if (win_class = "WorkerW" or win_class = "Windows.UI.Core.CoreWindow" or win_class = "Shell_InputSwitchTopLevelWindow") {
+	if (win_class = "WorkerW" or win_class = "Windows.UI.Core.CoreWindow" or win_class = "MultitaskingViewFrame" or win_class = "Shell_InputSwitchTopLevelWindow" or win_class = "NotifyIconOverflowWindow") {
 		return false
 	}
 	
@@ -30,7 +30,7 @@ IsWinApplicable(win_id) {
 	WinRestore ahk_id %win_id%
 	WinMove ahk_id %win_id%,, %win_x%, %win_y%, %win_w%, %win_h%
 	
-	x := win_x + win_w * .8
+	x := win_x + win_w * .75
 	y := win_y + 8
 	Click down, %x%, %y%
 	
