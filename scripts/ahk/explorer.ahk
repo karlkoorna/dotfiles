@@ -59,7 +59,7 @@ OpenTerminal(path) {
 #f::
 #IfWinActive ahk_class #32770
 #f::
-	path := ExplorerAddress()
+	path := GetAddress()
 	Run "C:/Program Files/Everything/Everything.exe" -p "%path%"
 	return
 #IfWinActive
