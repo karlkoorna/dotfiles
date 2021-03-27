@@ -4,13 +4,12 @@
 
 Notify(str, delay) {
 	ToolTip % str
-	SetTimer RemoveToolTip, % delay
+	SetTimer RemoveToolTip, %delay%
 }
 
 GetAddress() {
 	WinGetText texts
 	RegExMatch(texts, "Address: (.*)", address)
-	Notify(address, 2000)
 	return RegExMatch(SubStr(address, 10), "^[A-Z]:\\") ? SubStr(address, 10) : USERPROFILE . "\" . SubStr(address, 10)
 }
 

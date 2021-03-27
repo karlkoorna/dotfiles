@@ -4,7 +4,7 @@
 
 Notify(str, delay) {
 	ToolTip % str
-	SetTimer RemoveToolTip, % delay
+	SetTimer RemoveToolTip, %delay%
 }
 
 ; CTRL+ALT+V -- Switch selection and clipboard.
@@ -42,8 +42,8 @@ Notify(str, delay) {
 ^!a::
 	ip := "0.0.0.0"
 	tmp := WinDir . "/temp/ip.tmp"
-	UrlDownloadToFile https://checkip.amazonaws.com, % tmp
-	FileReadLine ip, % tmp, 1
+	UrlDownloadToFile https://checkip.amazonaws.com, %tmp%
+	FileReadLine ip, %tmp%, 1
 	FileDelete % tmp
 	Clipboard := ip
 	Notify("Copied IP", 1000)
