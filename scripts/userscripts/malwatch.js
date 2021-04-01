@@ -6,8 +6,9 @@
 // @include      /myanimelist\.net\/animelist\/[^?]+(\?status=1)?$/
 // @connect      graphql.anilist.co
 // @connect      nyaa.si
+// @connect      twist.moe
 // @connect      animepahe.com
-// @connect      www12.9anime.to
+// @connect      9anime.to
 // @connect      animekisa.tv
 // @grant        GM.xmlHttpRequest
 // @grant        GM.addStyle
@@ -18,6 +19,9 @@ async function get(url, timeout = 5000) {
 		GM.xmlHttpRequest({
 			url,
       		method: 'GET',
+			headers: {
+				'x-access-token': '0df14814b9e590a1f26d3071a4ed7974' // For Twist
+			},
 			timeout,
 			onerror: reject,
 			ontimeout: reject,
@@ -39,7 +43,11 @@ async function getSchedule(shows) {
 					query ($ids: [Int]) {
 						Page {
 							media(idMal_in: $ids) {
-								idMal nextAiringEpisode { episode timeUntilAiring }
+								idMal
+								nextAiringEpisode {
+									episode
+									timeUntilAiring
+								}
 							}
 						}
 					}
@@ -71,28 +79,41 @@ async function getSchedule(shows) {
 const sources = [
 	{
 		name: 'Nyaa',
-		delay: 200,
+		delay: 100,
 		async search(title, episode) {
-			const torrents = [ ...new DOMParser().parseFromString(await get(`https://nyaa.si/?page=rss&c=1_2&s=seeders&o=desc&q=${title.replace(/[^\w]/, ' ')} ${episode}`), 'text/xml').getElementsByTagName('item') ].map((el) => Object.fromEntries([ ...el.children ].map((el) => [ el.nodeName.replace('nyaa:', ''), isNaN(el.textContent) ? el.textContent : Number(el.textContent) ]))).filter((torrent) => torrent.seeders > 0 && new RegExp(`(E|- )0?${episode}(?![0-9]| ?~| ?-)`).test(torrent.title));
+			const torrents = Array.from(new DOMParser().parseFromString(await get(`https://nyaa.si/?page=rss&c=1_2&s=seeders&o=desc&q=${title.replace(/[^\w]/, ' ')} ${episode}`), 'text/xml').getElementsByTagName('item')).map((el) => Object.fromEntries([ ...el.children ].map((el) => [ el.nodeName.replace('nyaa:', ''), isNaN(el.textContent) ? el.textContent : Number(el.textContent) ]))).filter((torrent) => torrent.seeders > 0 && new RegExp(`(E|- )0?${episode}(?![0-9]| ?~| ?-)`).test(torrent.title));
 			if (torrents.length) return `magnet:?xt=urn:btih:${torrents[0].infoHash}&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce`;
 		}
 	},
 	{
+		name: 'Twist',
+		delay: 100,
+		async search(title, episode) {
+			window.twist = window.twist || JSON.parse(await get('https://twist.moe/api/anime'));
+			const show = twist.find((show) => show.title.toLowerCase().includes(title.toLowerCase().replace(/(st|nd|rd|th) season/, '')));
+			if (show && (!show.ongoing || JSON.parse(await get(`https://twist.moe/api/anime/${show.slug.slug}/sources`)).length >= episode)) return `https://twist.moe/a/${show.slug.slug}/${episode}`;
+	}
+	},
+	{
 		name: 'Pahe',
 		async search(title, episode) {
-			const shows = JSON.parse(await get(`https://animepahe.com/api?m=search&q=${title}`));
-			if (!shows.total) return;
-			const episodes = JSON.parse(await get(`https://animepahe.com/api?m=release&id=${shows.data[0].id}&sort=episode_desc`)).data;
-			if (episodes.length >= episode) return `https://animepahe.com/play/${shows.data[0].session}/${episodes[episodes.length - episode].session}`;
+			const show = JSON.parse(await get(`https://animepahe.com/api?m=search&q=${title}`))?.data?.[0];
+			if (!show) return;
+			const episodes = JSON.parse(await get(`https://animepahe.com/api?m=release&id=${show.id}&sort=episode_desc`)).data;
+			if (episode > episodes.length) return;
+			return `https://animepahe.com/play/${show.session}/${episodes[episodes.length - episode].session}`;
 		}
 	},
 	{
 		name: '9Anime',
+		delay: 100,
 		async search(title, episode) {
-			const shows = new DOMParser().parseFromString(JSON.parse(await get(`https://www12.9anime.to/ajax/anime/search?keyword=${title}`)).html, 'text/html');
-			const slug = [ ...shows.querySelectorAll('a:not(.more)') ].reverse().map((el, rank) => ({ rank, slug: el.getAttribute('href') })).sort((prev, next) => next.rank - prev.rank + Number(next.slug.includes('bluray')))?.[0]?.slug;
-			if (!slug) return;
-			return `https://www12.9anime.to${slug}/ep-${episode}`;
+			const shows = new DOMParser().parseFromString(await get(`https://9anime.to/search?keyword=${title}`), 'text/html');
+			const show = shows.querySelector('.anime-list .poster');
+			console.log(show);
+			if (!show) return;
+			if (episode > Number(show.querySelector('.tag.ep').innerText.split('/')[0].replace('Ep', ' ').replace('Full', '1'))) return;
+			return `https://9anime.to${show.getAttribute('href')}/ep-${episode}`;
 		}
 	},
 	{
@@ -108,35 +129,14 @@ const sources = [
 	}
 ];
 
-const dispose = setInterval(async () => {
-	if (!document.querySelector('.list-table > .list-item')) return;
-	clearInterval(dispose);
-	
-	let shows = [ ...document.querySelectorAll('.list-item') ].map((refEl, i) => {
-		const el = document.createElement('div');
-		el.classList.add('malwatch-links');
-		el.innerText = '…';
-		refEl.querySelector('.content-status').insertAdjacentElement('afterend', el);
-		
-		return {
-			el,
-			id: refEl.querySelector('.title a').href.split('/')[4],
-			title: refEl.querySelector('.title a').innerText,
-			episode: Number(refEl.querySelector('.progress a').innerText) || 0,
-			found: false,
-			links: {}
-		};
-	});
-	
-	const schedule = await getSchedule(shows);
-	
-	shows = shows.filter((show, i) => {
-		if (show.episode + 1 !== schedule[show.id]?.episode) return true;
-		show.el.innerHTML = schedule[show.id].time;
+function getLinks(shows, schedule) {
+	shows = shows.filter((show) => {
+		if (show.episode + 1 < (schedule[show.id]?.episode || 999_999)) return true;
+		show.el.innerHTML = `Ep. ${schedule[show.id].episode} in ${schedule[show.id].time}`;
 	});
 	
 	for (const source of sources) (async () => {
-		shows.forEach(async (show, i) => {
+		for (const show of shows) {
 			let link = null;
 			try {
 				link = await source.search(show.title, show.episode + 1) || null;
@@ -150,8 +150,46 @@ const dispose = setInterval(async () => {
 			}
 			
 			if (source.delay) await new Promise((resolve) => setTimeout(resolve, source.delay));
-		});
+		}
 	})();
+}
+
+const dispose = setInterval(async () => {
+	if (!document.querySelector('.list-table > .list-item')) return;
+	clearInterval(dispose);
+	
+	let shows = Array.from(document.querySelectorAll('.list-item')).map((refEl, i) => {
+		const el = document.createElement('div');
+		el.classList.add('malwatch-links');
+		el.innerText = '…';
+		refEl.querySelector('.content-status').insertAdjacentElement('afterend', el);
+		
+		return {
+			el,
+			refEl,
+			id: refEl.querySelector('.title a').href.split('/')[4],
+			title: refEl.querySelector('.title a').innerText,
+			episode: Number(refEl.querySelector('.progress a').innerText) || 0,
+			found: false,
+			links: {}
+		};
+	});
+	
+	const schedule = await getSchedule(shows);
+	
+	for (const show of shows) {
+		new MutationObserver((mutations) => {
+			if (mutations.length !== 1) return;
+			
+			show.found = false;
+			show.links = {};
+			show.episode = Number(show.refEl.querySelector('.progress a').innerText) || 0;
+			
+			getLinks([ show ], schedule);
+		}).observe(show.refEl.querySelector('.progress span'), { subtree: true, childList: true, characterData: true });
+	}
+	
+	getLinks(shows, schedule);
 }, 100);
 
 GM.addStyle(`
