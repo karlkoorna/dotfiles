@@ -51,9 +51,9 @@ Notify(str, delay) {
 
 ; Automatically decode URIs in clipboard.
 OnClipboardChange:
-	if RegExMatch(Clipboard, "https?:\/\/.*\/(.*)?(%[a-fA-F0-9]{2})+\S*") {
+	if RegExMatch(Clipboard, "^https?:\/\/.*\/(.*)?(%[a-fA-F0-9]{2})+\S*$") {
 		str := Clipboard
 		DllCall("Shlwapi.dll\UrlUnescapeW", "Ptr", &str, "Ptr", 0, "UInt", 0, "UInt", 0x00140000, "UInt")
-		Clipboard := str
+		Clipboard := StrReplace(str, " ", "%20")
 	}
 	return
