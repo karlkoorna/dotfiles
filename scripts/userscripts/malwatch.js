@@ -4,12 +4,6 @@
 // @author       Karl Köörna
 // @version      1.0.0
 // @include      /myanimelist\.net\/animelist\/[^?]+(\?status=1)?$/
-// @connect      graphql.anilist.co
-// @connect      nyaa.si
-// @connect      twist.moe
-// @connect      animepahe.com
-// @connect      9anime.to
-// @connect      animekisa.tv
 // @grant        GM.xmlHttpRequest
 // @grant        GM.addStyle
 // ==/UserScript==
@@ -110,7 +104,7 @@ const sources = [
 		async search(title, episode) {
 			const shows = new DOMParser().parseFromString(await get(`https://9anime.to/search?keyword=${title}`), 'text/html');
 			const show = shows.querySelector('.anime-list .poster');
-			console.log(show);
+			
 			if (!show) return;
 			if (episode > Number(show.querySelector('.tag.ep').innerText.split('/')[0].replace('Ep', ' ').replace('Full', '1'))) return;
 			return `https://9anime.to${show.getAttribute('href')}/ep-${episode}`;
