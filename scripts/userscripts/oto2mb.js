@@ -15,12 +15,12 @@ button.id = 'oto2mb';
 button.innerText = 'Copy for MB';
 
 button.addEventListener('click', () => {
-	GM.setClipboard(
-		Array.from(document.querySelectorAll('.tracklist tr:not(:first-child)')).map((el) => {
-			const info = el.querySelector('button[trackcode]');
-			return `${info.getAttribute('tn').toString().padStart(2, '0')}. ${info.getAttribute('artist')} ${ARTIST_SEP} ${info.getAttribute('title')} (${el.children[2].innerText})`
-		}).join('\n')
-	);
+	const str = Array.from(document.querySelectorAll('.tracklist tr:not(:first-child)')).map((el) => {
+		const info = el.querySelector('button[trackcode]');
+		return `${info.getAttribute('tn').toString().padStart(2, '0')}. ${info.getAttribute('artist')} ${ARTIST_SEP} ${info.getAttribute('title')} (${el.children[2].innerText})`
+	}).join('\n');
+	
+	GM.setClipboard(str);
 });
 
 document.querySelector('.tracklist tr:first-child > th:nth-child(2)').appendChild(button);
