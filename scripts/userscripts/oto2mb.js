@@ -12,23 +12,25 @@ const ARTIST_SEP = '\t';
 
 const button = document.createElement('a');
 button.id = 'oto2mb';
-button.innerText = 'Copy for MB';
+button.innerText = 'Copy tracks for MusicBrainz';
 
 button.addEventListener('click', () => {
-	const str = Array.from(document.querySelectorAll('.tracklist tr:not(:first-child)')).map((el) => {
+	const str = Array.from(document.querySelectorAll('#tracklist tr:not(:first-child)'), (el) => {
 		const info = el.querySelector('button[trackcode]');
-		return `${info.getAttribute('tn').toString().padStart(2, '0')}. ${info.getAttribute('artist')} ${ARTIST_SEP} ${info.getAttribute('title')} (${el.children[2].innerText})`
-	}).join('\n');
+		return `${info.getAttribute('tn').toString().padStart(2, '0')}. ${info.getAttribute('artist').replace(/ \(.*\)$/, '')}${ARTIST_SEP}${info.getAttribute('title')} (${el.children[2].innerText})`
+	}).join('\n')
 	
 	GM.setClipboard(str);
 });
 
-document.querySelector('.tracklist tr:first-child > th:nth-child(2)').appendChild(button);
+document.querySelector('.tracklist tr > th:nth-child(2)').appendChild(button);
 
 GM.addStyle(`
 #oto2mb {
-	margin-left: 12px;
+	margin-left: 13px;
+	color: #0e9af1;
 	font-size: 12px;
+	font-weight: bold;
 	cursor: pointer;
 }
 `);
