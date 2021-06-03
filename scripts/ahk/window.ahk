@@ -30,7 +30,7 @@ IsWinApplicable(win_id) {
 	WinRestore ahk_id %win_id%
 	WinMove ahk_id %win_id%,, %win_x%, %win_y%, %win_w%, %win_h%
 	
-	x := win_x + win_w * .75
+	x := win_x + win_w * .8
 	y := win_y + 12
 	Click down, %x%, %y%
 	
@@ -118,5 +118,15 @@ IsWinApplicable(win_id) {
 		start_y := y
 		
 		WinMove ahk_id %win_id%,, %win_x%, %win_y%, %win_w%, %win_h%
+	}
+	return
+
+; ALT+MMOUSE -- Close window on title bar click.
+MButton::
+	CoordMode Mouse, Relative
+	MouseGetPos x, y, win_id
+	
+	if (y < 30) {
+		WinClose ahk_id %win_id%
 	}
 	return

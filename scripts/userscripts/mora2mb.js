@@ -16,8 +16,8 @@ button.innerText = 'Copy tracks for MusicBrainz';
 
 button.addEventListener('click', () => {
 	const str = Array.from(document.querySelectorAll('#package_list tbody tr'), (el) => {
-		return `${el.querySelector('.package_td1').innerText.padStart(2, '0')}. ${el.querySelector('.package_td3').innerText}${ARTIST_SEP}${el.querySelector('.package_title2').innerText} (${el.querySelector('.package_td4').innerText.split('\n')[0]})`
-	}).join('\n')
+		return `${el.querySelector('.package_td1').innerText.padStart(2, '0')}. ${el.querySelector('.package_td3').innerText}${ARTIST_SEP}${el.querySelector('.package_title2').innerText} (${el.querySelector('.package_td4').innerText.split('\n')[0]})`;
+	}).join('\n');
 	
 	GM.setClipboard(str);
 });

@@ -49,7 +49,7 @@ Notify(str, delay) {
 	Notify("Copied IP", 1000)
 	return
 
-; Automatically decode URI in clipboard.
+; Automatically decode links in clipboard.
 OnClipboardChange:
 	if RegExMatch(Clipboard, "^https?:\/\/.*\/(.*)?(%[a-fA-F0-9]{2})+\S*$") {
 		str := Clipboard
