@@ -127,7 +127,7 @@ MButton::
 	MouseGetPos x, y, win_id
 	
 	if (y > 30) {
-		Click {MButton}
+		SendInput {MButton}
 		return
 	}
 	
