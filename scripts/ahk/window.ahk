@@ -126,7 +126,10 @@ MButton::
 	CoordMode Mouse, Relative
 	MouseGetPos x, y, win_id
 	
-	if (y < 30) {
-		WinClose ahk_id %win_id%
+	if (y > 30) {
+		Click {MButton}
+		return
 	}
+	
+	WinClose ahk_id %win_id%
 	return
