@@ -121,12 +121,13 @@ IsWinApplicable(win_id) {
 	}
 	return
 
-; ALT+MMOUSE -- Close window on title bar click.
+; MMOUSE -- Close window on title bar click.
 MButton::
-	CoordMode Mouse, Relative
-	MouseGetPos x, y, win_id
+	CoordMode Mouse, Screen
+	MouseGetPos ,, y, win_id
+	WinGetPos ,, win_y,,, ahk_id %win_id%
 	
-	if (y > 30) {
+	if (y - win_y > 30) {
 		SendInput {MButton}
 		return
 	}
