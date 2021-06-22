@@ -6,7 +6,7 @@ alias ....="cd ../../.."
 
 # Zip all directories in current directory.
 zipdirs () {
-	for name in */; do "C:/Program Files/7-Zip/7z.exe" a -r "${name::-1}.zip" "$name"; done
+	for name in */; do "C:/Program Files/7-Zip/7z.exe" a -r -mx=0 "${name::-1}.zip" "$name"; done
 }
 
 # Convert image to 1000x1000@72 JPEG@100%.
