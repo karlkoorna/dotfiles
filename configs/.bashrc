@@ -28,7 +28,9 @@ gensample () {
 	echo -ne "\x1B[0;33mConverting...\x1B[0m\r"
 	ffmpeg -hide_banner -loglevel panic -i "$1" -c:a libmp3lame -q:a 1 -fs 8M -y "$1.tmp.mp3"
 	echo -ne "\x1B[0;32mReady...     \x1B[0m\r\a"
-	sleep 5
+	sleep 6
 	rm "$1.tmp.mp3"
 	echo -e "\x1B[0;31mDeleted       \x1B[0m"
+	sleep 2
+	exit
 }
