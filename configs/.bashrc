@@ -15,10 +15,10 @@ downsizecover () {
 	
 	if [[ "$path" == *jpg ]]; then
 		magick mogrify -resize "1000x1000>" -density 72 -quality 100 -interlace plane "${path}"
-		jpegoptim --strip-all "$path"
+		exiftool -overwrite_original -all= "$path"
 	else
 		magick convert -resize "1000x1000>" -density 72 -quality 100 -interlace plane "$path" "${path%.*}.jpg"
-		jpegoptim --strip-all "${path%.*}.jpg"
+		exiftool -overwrite_original -all= "${path%.*}.jpg"
 		rm "$path"
 	fi
 }
