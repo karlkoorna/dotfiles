@@ -3,7 +3,6 @@ code --install-extension bungcip.better-toml
 code --install-extension eamodio.gitlens
 code --install-extension formulahendry.auto-rename-tag
 code --install-extension GrapeCity.gc-excelviewer
-code --install-extension icrawl.discord-vscode
 code --install-extension mechatroner.rainbow-csv
 code --install-extension mikestead.dotenv
 code --install-extension ms-python.python

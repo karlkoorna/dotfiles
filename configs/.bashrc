@@ -4,9 +4,13 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
-# Zip all directories in current directory.
+# Zip store all directories in working directory, optionally encrypt.
 zipdirs () {
-	for name in */; do "C:/Program Files/7-Zip/7z.exe" a -r -mx=0 "${name::-1}.zip" "$name"; done
+	if [[ -z "$1" ]]; then
+		for name in */; do "C:/Program Files/7-Zip/7z.exe" a -r -t7z -mx=0 "${name::-1}.7z" "$name"; done
+	else
+		for name in */; do "C:/Program Files/7-Zip/7z.exe" a -r -t7z -mx=0 -mhe -p$1 "${name::-1}.7z" "$name"; done
+	fi
 }
 
 # Convert image to 1000x1000@72 JPEG@100%.
@@ -23,7 +27,7 @@ downsizecover () {
 	fi
 }
 
-# Generate <8MB MP3@V1 target from source.
+# Create <8MB MP3@V1 audio clip.
 gensample () {
 	echo -ne "\x1B[0;33mConverting...\x1B[0m\r"
 	ffmpeg -hide_banner -loglevel panic -i "$1" -c:a libmp3lame -q:a 1 -fs 8M -y "$1.tmp.mp3"
@@ -33,4 +37,11 @@ gensample () {
 	echo -e "\x1B[0;31mDeleted       \x1B[0m"
 	sleep 2
 	exit
+}
+
+# Kill processes by port.
+kp () {
+	for pid in $(netstat -aon | grep :$1 | grep -oP "\s\d+\s"); do
+		taskkill -f -pid $pid
+	done
 }
