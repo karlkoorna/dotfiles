@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Privacy
-// @description  Hige privacy sensitive elements on pages.
+// @description  Hide privacy sensitive elements on pages.
 // @author       Karl Köörna
 // @version      1.0.0
 // @run-at       document-start
