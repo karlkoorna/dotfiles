@@ -1,13 +1,10 @@
 // ==UserScript==
 // @name         Privacy
-// @description  Hide privacy sensitive elements on pages.
+// @description  Hige privacy sensitive elements on pages.
 // @author       Karl Köörna
 // @version      1.0.0
 // @run-at       document-start
-// @include      /spotify.com/
-// @include      /google.com/
-// @include      /youtube.com/
-// @include      /github.com/
+// @match        <all_urls>
 // @grant        GM.addStyle
 // ==/UserScript==
 
@@ -22,6 +19,7 @@ a[href*="user/"], /* Playlist authors on user lists. */
 }
 
 /* Google */
+
 #footcnt .fbar:first-of-type, /* Location in footer. */
 a[aria-label^="Google Account:"] { /* Profile picture in top-right corner. */
 	display: none;
@@ -43,6 +41,10 @@ ytd-comment-simplebox-renderer { /* Comment box below videos. */
 
 header img.avatar { /* Profile picture in top-right corner. */
 	filter: brightness(100) brightness(0.4);
+}
+
+#credential_picker_container {
+	display: none;
 }
 
 `);
