@@ -10,6 +10,12 @@
 
 GM.addStyle(`
 
+/* General */
+
+#credential_picker_container {
+	display: none;
+}
+
 /* Spotify */
 
 a[href*="playlist/"] + div, /* Playlist authors on playlist pages. */
@@ -41,10 +47,6 @@ ytd-comment-simplebox-renderer { /* Comment box below videos. */
 
 header img.avatar { /* Profile picture in top-right corner. */
 	filter: brightness(100) brightness(0.4);
-}
-
-#credential_picker_container {
-	display: none;
 }
 
 `);
