@@ -150,6 +150,10 @@ HandleWheelAction(dir) {
 		return
 	}
 	
+	if (A_TimeSincePriorHotkey < 200 && A_TimeSincePriorHotkey <> -1) {
+		return
+	}
+	
 	if (dir = -1) { ; UP
 		WinMaximize ahk_id %win_id%
 	} else if (IsWinFloating(win_id)) { ; DOWN & FLOATING
