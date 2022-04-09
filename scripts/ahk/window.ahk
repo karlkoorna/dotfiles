@@ -165,6 +165,9 @@ HandleWheelAction(dir) {
 
 ;;; HOTKEYS
 
+; ALT+SCROLLLOCK -- Toggle functionality (for use in apps that have ALT+MOUSE functionality).
+!ScrollLock:: Suspend
+
 ; ALT+LMOUSE -- Move a window from cursor location.
 ; ALT+LMOUSE+LMOUSE -- (Un)maximize a window.
 !LButton:: HandleLeftAction(true)
