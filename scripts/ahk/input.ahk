@@ -1,10 +1,12 @@
-﻿; CTRL+M4 -- Voicemeeter key.
+﻿;;; Hotkeys
+
+; CTRL+M4 -- Voicemeeter key.
 ^XButton2::F23
 
 ; CTRL+M5 -- Snipaste key.
 ^XButton1::F24
 
-; Autocorrect
+;;; Autocorrect
 
 ::acurate::accurate
 ::april::April

@@ -1,4 +1,6 @@
-﻿RemoveToolTip() {
+﻿;;; Utils
+
+RemoveToolTip() {
 	ToolTip
 }
 
@@ -6,6 +8,8 @@ Notify(str, delay) {
 	ToolTip % str
 	SetTimer RemoveToolTip, %delay%
 }
+
+;;; Hotkeys
 
 ; CTRL+ALT+V -- Switch selection and clipboard.
 ^!v::

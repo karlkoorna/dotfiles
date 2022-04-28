@@ -2,7 +2,7 @@ CoordMode Mouse, Screen
 SetMouseDelay 10
 SetWinDelay 10
 
-;;; UTILS
+;;; Utils
 
 IsWinSpecial(win_id) {
 	WinGetClass win_class, ahk_id %win_id%
@@ -22,7 +22,7 @@ IsWinFloating(win_id) {
 	return win_minmax == 0 ; If window is not minimized or maximized.
 }
 
-;;; HANDLERS
+;;; Handlers
 
 HandleLeftAction(activate) {
 	MouseGetPos start_mx, start_my, win_id
@@ -163,7 +163,7 @@ HandleWheelAction(dir) {
 	}
 }
 
-;;; HOTKEYS
+;;; Hotkeys
 
 ; ALT+SCROLLLOCK -- Toggle functionality (for use in apps that have ALT+MOUSE functionality).
 !ScrollLock:: Suspend

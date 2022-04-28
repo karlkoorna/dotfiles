@@ -1,4 +1,8 @@
-﻿RemoveToolTip() {
+﻿dialog := 0
+
+;;; Utils
+
+RemoveToolTip() {
 	ToolTip
 }
 
@@ -18,6 +22,30 @@ OpenTerminal(path) {
 	Run % path
 	SetWorkingDir % A_ScriptDir
 }
+
+;;; Handlers
+
+HandleEverythingDialog(withFile) {
+	global dialog
+	
+	if (dialog = 0) {
+		return
+	}
+	
+	ControlGet, row, List, Selected, SysListView321
+	columns := StrSplit(row, "`t")
+	path := columns[2]
+	if withFile {
+		path .= "\" . columns[1]
+	}
+	
+	ControlSetText, Edit1, %path%, ahk_id %dialog%
+	ControlSend, Edit1, {Enter}, ahk_id %dialog%
+	WinClose
+	dialog := 0
+}
+
+;;; Hotkeys
 
 ; CTRL+ALT+F -- Toggle window always on top.
 ^!f::
@@ -56,10 +84,31 @@ OpenTerminal(path) {
 ; WIN+F -- Open Everything from File Explorer.
 #IfWinActive ahk_class CabinetWClass
 #f::
-#IfWinActive ahk_class #32770
-#f::
 	path := GetAddress()
 	Run "C:/Program Files/Everything/Everything.exe" -p "%path%"
+	return
+#IfWinActive
+
+; WIN+F -- Open Everything from File Explorer dialog.
+#IfWinActive ahk_class #32770
+#f::
+	WinGet, dialog
+	path := GetAddress()
+	Run "C:/Program Files/Everything/Everything.exe" -p "%path%"
+	return
+#IfWinActive
+
+; SHIFT+S -- Send folder path from Everything to File Explorer dialog and close Everything.
+#IfWinActive ahk_class EVERYTHING
++s::
+	HandleEverythingDialog(false)
+	return
+#IfWinActive
+
+; ALT+S -- Send file path from Everything to File Explorer dialog and close Everything.
+#IfWinActive ahk_class EVERYTHING
+!s::
+	HandleEverythingDialog(true)
 	return
 #IfWinActive
 
