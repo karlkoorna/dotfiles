@@ -64,7 +64,7 @@ My way of Windows.
 
 ### [MP3Tag](https://mp3tag.de)
 
-### [Node.js](https://nodejs.org) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/nodejs)
+### [Node.js](https://nodejs.org)
 
 ### [Notepad++](https://notepad-plus-plus.org) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/notepad++)
 
