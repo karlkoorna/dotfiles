@@ -1,14 +1,14 @@
 code --install-extension bierner.markdown-preview-github-styles
 code --install-extension bungcip.better-toml
+code --install-extension cweijan.vscode-autohotkey-plus
 code --install-extension eamodio.gitlens
 code --install-extension formulahendry.auto-rename-tag
 code --install-extension GrapeCity.gc-excelviewer
 code --install-extension mechatroner.rainbow-csv
-code --install-extension mikestead.dotenv
 code --install-extension ms-python.python
+code --install-extension ms-toolsai.jupyter
 code --install-extension richie5um2.vscode-sort-json
 code --install-extension shardulm94.trailing-spaces
-code --install-extension slevesque.vscode-autohotkey
 code --install-extension Tyriar.sort-lines
 code --install-extension vscode-icons-team.vscode-icons
 code --install-extension yzhang.markdown-all-in-one

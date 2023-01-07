@@ -1,12 +1,12 @@
 ﻿;;; Utils
 
-RemoveToolTip() {
+Unnotify() {
 	ToolTip
 }
 
 Notify(str, delay) {
 	ToolTip % str
-	SetTimer RemoveToolTip, %delay%
+	SetTimer Unnotify, %delay%
 }
 
 ;;; Hotkeys

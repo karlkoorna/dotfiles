@@ -1,48 +1,27 @@
-﻿dialog := 0
+﻿;;; Utils
 
-;;; Utils
-
-RemoveToolTip() {
+Unnotify() {
 	ToolTip
 }
 
 Notify(str, delay) {
 	ToolTip % str
-	SetTimer RemoveToolTip, %delay%
+	SetTimer Unnotify, %delay%
 }
 
-GetAddress() {
+GetExplorerAddress() {
 	WinGetText texts
 	RegExMatch(texts, "Address: (.*)", address)
-	return RegExMatch(SubStr(address, 10), "^[A-Z]:\\") ? SubStr(address, 10) : USERPROFILE . "\" . SubStr(address, 10)
+
+	if (RegExMatch(SubStr(address, 10), "^[A-Z]:\\")) { ; Absolute path
+		return SubStr(address, 10)
+	} else { ; Quick Access path
+		return USERPROFILE . "\" . SubStr(address, 10)
+	}
 }
 
-OpenTerminal(path) {
-	SetWorkingDir % GetAddress()
-	Run % path
-	SetWorkingDir % A_ScriptDir
-}
-
-;;; Handlers
-
-HandleEverythingDialog(withFile) {
-	global dialog
-	
-	if (dialog = 0) {
-		return
-	}
-	
-	ControlGet, row, List, Selected, SysListView321
-	columns := StrSplit(row, "`t")
-	path := columns[2]
-	if withFile {
-		path .= "\" . columns[1]
-	}
-	
-	ControlSetText, Edit1, %path%, ahk_id %dialog%
-	ControlSend, Edit1, {Enter}, ahk_id %dialog%
-	WinClose
-	dialog := 0
+OpenTerminal(profile, path) {
+	Run % LOCALAPPDATA . "/Microsoft/WindowsApps/wt.exe new-tab -d . -p """ . profile . """", path
 }
 
 ;;; Hotkeys
@@ -59,7 +38,7 @@ HandleEverythingDialog(withFile) {
 ^t::
 #IfWinActive ahk_class #32770
 ^t::
-	OpenTerminal("C:/Program Files/Git/git-bash.exe")
+	OpenTerminal("Git Bash", GetExplorerAddress())
 	return
 #IfWinActive
 
@@ -68,7 +47,7 @@ HandleEverythingDialog(withFile) {
 ^+t::
 #IfWinActive ahk_class #32770
 ^+t::
-	OpenTerminal("bash")
+	OpenTerminal("Ubuntu", GetExplorerAddress())
 	return
 #IfWinActive
 
@@ -77,38 +56,16 @@ HandleEverythingDialog(withFile) {
 ^!t::
 #IfWinActive ahk_class #32770
 ^!t::
-	OpenTerminal("powershell")
+	OpenTerminal("PowerShell", GetExplorerAddress())
 	return
 #IfWinActive
 
-; WIN+F -- Open Everything from File Explorer.
+; WIN+F -- Open Everything from File Explorer window or dialog.
 #IfWinActive ahk_class CabinetWClass
 #f::
-	path := GetAddress()
-	Run "C:/Program Files/Everything/Everything.exe" -p "%path%"
-	return
-#IfWinActive
-
-; WIN+F -- Open Everything from File Explorer dialog.
 #IfWinActive ahk_class #32770
 #f::
-	WinGet, dialog
-	path := GetAddress()
-	Run "C:/Program Files/Everything/Everything.exe" -p "%path%"
-	return
-#IfWinActive
-
-; SHIFT+S -- Send folder path from Everything to File Explorer dialog and close Everything.
-#IfWinActive ahk_class EVERYTHING
-+s::
-	HandleEverythingDialog(false)
-	return
-#IfWinActive
-
-; ALT+S -- Send file path from Everything to File Explorer dialog and close Everything.
-#IfWinActive ahk_class EVERYTHING
-!s::
-	HandleEverythingDialog(true)
+	Run % """C:/Program Files/Everything/Everything.exe"" -p """ . GetExplorerAddress() . """"
 	return
 #IfWinActive
 
