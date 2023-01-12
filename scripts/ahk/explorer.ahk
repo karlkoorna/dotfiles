@@ -1,87 +1,71 @@
-﻿;;; Utils
+﻿#Requires AutoHotkey v2
 
 Unnotify() {
-	ToolTip
+	ToolTip()
 }
 
 Notify(str, delay) {
-	ToolTip % str
-	SetTimer Unnotify, %delay%
+	ToolTip(str)
+	SetTimer(Unnotify, delay)
 }
 
 GetExplorerAddress() {
-	WinGetText texts
-	RegExMatch(texts, "Address: (.*)", address)
-
-	if (RegExMatch(SubStr(address, 10), "^[A-Z]:\\")) { ; Absolute path
-		return SubStr(address, 10)
-	} else { ; Quick Access path
-		return USERPROFILE . "\" . SubStr(address, 10)
+	address := SubStr(ControlGetText("ToolbarWindow323"), 10)
+	if (InStr(address, "\")) {
+		return address
 	}
+
+	return EnvGet("USERPROFILE") . "/" . address
 }
 
 OpenTerminal(profile, path) {
-	Run % LOCALAPPDATA . "/Microsoft/WindowsApps/wt.exe new-tab -d . -p """ . profile . """", path
+	Run(Format("{1}/Microsoft/WindowsApps/wt.exe new-tab -p `"{2}`" -d .", EnvGet("LOCALAPPDATA"), profile), path)
 }
 
-;;; Hotkeys
+; When File Explorer or File Dialog is active then...
+#HotIf WinActive("ahk_class CabinetWClass") or WinActive("ahk_class #32770")
 
-; CTRL+ALT+F -- Toggle window always on top.
-^!f::
-	Winset AlwaysOnTop, Toggle, A
-	WinGet ExStyle, ExStyle, A
-	Notify(ExStyle & 0x8 ? "Marked" : "Unmarked", 500)
-	return
-
-; CTRL+T -- Open Git Bash from File Explorer.
-#IfWinActive ahk_class CabinetWClass
-^t::
-#IfWinActive ahk_class #32770
-^t::
+; [CTRL+T] Open Git Bash.
+^t:: {
 	OpenTerminal("Git Bash", GetExplorerAddress())
-	return
-#IfWinActive
+}
 
-; CTRL+SHIFT+T -- Open WSL from File Explorer.
-#IfWinActive ahk_class CabinetWClass
-^+t::
-#IfWinActive ahk_class #32770
-^+t::
+; [CTRL+SHIFT+T] Open WSL.
+^+t:: {
 	OpenTerminal("Ubuntu", GetExplorerAddress())
-	return
-#IfWinActive
+}
 
-; CTRL+ALT+T -- Open PowerShell from File Explorer.
-#IfWinActive ahk_class CabinetWClass
-^!t::
-#IfWinActive ahk_class #32770
-^!t::
+; [CTRL+ALT+T] Open PowerShell.
+^!t:: {
 	OpenTerminal("PowerShell", GetExplorerAddress())
-	return
-#IfWinActive
+}
 
-; WIN+F -- Open Everything from File Explorer window or dialog.
-#IfWinActive ahk_class CabinetWClass
-#f::
-#IfWinActive ahk_class #32770
-#f::
-	Run % """C:/Program Files/Everything/Everything.exe"" -p """ . GetExplorerAddress() . """"
-	return
-#IfWinActive
+; [WIN+F] Open Everything.
+#f:: {
+	Run(Format("`"C:/Program Files/Everything/Everything.exe`" -p `"`"{1}`"`"", GetExplorerAddress()))
+}
 
-; WIN+F -- Open Everything.
-#f::
-	Run "C:/Program Files/Everything/Everything.exe"
-	return
+#HotIf
 
-; WIN+C -- Open Qalculate.
-#c::
-	Run "C:/Program Files/Qalculate/qalculate.exe"
-	return
+; [CTRL+ALT+F] Toggle window always on top.
+^!f:: {
+	WinSetAlwaysOnTop(-1, "A")
+	Notify(WinGetExStyle("A") & 0x08 ? "Marked" : "Unmarked", 500)
+}
 
-; ESC -- Close Qalculate.
-#IfWinActive Qalculate
-Escape::
-	WinClose
-	return
-#IfWinActive
+; [WIN+F] Open Everything.
+#f:: {
+	Run("C:/Program Files/Everything/Everything.exe")
+}
+
+; [WIN+C] Open Qalculate.
+#c:: {
+	Run("C:/Program Files/Qalculate/qalculate.exe",,, &pid)
+	WinWait("ahk_pid " pid)
+	WinActivate("ahk_pid " pid)
+}
+
+; Close Qalculate with escape.
+#HotIf WinActive("Qalculate")
+Escape:: WinClose("A")
+#HotIf
