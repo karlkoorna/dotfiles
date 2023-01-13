@@ -10,7 +10,7 @@ Notify(str, delay) {
 }
 
 GetExplorerAddress() {
-	address := SubStr(ControlGetText("ToolbarWindow323"), 10)
+	address := SubStr(ControlGetText("ToolbarWindow324"), 10)
 	if (InStr(address, "\")) {
 		return address
 	}
