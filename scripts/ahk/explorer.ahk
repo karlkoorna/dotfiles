@@ -10,12 +10,12 @@ Notify(str, delay) {
 }
 
 GetExplorerAddress() {
-	address := SubStr(ControlGetText("ToolbarWindow324"), 10)
-	if (InStr(address, "\")) {
-		return address
+	RegExMatch(WinGetText(), "(?<=Address: ).+", &match)
+	if (!InStr(match[0], "\")) {
+		return EnvGet("USERPROFILE") . "/" . match[0]
 	}
 
-	return EnvGet("USERPROFILE") . "/" . address
+	return match[0]
 }
 
 OpenTerminal(profile, path) {
