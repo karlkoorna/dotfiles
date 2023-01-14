@@ -178,12 +178,6 @@ IsWinSpecial(winId) {
 
 */
 
-; [MMOUSE] Close a window by middle-clicking the title bar.
-MButton:: {
-	MouseGetPos(,, &winId)
-	WinClose("ahk_id " winId)
-}
-
 ; [CTRL+ALT+F] Toggle window always on top.
 ^!f:: {
 	WinSetAlwaysOnTop(-1, "A")
