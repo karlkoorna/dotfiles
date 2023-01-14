@@ -47,12 +47,6 @@ OpenTerminal(profile, path) {
 
 #HotIf
 
-; [CTRL+ALT+F] Toggle window always on top.
-^!f:: {
-	WinSetAlwaysOnTop(-1, "A")
-	Notify(WinGetExStyle("A") & 0x08 ? "Marked" : "Unmarked", 500)
-}
-
 ; [WIN+F] Open Everything.
 #f:: {
 	Run("C:/Program Files/Everything/Everything.exe")
@@ -65,7 +59,12 @@ OpenTerminal(profile, path) {
 	WinActivate("ahk_pid " pid)
 }
 
-; Close Qalculate with escape.
+; When Qalculate is active then...
 #HotIf WinActive("Qalculate")
-Escape:: WinClose("A")
+
+; Close with escape.
+Escape:: {
+	WinClose("A")
+}
+
 #HotIf
