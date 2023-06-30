@@ -27,10 +27,6 @@ My way of Windows.
 
 ### [qBittorrent](https://qbittorrent.org/download.php)
 
-### [Discord](https://discordapp.com)
-
-* Disable in-game overlay.
-
 ### [Everything](https://voidtools.com/downloads)
 
 * Do not run as administrator.
