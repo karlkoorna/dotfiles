@@ -22,8 +22,6 @@
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "git.confirmSync": false,
-    "gitlens.codeLens.enabled": false,
-    "gitlens.showWhatsNewAfterUpgrades": false,
     "html.format.extraLiners": "",
     "html.format.indentInnerHtml": true,
     "html.format.maxPreserveNewLines": 0,
