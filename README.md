@@ -66,7 +66,7 @@ My way of Windows.
 
 ### [Node.js](https://nodejs.org)
 
-### [Notepad++](https://notepad-plus-plus.org) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/notepad++)
+### [Notepad++](https://notepad-plus-plus.org)
 
 ### [OpenJDK](https://adoptopenjdk.net/?jvmVariant=openj9)
 
