@@ -1,7 +1,6 @@
 code --install-extension bierner.markdown-preview-github-styles
 code --install-extension bungcip.better-toml
 code --install-extension cweijan.vscode-autohotkey-plus
-code --install-extension eamodio.gitlens
 code --install-extension formulahendry.auto-rename-tag
 code --install-extension GrapeCity.gc-excelviewer
 code --install-extension mechatroner.rainbow-csv
