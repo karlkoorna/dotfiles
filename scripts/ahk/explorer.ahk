@@ -10,12 +10,15 @@ Notify(str, delay) {
 }
 
 GetExplorerAddress() {
-	RegExMatch(WinGetText(), "(?<=Address: ).+", &match)
-	if (!InStr(match[0], "\")) {
-		return EnvGet("USERPROFILE") . "/" . match[0]
+	address := WinGetTitle()
+	if (address == "Home") {
+		return EnvGet("USERPROFILE")
+	}
+	if (!InStr(address, "\")) {
+		return EnvGet("USERPROFILE") . "/" . address
 	}
 
-	return match[0]
+	return address
 }
 
 OpenTerminal(profile, path) {

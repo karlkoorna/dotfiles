@@ -27,10 +27,6 @@ My way of Windows.
 
 ### [qBittorrent](https://qbittorrent.org/download.php)
 
-### [Discord](https://discordapp.com)
-
-* Disable in-game overlay.
-
 ### [Everything](https://voidtools.com/downloads)
 
 * Do not run as administrator.
@@ -58,15 +54,11 @@ My way of Windows.
 
 ### [Insomnia](https://insomnia.rest)
 
-* Do not validate certificates.
-
 ### Office (Word, Excel, PowerPoint)
-
-### [MP3Tag](https://mp3tag.de)
 
 ### [Node.js](https://nodejs.org)
 
-### [Notepad++](https://notepad-plus-plus.org) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/notepad++)
+### [Notepad++](https://notepad-plus-plus.org)
 
 ### [OpenJDK](https://adoptopenjdk.net/?jvmVariant=openj9)
 
@@ -77,13 +69,6 @@ My way of Windows.
 ### [Rust](https://rust-lang.org/tools/install)
 
 ### [Snipaste](https://snipaste.com) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/snipaste)
-
-### [Spek](http://spek.cc)
-
-### [Steam](https://store.steampowered.com)
-
-* Open overlay with `Shift + '`.
-* Allow downloads during gameplay.
 
 ### [Visual Studio Code](https://code.visualstudio.com) [📁](https://github.com/karlkoorna/dotfiles/tree/master/configs/vscode)
 
